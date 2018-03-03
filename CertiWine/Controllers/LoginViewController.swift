@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LViewController: UIViewController {
 
     lazy var loginCoordinator = LoginCoordinator(rootViewController: self)
   

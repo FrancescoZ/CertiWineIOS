@@ -31,7 +31,7 @@
 
 import Foundation
 
-struct Error: Decodable{
+struct ErrorCertiWine: Decodable{
   let success: Bool
   let message: String
 }
