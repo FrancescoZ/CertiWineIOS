@@ -1,0 +1,1637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0281A099B6DF240CD72EE130618B1B0F /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3520DDF3C03E7E8912F070B4B7D0161 /* octicons.ttf */; };
+		03141771231498E20C3058324607C640 /* FaceAware-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6D69D61D7B92B407A508D53955E52B /* FaceAware-dummy.m */; };
+		0F2E8310657F6A3EBEBB5DB0CEEE7C38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		10BD6D329B02C3275995F12648C56B90 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F63B109DCC67EF2346B3330EB36879D /* PageView.swift */; };
+		113902E55762062A2D48B56D8DAA0532 /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E7D588AA17AC344B259E7BC8638E89 /* FAKFontAwesome.m */; };
+		126497559A13DBF44A4772FE59850ACA /* CircleMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9BDE33A508D85F7B3CE1ADF4B2D77D /* CircleMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1769170427A6B5C9688007764866EDDA /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B15204AA2DFFA6D8362D244FF7A9D828 /* foundation-icons.ttf */; };
+		1872CD2DA576F188DAFBE6CCA3EC4DCF /* FAKOcticons.h in Headers */ = {isa = PBXBuildFile; fileRef = 7924CDFAFDFBF223CD9F2E4D305F737E /* FAKOcticons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C2164E8F60BCD2B17B5B2F607A8E048 /* FaceAware-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA621FFA80458EA4CDE91C757954773 /* FaceAware-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20070C9501DA782A1D5EDCB4F75AEDE2 /* Hue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6BE54AB61C7C384DD24E0497808142 /* Hue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2166C0EC39F6BB2B691B380B539FE8AD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55C580E1FC5B6E9F442FE42A9553FEA /* CoreText.framework */; };
+		2D30889B4E1FC09CB6FDB15B96AD30E9 /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC845AF9937C8968F261B1942506027 /* GestureControl.swift */; };
+		302BA79F7DBB6B6E09EC10F46AA6903D /* UIImageView+FaceAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90562BF7067650F056A7390E288DDD /* UIImageView+FaceAware.swift */; };
+		332E15E9E986025C0150030E720D976A /* FAKZocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 47C58E0DC7124A449B48FD41822A48CB /* FAKZocial.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3346ABD8DBFC61551BA6DD0AEC5CB9DE /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A651DCD49E3AAA7C14501581AE300B /* PageContainer.swift */; };
+		37D7C486572E5A90022B4BB839F06DEF /* Pods-CertiWineTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E638A0C48AC5C7A14611189A6DBC1 /* Pods-CertiWineTests-dummy.m */; };
+		37DA891DDA5E91349A6E7CEF0465CC51 /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 414B7FE295F021181820F4E5D512E143 /* FAKIcon.m */; };
+		3964A2B00BB8619003961BD7D3BD1AF1 /* FAKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FD5060CE078DD7616C9831D806328C /* FAKIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DD8CAA7CBB4F9B90855F31858D30924 /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3E4CB7C03D11B4946329BC03D17837 /* CircleMenuLoader.swift */; };
+		409BCBFBF2161753E6B85649EF6633C5 /* OnboardingContantViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D9BC1D0D055674F25049E07F6BF1C /* OnboardingContantViewItem.swift */; };
+		48696FE82A4D8086055541E81DC94107 /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBB44031962F01250EA8ACDC2EDA22 /* PageViewItem.swift */; };
+		4B7E574AEF9BAB8E643CCBA149E8A85F /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 036A5BE0E55FBB135E07ECB4E2142B28 /* FAKFoundationIcons.m */; };
+		4F5FAA1BFB6846C4C80D881F3B9355A7 /* FillAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03643D99E6302D0E9D9E4E8582B55294 /* FillAnimationView.swift */; };
+		5093F84F27DF70B22CA692D3485AF2DB /* FAKFontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = C3B74E428B590E193793AF37C0E588A5 /* FAKFontAwesome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5832280486E1376CBD13F70A8C6F02C6 /* FAKOcticons.m in Sources */ = {isa = PBXBuildFile; fileRef = C85D7AC8974C74113DA2393C1AC3E23A /* FAKOcticons.m */; };
+		5A1AE014B6FF9AC20A3402A7B05BA7E5 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8841904ED4DDECC7E492335B93AFB6 /* OnboardingContentView.swift */; };
+		5E6D63929C555092395F0536F960D1C4 /* CircleMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AF19622A12FC7DD82703255580ABAE /* CircleMenu-dummy.m */; };
+		61430A34EB37246ABC3F8E8E29806F38 /* Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A341F06D5B4A45E85D6CDB84C1933D8 /* Configuring.swift */; };
+		61FA9EF01CB62B6F8F33C42E50CAF536 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3D17F14595E77C208A53DEEC6D86F2F /* FontAwesome.otf */; };
+		66D2E16A248430B979133176DCC3B109 /* PaperOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF639D9784DDC47F2AD2613B4EEA6540 /* PaperOnboardingDelegate.swift */; };
+		6A72C8E44A0E2774C76D073F982E117F /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E2206A3EB6F5C53BF9B417321D72C4F /* zocial-regular-webfont.ttf */; };
+		6B3C2778C40F244D98903E993A211EB5 /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC5B779B789F2B1B05E645A1A53FF9D /* FAKIonIcons.m */; };
+		70037719067023C26066A280A0B7228B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		70644D2FAACDCB954D268086F220F534 /* FAKFoundationIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 5785F597F2673238620B03CAD797D21D /* FAKFoundationIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70CBCB67007D356F14B8EC15118BA9E3 /* Hue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CAF671FE08EA01DC16CAE1D9CB7AF4 /* Hue-dummy.m */; };
+		7203765DBB10EBBA88FDEF431A435DEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		7455C21A8CDE7750973B1EA649305312 /* paper-onboarding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5814B5496C35FD35B077225159528EDC /* paper-onboarding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7654819548331A59AAB96E83F6E9353E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */; };
+		7C214903E97437C9DE70A5F4C0B56041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		8267189738A27E9FB0B3B61F0B2C84CA /* FAKMaterialIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = D92B486DD9237175C7DCB3F86F260433 /* FAKMaterialIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83790D4473D3F8965A7705C0EE1ADFC6 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D2929E302CEA1218FEC89A4E77D3D2 /* UIColor+Hue.swift */; };
+		85EE7A0CB68505A4ABBC14C8B528EABB /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B0C3B66C63DD8C25D977CE352C7E1C /* ConstraintsHelper.swift */; };
+		8F418BCF1151FB34F297F908475B048D /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7CEB59FD17BBCC010540A45B8BF4 /* CircleMenuButton.swift */; };
+		99D62A3C6928E8C7BD61E2C98E5A360F /* FontAwesomeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF4293AC34828023F4F9F6ADE23B58AC /* FontAwesomeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BF8930E69FAFBCFCA70563E4775913F /* FontAwesomeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FE02102C2D86A7512A6224BDDF733619 /* FontAwesomeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6C941A7138D6538E603006596E05684 /* Pods-CertiWineTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB089526C583FCE0E8D21828A3759A1C /* Pods-CertiWineTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6D1C9304CF49244EB5D99A69971A8EE /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E034CB5353D27ECEAE29C8B16437F7A8 /* ionicons.ttf */; };
+		B98B26D76E50DE44887EDA3096028C46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		BB377AC3B7923B0182478FB34EAAC42D /* FAKMaterialIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B7BC9FC2BC26CE90C03F32D1878DBA /* FAKMaterialIcons.m */; };
+		C7DA2447575E683C18E8A452A886B85C /* FontAwesomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 090CC8C96EC3D654DE97D713C6B2E7BC /* FontAwesomeKit-dummy.m */; };
+		CD0A71E316A3C77C88AE6C30C3562CB0 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0B56F8E6D5DF2B08B2819934E437A2 /* PaperOnboarding.swift */; };
+		CDEAFF50FED59401B66C354798994E30 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E18EBFF0CBBEC4655BCF148861CB04 /* PaperOnboardingDataSource.swift */; };
+		CEC8FC4A3321340F48708DCECA1B0EB7 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDE69C8C70B7D8F9B1FAFE8DE9E916 /* CircleMenu.swift */; };
+		D1744730BD2F44285918621E79B0C115 /* Pods-CertiWine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 368817B836A1CD558E5541240701E26E /* Pods-CertiWine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D26832C96E013704F116A04D12D9B10D /* FAKIonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 8526066D6EF569C15FF3E89D1427539E /* FAKIonIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D327632C06E3B012E8956FFC6A4219EB /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958A56885699439C22D11FEDB34068B /* FAKZocial.m */; };
+		DC1474A8A5F9C27D852181B661944619 /* paper-onboarding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BADCB4B9F06172D3D247954AA19ADC98 /* paper-onboarding-dummy.m */; };
+		E836B47D4E10B4D0B2E9DC84A6FF6A89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		EFE061A1D694BAAD2291C9D7FF78DB7B /* Pods-CertiWine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DD3B674EEDB53F8187C98E51BF2B5 /* Pods-CertiWine-dummy.m */; };
+		F7CF131806881684610E31F7EA931C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		F85030977A6D1BAC697812B41A5905C7 /* UIImage+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849A0A10F5D9195FAFDC70383F832B6 /* UIImage+Hue.swift */; };
+		FAA3DAE967FF67C21B6F3F730A9EEB59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */; };
+		FDFB10982DFB0AE07FB9571456B05CC7 /* Material-Design-Iconic-Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 192DC09BD5B1DAF4F15C8B79CAAF2880 /* Material-Design-Iconic-Font.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D44276D2B9646F0CD05B5D6B86523CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C0D4D60FC8558D0199CE0C958E22855;
+			remoteInfo = FaceAware;
+		};
+		3DBAD11C9704BFA379CD90F6A3EBDC10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8E1DFAA9703A5C068D915A4C272EA21;
+			remoteInfo = FontAwesomeKit;
+		};
+		86A0F8CB708BB764DDC7591F76487D80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2542602E50EDF091ADB18B4688DF34F;
+			remoteInfo = Hue;
+		};
+		8A2A905B8D6C47E086FBCB9903D8F5FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE0EA4A854B31B97AB23A6135FCBFABD;
+			remoteInfo = CircleMenu;
+		};
+		99B85A061C6183B5D14F14698630CFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 738B2050D3EE6CEF2F8FC5020EAB44A1;
+			remoteInfo = "paper-onboarding";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00FD5060CE078DD7616C9831D806328C /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = FontAwesomeKit/FAKIcon.h; sourceTree = "<group>"; };
+		02FDE69C8C70B7D8F9B1FAFE8DE9E916 /* CircleMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleMenu.swift; path = CircleMenuLib/CircleMenu.swift; sourceTree = "<group>"; };
+		03643D99E6302D0E9D9E4E8582B55294 /* FillAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillAnimationView.swift; path = Source/FillAnimationView/FillAnimationView.swift; sourceTree = "<group>"; };
+		036A5BE0E55FBB135E07ECB4E2142B28 /* FAKFoundationIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFoundationIcons.m; path = FontAwesomeKit/FAKFoundationIcons.m; sourceTree = "<group>"; };
+		042CC2F995150E06B18F8D959635A247 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B8225F27573277CB2EAC773C8EB010 /* Hue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Hue.modulemap; sourceTree = "<group>"; };
+		090CC8C96EC3D654DE97D713C6B2E7BC /* FontAwesomeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesomeKit-dummy.m"; sourceTree = "<group>"; };
+		0958A56885699439C22D11FEDB34068B /* FAKZocial.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKZocial.m; path = FontAwesomeKit/FAKZocial.m; sourceTree = "<group>"; };
+		0C0B56F8E6D5DF2B08B2819934E437A2 /* PaperOnboarding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboarding.swift; path = Source/PaperOnboarding.swift; sourceTree = "<group>"; };
+		0CAF7EE65780CFF2B92A4FF3616652BC /* Pods-CertiWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CertiWine.debug.xcconfig"; sourceTree = "<group>"; };
+		0D90562BF7067650F056A7390E288DDD /* UIImageView+FaceAware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+FaceAware.swift"; path = "FaceAware/UIImageView+FaceAware.swift"; sourceTree = "<group>"; };
+		0E9BDE33A508D85F7B3CE1ADF4B2D77D /* CircleMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleMenu-umbrella.h"; sourceTree = "<group>"; };
+		14EAE578239921DE628213DDDC01B6BE /* paper-onboarding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "paper-onboarding.xcconfig"; sourceTree = "<group>"; };
+		17EEAF8FB811241BCD875C071BF45565 /* FaceAware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FaceAware.framework; path = FaceAware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DF11E6ED38C22F77B7F03337555C67 /* Pods-CertiWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CertiWine.release.xcconfig"; sourceTree = "<group>"; };
+		192DC09BD5B1DAF4F15C8B79CAAF2880 /* Material-Design-Iconic-Font.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Material-Design-Iconic-Font.ttf"; path = "FontAwesomeKit/Material-Design-Iconic-Font.ttf"; sourceTree = "<group>"; };
+		1ADFB0D9F83EB1601F9A7A657DE01BFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C3E4CB7C03D11B4946329BC03D17837 /* CircleMenuLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleMenuLoader.swift; path = CircleMenuLib/CircleMenuLoader/CircleMenuLoader.swift; sourceTree = "<group>"; };
+		2064C5B237455A639E43107F6B0A312C /* Pods-CertiWineTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CertiWineTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		24063DFF5168B43D968212678BD9F758 /* paper-onboarding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "paper-onboarding-prefix.pch"; sourceTree = "<group>"; };
+		25663C5851214E73BE1C365873124E9D /* Hue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hue.xcconfig; sourceTree = "<group>"; };
+		27A651DCD49E3AAA7C14501581AE300B /* PageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageContainer.swift; path = Source/PageView/PageContainerView/PageContainer.swift; sourceTree = "<group>"; };
+		27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		28C0F2058C2D212779F134C0DD13C798 /* Pods-CertiWineTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CertiWineTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2C158F79CDF7AFBB8C84B6FA2A3FA772 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FC845AF9937C8968F261B1942506027 /* GestureControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GestureControl.swift; path = Source/GestureControl/GestureControl.swift; sourceTree = "<group>"; };
+		3335170D5A9C2833496EF62596464077 /* Pods-CertiWine-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CertiWine-acknowledgements.markdown"; sourceTree = "<group>"; };
+		33A797E254EBBBD1E3DC3819C2E3BF5F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368817B836A1CD558E5541240701E26E /* Pods-CertiWine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CertiWine-umbrella.h"; sourceTree = "<group>"; };
+		3A341F06D5B4A45E85D6CDB84C1933D8 /* Configuring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuring.swift; path = Source/Helpers/Configuring.swift; sourceTree = "<group>"; };
+		3A8E638A0C48AC5C7A14611189A6DBC1 /* Pods-CertiWineTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CertiWineTests-dummy.m"; sourceTree = "<group>"; };
+		3BE7FF118FB872041C113CA0D5EF9CAD /* Pods-CertiWine-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CertiWine-acknowledgements.plist"; sourceTree = "<group>"; };
+		414B7FE295F021181820F4E5D512E143 /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = FontAwesomeKit/FAKIcon.m; sourceTree = "<group>"; };
+		44166D43D4E95D54C5D603E79F2AC2C3 /* CircleMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CircleMenu.modulemap; sourceTree = "<group>"; };
+		47C58E0DC7124A449B48FD41822A48CB /* FAKZocial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKZocial.h; path = FontAwesomeKit/FAKZocial.h; sourceTree = "<group>"; };
+		48BAB78C0DBF80C19AD2A1D6441C2AB6 /* FaceAware-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FaceAware-prefix.pch"; sourceTree = "<group>"; };
+		4F8841904ED4DDECC7E492335B93AFB6 /* OnboardingContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnboardingContentView.swift; path = Source/OnboardingContentView/OnboardingContentView.swift; sourceTree = "<group>"; };
+		50CEB266ED6E223FFC2EA8D70128C52E /* Pods-CertiWine-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CertiWine-resources.sh"; sourceTree = "<group>"; };
+		51B7BC9FC2BC26CE90C03F32D1878DBA /* FAKMaterialIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKMaterialIcons.m; path = FontAwesomeKit/FAKMaterialIcons.m; sourceTree = "<group>"; };
+		529B7CEB59FD17BBCC010540A45B8BF4 /* CircleMenuButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleMenuButton.swift; path = CircleMenuLib/CircleMenuButton/CircleMenuButton.swift; sourceTree = "<group>"; };
+		5785F597F2673238620B03CAD797D21D /* FAKFoundationIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFoundationIcons.h; path = FontAwesomeKit/FAKFoundationIcons.h; sourceTree = "<group>"; };
+		5814B5496C35FD35B077225159528EDC /* paper-onboarding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "paper-onboarding-umbrella.h"; sourceTree = "<group>"; };
+		58AF19622A12FC7DD82703255580ABAE /* CircleMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleMenu-dummy.m"; sourceTree = "<group>"; };
+		5A4B94E724D3666E5A57922A354F309F /* Pods-CertiWine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CertiWine.modulemap"; sourceTree = "<group>"; };
+		5D3E7ADA09CEEB986289EEFB7F4B07CB /* Hue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hue-prefix.pch"; sourceTree = "<group>"; };
+		5DAA4CB8F8F674CDD581470615175015 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F63B109DCC67EF2346B3330EB36879D /* PageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = Source/PageView/PageView.swift; sourceTree = "<group>"; };
+		610EA4682B8294839980877F5FF39458 /* Pods-CertiWineTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CertiWineTests-resources.sh"; sourceTree = "<group>"; };
+		65BF2A6118658DF3645311485FE6E0EB /* Pods-CertiWineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CertiWineTests.release.xcconfig"; sourceTree = "<group>"; };
+		6E2206A3EB6F5C53BF9B417321D72C4F /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "zocial-regular-webfont.ttf"; path = "FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		714DD7E1AFE10E6F11894E3E7F349EE9 /* Pods-CertiWineTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CertiWineTests-frameworks.sh"; sourceTree = "<group>"; };
+		76FCEEF9F5AA1F87794ECCBEB6B688EF /* CircleMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleMenu.xcconfig; sourceTree = "<group>"; };
+		7924CDFAFDFBF223CD9F2E4D305F737E /* FAKOcticons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKOcticons.h; path = FontAwesomeKit/FAKOcticons.h; sourceTree = "<group>"; };
+		7F8DD3B674EEDB53F8187C98E51BF2B5 /* Pods-CertiWine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CertiWine-dummy.m"; sourceTree = "<group>"; };
+		80B256604563464856DB7BBAEBB0ADD1 /* FontAwesomeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FontAwesomeKit.modulemap; sourceTree = "<group>"; };
+		816BEBFD07083AE14DEA916C44D73377 /* FontAwesomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FontAwesomeKit.framework; path = FontAwesomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		848384D6516058A1BEE254E098CD0359 /* Pods-CertiWine-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CertiWine-frameworks.sh"; sourceTree = "<group>"; };
+		8526066D6EF569C15FF3E89D1427539E /* FAKIonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIonIcons.h; path = FontAwesomeKit/FAKIonIcons.h; sourceTree = "<group>"; };
+		86E18EBFF0CBBEC4655BCF148861CB04 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboardingDataSource.swift; path = Source/PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
+		8B70116C8071E5219DA04517E5552601 /* Pods_CertiWine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CertiWine.framework; path = "Pods-CertiWine.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DF553B9E99BE78601D2A8DDC2903A89 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = paper_onboarding.framework; path = "paper-onboarding.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF11BE62C05925BAB565E34C89B0274 /* Pods-CertiWineTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CertiWineTests.modulemap"; sourceTree = "<group>"; };
+		92CC23791843EA07A9A52C7A7ABC9187 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98DBB44031962F01250EA8ACDC2EDA22 /* PageViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewItem.swift; path = Source/PageView/Item/PageViewItem.swift; sourceTree = "<group>"; };
+		A3D17F14595E77C208A53DEEC6D86F2F /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.otf; path = FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		A638411DB2F08C46A9C910BB8930E869 /* Pods_CertiWineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CertiWineTests.framework; path = "Pods-CertiWineTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A82AE594D608CADD4987F0D5D7EFE1F4 /* FontAwesomeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesomeKit.xcconfig; sourceTree = "<group>"; };
+		AF639D9784DDC47F2AD2613B4EEA6540 /* PaperOnboardingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboardingDelegate.swift; path = Source/PaperOnboardingDelegate.swift; sourceTree = "<group>"; };
+		B15204AA2DFFA6D8362D244FF7A9D828 /* foundation-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "foundation-icons.ttf"; path = "FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		B384138A7EC6E44762F5A072258C5234 /* Hue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hue.framework; path = Hue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B88BA9012064CEF6CA20DAB63FB3FB1C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E7D588AA17AC344B259E7BC8638E89 /* FAKFontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFontAwesome.m; path = FontAwesomeKit/FAKFontAwesome.m; sourceTree = "<group>"; };
+		BADCB4B9F06172D3D247954AA19ADC98 /* paper-onboarding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "paper-onboarding-dummy.m"; sourceTree = "<group>"; };
+		BCAD7D2165250F85A982D61793CB7608 /* Pods-CertiWineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CertiWineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDA621FFA80458EA4CDE91C757954773 /* FaceAware-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FaceAware-umbrella.h"; sourceTree = "<group>"; };
+		BE6D69D61D7B92B407A508D53955E52B /* FaceAware-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FaceAware-dummy.m"; sourceTree = "<group>"; };
+		C3520DDF3C03E7E8912F070B4B7D0161 /* octicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = octicons.ttf; path = FontAwesomeKit/octicons.ttf; sourceTree = "<group>"; };
+		C3B74E428B590E193793AF37C0E588A5 /* FAKFontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFontAwesome.h; path = FontAwesomeKit/FAKFontAwesome.h; sourceTree = "<group>"; };
+		C475216801333532DF55BB503F9D15A0 /* FaceAware.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FaceAware.modulemap; sourceTree = "<group>"; };
+		C55C580E1FC5B6E9F442FE42A9553FEA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		C85D7AC8974C74113DA2393C1AC3E23A /* FAKOcticons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKOcticons.m; path = FontAwesomeKit/FAKOcticons.m; sourceTree = "<group>"; };
+		CF4293AC34828023F4F9F6ADE23B58AC /* FontAwesomeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeKit-umbrella.h"; sourceTree = "<group>"; };
+		D80AC8B949361223B93921D9728A051C /* FaceAware.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FaceAware.xcconfig; sourceTree = "<group>"; };
+		D90D9BC1D0D055674F25049E07F6BF1C /* OnboardingContantViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnboardingContantViewItem.swift; path = Source/OnboardingContentView/Item/OnboardingContantViewItem.swift; sourceTree = "<group>"; };
+		D92B486DD9237175C7DCB3F86F260433 /* FAKMaterialIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKMaterialIcons.h; path = FontAwesomeKit/FAKMaterialIcons.h; sourceTree = "<group>"; };
+		DD6B56224CE03A21E97C546D60B276CE /* FontAwesomeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeKit-prefix.pch"; sourceTree = "<group>"; };
+		E034CB5353D27ECEAE29C8B16437F7A8 /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = ionicons.ttf; path = FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
+		E0D2929E302CEA1218FEC89A4E77D3D2 /* UIColor+Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hue.swift"; path = "Source/iOS/UIColor+Hue.swift"; sourceTree = "<group>"; };
+		E1935CAAA04EA7642BEB8A6271091E31 /* CircleMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleMenu-prefix.pch"; sourceTree = "<group>"; };
+		E1E1D4DAB07D5E5B2E0D8BAF96A11787 /* CircleMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircleMenu.framework; path = CircleMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E849A0A10F5D9195FAFDC70383F832B6 /* UIImage+Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Hue.swift"; path = "Source/iOS/UIImage+Hue.swift"; sourceTree = "<group>"; };
+		EB089526C583FCE0E8D21828A3759A1C /* Pods-CertiWineTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CertiWineTests-umbrella.h"; sourceTree = "<group>"; };
+		EE6BE54AB61C7C384DD24E0497808142 /* Hue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hue-umbrella.h"; sourceTree = "<group>"; };
+		EF6A661B1E65F8A291DBE5CB4A294B3B /* paper-onboarding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "paper-onboarding.modulemap"; sourceTree = "<group>"; };
+		F2B0C3B66C63DD8C25D977CE352C7E1C /* ConstraintsHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintsHelper.swift; path = Source/Helpers/ConstraintsHelper.swift; sourceTree = "<group>"; };
+		F5CAF671FE08EA01DC16CAE1D9CB7AF4 /* Hue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hue-dummy.m"; sourceTree = "<group>"; };
+		FDC5B779B789F2B1B05E645A1A53FF9D /* FAKIonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIonIcons.m; path = FontAwesomeKit/FAKIonIcons.m; sourceTree = "<group>"; };
+		FE02102C2D86A7512A6224BDDF733619 /* FontAwesomeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontAwesomeKit.h; path = FontAwesomeKit/FontAwesomeKit.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A325AAFE109272B85689483EA39F9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F2E8310657F6A3EBEBB5DB0CEEE7C38 /* Foundation.framework in Frameworks */,
+				7654819548331A59AAB96E83F6E9353E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		679DE02868A9576BDF20BC59AF1B4A2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7203765DBB10EBBA88FDEF431A435DEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75747D47FD22E4EB3C843426B364943D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7CF131806881684610E31F7EA931C5B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8501462497975B6EFFE9E8FF266B725C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2166C0EC39F6BB2B691B380B539FE8AD /* CoreText.framework in Frameworks */,
+				B98B26D76E50DE44887EDA3096028C46 /* Foundation.framework in Frameworks */,
+				FAA3DAE967FF67C21B6F3F730A9EEB59 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E07E39981584EEBC3CDFD56AB72FAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C214903E97437C9DE70A5F4C0B56041 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98B874BAD3CDD2365EF5B72C1656A0D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E836B47D4E10B4D0B2E9DC84A6FF6A89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3835794FE7F9B66AA611A44AB26BF02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70037719067023C26066A280A0B7228B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF1CA95E532A8F990E19506982FA04EE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15C568C5AD7EB5B4BBCC0BE6626A4B7B /* FaceAware */ = {
+			isa = PBXGroup;
+			children = (
+				0D90562BF7067650F056A7390E288DDD /* UIImageView+FaceAware.swift */,
+				9B7DEB15FCE646FC0DDB31EC3FB34D98 /* Support Files */,
+			);
+			name = FaceAware;
+			path = FaceAware;
+			sourceTree = "<group>";
+		};
+		1ABDEF8B44DEA007456CC351F9881E1E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80B256604563464856DB7BBAEBB0ADD1 /* FontAwesomeKit.modulemap */,
+				A82AE594D608CADD4987F0D5D7EFE1F4 /* FontAwesomeKit.xcconfig */,
+				090CC8C96EC3D654DE97D713C6B2E7BC /* FontAwesomeKit-dummy.m */,
+				DD6B56224CE03A21E97C546D60B276CE /* FontAwesomeKit-prefix.pch */,
+				CF4293AC34828023F4F9F6ADE23B58AC /* FontAwesomeKit-umbrella.h */,
+				2C158F79CDF7AFBB8C84B6FA2A3FA772 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FontAwesomeKit";
+			sourceTree = "<group>";
+		};
+		1B2FFBF86200577D5A2B375ABFC97C09 /* FoundationIcons */ = {
+			isa = PBXGroup;
+			children = (
+				5785F597F2673238620B03CAD797D21D /* FAKFoundationIcons.h */,
+				036A5BE0E55FBB135E07ECB4E2142B28 /* FAKFoundationIcons.m */,
+				3A78538A3D96232C39F991B01C1DB17C /* Resources */,
+			);
+			name = FoundationIcons;
+			sourceTree = "<group>";
+		};
+		2569A4A78B50AAF078A9F24AE4911931 /* Octicons */ = {
+			isa = PBXGroup;
+			children = (
+				7924CDFAFDFBF223CD9F2E4D305F737E /* FAKOcticons.h */,
+				C85D7AC8974C74113DA2393C1AC3E23A /* FAKOcticons.m */,
+				C7FD7289828DC18880E2E0254D4CBAFB /* Resources */,
+			);
+			name = Octicons;
+			sourceTree = "<group>";
+		};
+		3A78538A3D96232C39F991B01C1DB17C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B15204AA2DFFA6D8362D244FF7A9D828 /* foundation-icons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3AC908E6733C53D2126A961FD173A53C /* paper-onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3A341F06D5B4A45E85D6CDB84C1933D8 /* Configuring.swift */,
+				F2B0C3B66C63DD8C25D977CE352C7E1C /* ConstraintsHelper.swift */,
+				03643D99E6302D0E9D9E4E8582B55294 /* FillAnimationView.swift */,
+				2FC845AF9937C8968F261B1942506027 /* GestureControl.swift */,
+				D90D9BC1D0D055674F25049E07F6BF1C /* OnboardingContantViewItem.swift */,
+				4F8841904ED4DDECC7E492335B93AFB6 /* OnboardingContentView.swift */,
+				27A651DCD49E3AAA7C14501581AE300B /* PageContainer.swift */,
+				5F63B109DCC67EF2346B3330EB36879D /* PageView.swift */,
+				98DBB44031962F01250EA8ACDC2EDA22 /* PageViewItem.swift */,
+				0C0B56F8E6D5DF2B08B2819934E437A2 /* PaperOnboarding.swift */,
+				86E18EBFF0CBBEC4655BCF148861CB04 /* PaperOnboardingDataSource.swift */,
+				AF639D9784DDC47F2AD2613B4EEA6540 /* PaperOnboardingDelegate.swift */,
+				54D88F295373E26C1771289621A34550 /* Support Files */,
+			);
+			name = "paper-onboarding";
+			path = "paper-onboarding";
+			sourceTree = "<group>";
+		};
+		406BE98B557944EAE98A3C0D2A3A656C /* Pods-CertiWine */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB0D9F83EB1601F9A7A657DE01BFE /* Info.plist */,
+				5A4B94E724D3666E5A57922A354F309F /* Pods-CertiWine.modulemap */,
+				3335170D5A9C2833496EF62596464077 /* Pods-CertiWine-acknowledgements.markdown */,
+				3BE7FF118FB872041C113CA0D5EF9CAD /* Pods-CertiWine-acknowledgements.plist */,
+				7F8DD3B674EEDB53F8187C98E51BF2B5 /* Pods-CertiWine-dummy.m */,
+				848384D6516058A1BEE254E098CD0359 /* Pods-CertiWine-frameworks.sh */,
+				50CEB266ED6E223FFC2EA8D70128C52E /* Pods-CertiWine-resources.sh */,
+				368817B836A1CD558E5541240701E26E /* Pods-CertiWine-umbrella.h */,
+				0CAF7EE65780CFF2B92A4FF3616652BC /* Pods-CertiWine.debug.xcconfig */,
+				18DF11E6ED38C22F77B7F03337555C67 /* Pods-CertiWine.release.xcconfig */,
+			);
+			name = "Pods-CertiWine";
+			path = "Target Support Files/Pods-CertiWine";
+			sourceTree = "<group>";
+		};
+		44622A01110C08A7EC0D0C060D02E2FA /* IonIcons */ = {
+			isa = PBXGroup;
+			children = (
+				8526066D6EF569C15FF3E89D1427539E /* FAKIonIcons.h */,
+				FDC5B779B789F2B1B05E645A1A53FF9D /* FAKIonIcons.m */,
+				7F517784E9736F0CDA81AFEB983B3E62 /* Resources */,
+			);
+			name = IonIcons;
+			sourceTree = "<group>";
+		};
+		4B84528E975A83331C8B9F9AE3DD24DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				07B8225F27573277CB2EAC773C8EB010 /* Hue.modulemap */,
+				25663C5851214E73BE1C365873124E9D /* Hue.xcconfig */,
+				F5CAF671FE08EA01DC16CAE1D9CB7AF4 /* Hue-dummy.m */,
+				5D3E7ADA09CEEB986289EEFB7F4B07CB /* Hue-prefix.pch */,
+				EE6BE54AB61C7C384DD24E0497808142 /* Hue-umbrella.h */,
+				B88BA9012064CEF6CA20DAB63FB3FB1C /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Hue";
+			sourceTree = "<group>";
+		};
+		54D88F295373E26C1771289621A34550 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DAA4CB8F8F674CDD581470615175015 /* Info.plist */,
+				EF6A661B1E65F8A291DBE5CB4A294B3B /* paper-onboarding.modulemap */,
+				14EAE578239921DE628213DDDC01B6BE /* paper-onboarding.xcconfig */,
+				BADCB4B9F06172D3D247954AA19ADC98 /* paper-onboarding-dummy.m */,
+				24063DFF5168B43D968212678BD9F758 /* paper-onboarding-prefix.pch */,
+				5814B5496C35FD35B077225159528EDC /* paper-onboarding-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/paper-onboarding";
+			sourceTree = "<group>";
+		};
+		58381E9267BAD1D8BB0AB79E397CCE8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D14D64FE49E3BF62E69E129DD681ED6 /* CircleMenu */,
+				15C568C5AD7EB5B4BBCC0BE6626A4B7B /* FaceAware */,
+				8AC653ED98F3681FE8D772DC6F49F3BF /* FontAwesomeKit */,
+				BFC7E9E5EA1A443F0189166A2E6F0879 /* Hue */,
+				3AC908E6733C53D2126A961FD173A53C /* paper-onboarding */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		590AF8AB4F6A490D14C11FB045A93DD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3D17F14595E77C208A53DEEC6D86F2F /* FontAwesome.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		59F2E9D905ADD9B79C900C1F083FA2AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				192DC09BD5B1DAF4F15C8B79CAAF2880 /* Material-Design-Iconic-Font.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		70021133CAE3CDCC7E467EB82963C988 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				44166D43D4E95D54C5D603E79F2AC2C3 /* CircleMenu.modulemap */,
+				76FCEEF9F5AA1F87794ECCBEB6B688EF /* CircleMenu.xcconfig */,
+				58AF19622A12FC7DD82703255580ABAE /* CircleMenu-dummy.m */,
+				E1935CAAA04EA7642BEB8A6271091E31 /* CircleMenu-prefix.pch */,
+				0E9BDE33A508D85F7B3CE1ADF4B2D77D /* CircleMenu-umbrella.h */,
+				33A797E254EBBBD1E3DC3819C2E3BF5F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CircleMenu";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				58381E9267BAD1D8BB0AB79E397CCE8D /* Pods */,
+				D213C7F4464B15FACA6E5CF492849446 /* Products */,
+				C7F10F0EEE03A05C576A15E6E5E96491 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7F517784E9736F0CDA81AFEB983B3E62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E034CB5353D27ECEAE29C8B16437F7A8 /* ionicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8AC653ED98F3681FE8D772DC6F49F3BF /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				FE02102C2D86A7512A6224BDDF733619 /* FontAwesomeKit.h */,
+				D0DD68BFBE477A50BAC42EF835851C03 /* Core */,
+				CCB4D306E9E35195719E0D1FB27E425D /* FontAwesome */,
+				1B2FFBF86200577D5A2B375ABFC97C09 /* FoundationIcons */,
+				44622A01110C08A7EC0D0C060D02E2FA /* IonIcons */,
+				F30140B8A1945C34D60AC006B2FFA00C /* Material */,
+				2569A4A78B50AAF078A9F24AE4911931 /* Octicons */,
+				1ABDEF8B44DEA007456CC351F9881E1E /* Support Files */,
+				FFB68EB6FF17900A6E8E9F265D7E368B /* Zocial */,
+			);
+			name = FontAwesomeKit;
+			path = FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		9B7DEB15FCE646FC0DDB31EC3FB34D98 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C475216801333532DF55BB503F9D15A0 /* FaceAware.modulemap */,
+				D80AC8B949361223B93921D9728A051C /* FaceAware.xcconfig */,
+				BE6D69D61D7B92B407A508D53955E52B /* FaceAware-dummy.m */,
+				48BAB78C0DBF80C19AD2A1D6441C2AB6 /* FaceAware-prefix.pch */,
+				BDA621FFA80458EA4CDE91C757954773 /* FaceAware-umbrella.h */,
+				92CC23791843EA07A9A52C7A7ABC9187 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FaceAware";
+			sourceTree = "<group>";
+		};
+		9D14D64FE49E3BF62E69E129DD681ED6 /* CircleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				02FDE69C8C70B7D8F9B1FAFE8DE9E916 /* CircleMenu.swift */,
+				529B7CEB59FD17BBCC010540A45B8BF4 /* CircleMenuButton.swift */,
+				1C3E4CB7C03D11B4946329BC03D17837 /* CircleMenuLoader.swift */,
+				70021133CAE3CDCC7E467EB82963C988 /* Support Files */,
+			);
+			name = CircleMenu;
+			path = CircleMenu;
+			sourceTree = "<group>";
+		};
+		9DAD93A4B9DB5DA1C5C8C42A3DDD9356 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E2206A3EB6F5C53BF9B417321D72C4F /* zocial-regular-webfont.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BFC7E9E5EA1A443F0189166A2E6F0879 /* Hue */ = {
+			isa = PBXGroup;
+			children = (
+				E0D2929E302CEA1218FEC89A4E77D3D2 /* UIColor+Hue.swift */,
+				E849A0A10F5D9195FAFDC70383F832B6 /* UIImage+Hue.swift */,
+				4B84528E975A83331C8B9F9AE3DD24DE /* Support Files */,
+			);
+			name = Hue;
+			path = Hue;
+			sourceTree = "<group>";
+		};
+		C7F10F0EEE03A05C576A15E6E5E96491 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				406BE98B557944EAE98A3C0D2A3A656C /* Pods-CertiWine */,
+				D3F634D5E0B69CEC7B5293D983FE19E1 /* Pods-CertiWineTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C7FD7289828DC18880E2E0254D4CBAFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3520DDF3C03E7E8912F070B4B7D0161 /* octicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CCB4D306E9E35195719E0D1FB27E425D /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				C3B74E428B590E193793AF37C0E588A5 /* FAKFontAwesome.h */,
+				B8E7D588AA17AC344B259E7BC8638E89 /* FAKFontAwesome.m */,
+				590AF8AB4F6A490D14C11FB045A93DD7 /* Resources */,
+			);
+			name = FontAwesome;
+			sourceTree = "<group>";
+		};
+		D0DD68BFBE477A50BAC42EF835851C03 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				00FD5060CE078DD7616C9831D806328C /* FAKIcon.h */,
+				414B7FE295F021181820F4E5D512E143 /* FAKIcon.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		D213C7F4464B15FACA6E5CF492849446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1E1D4DAB07D5E5B2E0D8BAF96A11787 /* CircleMenu.framework */,
+				17EEAF8FB811241BCD875C071BF45565 /* FaceAware.framework */,
+				816BEBFD07083AE14DEA916C44D73377 /* FontAwesomeKit.framework */,
+				B384138A7EC6E44762F5A072258C5234 /* Hue.framework */,
+				8DF553B9E99BE78601D2A8DDC2903A89 /* paper_onboarding.framework */,
+				8B70116C8071E5219DA04517E5552601 /* Pods_CertiWine.framework */,
+				A638411DB2F08C46A9C910BB8930E869 /* Pods_CertiWineTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3F634D5E0B69CEC7B5293D983FE19E1 /* Pods-CertiWineTests */ = {
+			isa = PBXGroup;
+			children = (
+				042CC2F995150E06B18F8D959635A247 /* Info.plist */,
+				8FF11BE62C05925BAB565E34C89B0274 /* Pods-CertiWineTests.modulemap */,
+				28C0F2058C2D212779F134C0DD13C798 /* Pods-CertiWineTests-acknowledgements.markdown */,
+				2064C5B237455A639E43107F6B0A312C /* Pods-CertiWineTests-acknowledgements.plist */,
+				3A8E638A0C48AC5C7A14611189A6DBC1 /* Pods-CertiWineTests-dummy.m */,
+				714DD7E1AFE10E6F11894E3E7F349EE9 /* Pods-CertiWineTests-frameworks.sh */,
+				610EA4682B8294839980877F5FF39458 /* Pods-CertiWineTests-resources.sh */,
+				EB089526C583FCE0E8D21828A3759A1C /* Pods-CertiWineTests-umbrella.h */,
+				BCAD7D2165250F85A982D61793CB7608 /* Pods-CertiWineTests.debug.xcconfig */,
+				65BF2A6118658DF3645311485FE6E0EB /* Pods-CertiWineTests.release.xcconfig */,
+			);
+			name = "Pods-CertiWineTests";
+			path = "Target Support Files/Pods-CertiWineTests";
+			sourceTree = "<group>";
+		};
+		F30140B8A1945C34D60AC006B2FFA00C /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				D92B486DD9237175C7DCB3F86F260433 /* FAKMaterialIcons.h */,
+				51B7BC9FC2BC26CE90C03F32D1878DBA /* FAKMaterialIcons.m */,
+				59F2E9D905ADD9B79C900C1F083FA2AF /* Resources */,
+			);
+			name = Material;
+			sourceTree = "<group>";
+		};
+		FF1CA95E532A8F990E19506982FA04EE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C55C580E1FC5B6E9F442FE42A9553FEA /* CoreText.framework */,
+				A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */,
+				27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FFB68EB6FF17900A6E8E9F265D7E368B /* Zocial */ = {
+			isa = PBXGroup;
+			children = (
+				47C58E0DC7124A449B48FD41822A48CB /* FAKZocial.h */,
+				0958A56885699439C22D11FEDB34068B /* FAKZocial.m */,
+				9DAD93A4B9DB5DA1C5C8C42A3DDD9356 /* Resources */,
+			);
+			name = Zocial;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2B0AC73E729AAE80CAB37E9B7958E3A6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C2164E8F60BCD2B17B5B2F607A8E048 /* FaceAware-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383E730748015EC043CAC16F56FABF4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1744730BD2F44285918621E79B0C115 /* Pods-CertiWine-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DCD29ED93F6CFC863848D62944817B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				126497559A13DBF44A4772FE59850ACA /* CircleMenu-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8199018E4951567D134E4591A8B6F392 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C941A7138D6538E603006596E05684 /* Pods-CertiWineTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF933365F7C3E1F06DEC61034BEA127 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5093F84F27DF70B22CA692D3485AF2DB /* FAKFontAwesome.h in Headers */,
+				70644D2FAACDCB954D268086F220F534 /* FAKFoundationIcons.h in Headers */,
+				3964A2B00BB8619003961BD7D3BD1AF1 /* FAKIcon.h in Headers */,
+				D26832C96E013704F116A04D12D9B10D /* FAKIonIcons.h in Headers */,
+				8267189738A27E9FB0B3B61F0B2C84CA /* FAKMaterialIcons.h in Headers */,
+				1872CD2DA576F188DAFBE6CCA3EC4DCF /* FAKOcticons.h in Headers */,
+				332E15E9E986025C0150030E720D976A /* FAKZocial.h in Headers */,
+				99D62A3C6928E8C7BD61E2C98E5A360F /* FontAwesomeKit-umbrella.h in Headers */,
+				9BF8930E69FAFBCFCA70563E4775913F /* FontAwesomeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D025A52D0EFD2820155A870EEA13A4C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7455C21A8CDE7750973B1EA649305312 /* paper-onboarding-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7A1A54E14DBFCE33CEEFA24B23A9282 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20070C9501DA782A1D5EDCB4F75AEDE2 /* Hue-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		738B2050D3EE6CEF2F8FC5020EAB44A1 /* paper-onboarding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C0F1C8062762AC00D8F9FF77BD2BCD9 /* Build configuration list for PBXNativeTarget "paper-onboarding" */;
+			buildPhases = (
+				51939CF808A8AD03A5E37CB8C1090A43 /* Sources */,
+				87E07E39981584EEBC3CDFD56AB72FAC /* Frameworks */,
+				D025A52D0EFD2820155A870EEA13A4C6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "paper-onboarding";
+			productName = "paper-onboarding";
+			productReference = 8DF553B9E99BE78601D2A8DDC2903A89 /* paper_onboarding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		98D06F4F0E9B5D90D55AE30CACF069C7 /* Pods-CertiWine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF6976CFA7B73D782B561FB35CE5C9F /* Build configuration list for PBXNativeTarget "Pods-CertiWine" */;
+			buildPhases = (
+				9BD74F7DBD6F908CEFE226022EA7D1A2 /* Sources */,
+				75747D47FD22E4EB3C843426B364943D /* Frameworks */,
+				383E730748015EC043CAC16F56FABF4F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC5DB9257B2F7C283B4260A7EA82A2CA /* PBXTargetDependency */,
+				D6CCD0A2C0C8EB2B8990C05CBFF0E5B4 /* PBXTargetDependency */,
+				89FC5578CA4AC5958BEEC59DD9B61276 /* PBXTargetDependency */,
+				4930F73C5FA50C6B13645ABD00289827 /* PBXTargetDependency */,
+				4EBE6045894D72383A23347A09262124 /* PBXTargetDependency */,
+			);
+			name = "Pods-CertiWine";
+			productName = "Pods-CertiWine";
+			productReference = 8B70116C8071E5219DA04517E5552601 /* Pods_CertiWine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C0D4D60FC8558D0199CE0C958E22855 /* FaceAware */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9950655C9CBC5E137F56C6CB99862F /* Build configuration list for PBXNativeTarget "FaceAware" */;
+			buildPhases = (
+				4D9946B1B99DBCFBEF27EDC20B9173D2 /* Sources */,
+				98B874BAD3CDD2365EF5B72C1656A0D7 /* Frameworks */,
+				2B0AC73E729AAE80CAB37E9B7958E3A6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceAware;
+			productName = FaceAware;
+			productReference = 17EEAF8FB811241BCD875C071BF45565 /* FaceAware.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A8E1DFAA9703A5C068D915A4C272EA21 /* FontAwesomeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04EF0251B435B1FD8A5D405A1E79A639 /* Build configuration list for PBXNativeTarget "FontAwesomeKit" */;
+			buildPhases = (
+				1C11690BF49CDCBB7017548784E319D7 /* Sources */,
+				8501462497975B6EFFE9E8FF266B725C /* Frameworks */,
+				8FF933365F7C3E1F06DEC61034BEA127 /* Headers */,
+				F22AB6CB1A0587A4E4A25F8446D0984F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontAwesomeKit;
+			productName = FontAwesomeKit;
+			productReference = 816BEBFD07083AE14DEA916C44D73377 /* FontAwesomeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B2542602E50EDF091ADB18B4688DF34F /* Hue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7517784A4541FCDE27289AB3A48C7E6 /* Build configuration list for PBXNativeTarget "Hue" */;
+			buildPhases = (
+				5447F17F074A6885C2DE5EA00B620E76 /* Sources */,
+				0A325AAFE109272B85689483EA39F9B2 /* Frameworks */,
+				F7A1A54E14DBFCE33CEEFA24B23A9282 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hue;
+			productName = Hue;
+			productReference = B384138A7EC6E44762F5A072258C5234 /* Hue.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C39CBBDC6A60D162E03DC4AD5459EF78 /* Pods-CertiWineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67E6BFFFB7E3B82140392430B37DC259 /* Build configuration list for PBXNativeTarget "Pods-CertiWineTests" */;
+			buildPhases = (
+				2283DC0565F46D7ACD91759E21A83877 /* Sources */,
+				679DE02868A9576BDF20BC59AF1B4A2B /* Frameworks */,
+				8199018E4951567D134E4591A8B6F392 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CertiWineTests";
+			productName = "Pods-CertiWineTests";
+			productReference = A638411DB2F08C46A9C910BB8930E869 /* Pods_CertiWineTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FE0EA4A854B31B97AB23A6135FCBFABD /* CircleMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A40B397D803C8F1AFE1CFAC2F2ECE5B /* Build configuration list for PBXNativeTarget "CircleMenu" */;
+			buildPhases = (
+				473746D209B50441D33A0C746273C170 /* Sources */,
+				A3835794FE7F9B66AA611A44AB26BF02 /* Frameworks */,
+				4DCD29ED93F6CFC863848D62944817B8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircleMenu;
+			productName = CircleMenu;
+			productReference = E1E1D4DAB07D5E5B2E0D8BAF96A11787 /* CircleMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D213C7F4464B15FACA6E5CF492849446 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE0EA4A854B31B97AB23A6135FCBFABD /* CircleMenu */,
+				9C0D4D60FC8558D0199CE0C958E22855 /* FaceAware */,
+				A8E1DFAA9703A5C068D915A4C272EA21 /* FontAwesomeKit */,
+				B2542602E50EDF091ADB18B4688DF34F /* Hue */,
+				738B2050D3EE6CEF2F8FC5020EAB44A1 /* paper-onboarding */,
+				98D06F4F0E9B5D90D55AE30CACF069C7 /* Pods-CertiWine */,
+				C39CBBDC6A60D162E03DC4AD5459EF78 /* Pods-CertiWineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F22AB6CB1A0587A4E4A25F8446D0984F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61FA9EF01CB62B6F8F33C42E50CAF536 /* FontAwesome.otf in Resources */,
+				1769170427A6B5C9688007764866EDDA /* foundation-icons.ttf in Resources */,
+				A6D1C9304CF49244EB5D99A69971A8EE /* ionicons.ttf in Resources */,
+				FDFB10982DFB0AE07FB9571456B05CC7 /* Material-Design-Iconic-Font.ttf in Resources */,
+				0281A099B6DF240CD72EE130618B1B0F /* octicons.ttf in Resources */,
+				6A72C8E44A0E2774C76D073F982E117F /* zocial-regular-webfont.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C11690BF49CDCBB7017548784E319D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113902E55762062A2D48B56D8DAA0532 /* FAKFontAwesome.m in Sources */,
+				4B7E574AEF9BAB8E643CCBA149E8A85F /* FAKFoundationIcons.m in Sources */,
+				37DA891DDA5E91349A6E7CEF0465CC51 /* FAKIcon.m in Sources */,
+				6B3C2778C40F244D98903E993A211EB5 /* FAKIonIcons.m in Sources */,
+				BB377AC3B7923B0182478FB34EAAC42D /* FAKMaterialIcons.m in Sources */,
+				5832280486E1376CBD13F70A8C6F02C6 /* FAKOcticons.m in Sources */,
+				D327632C06E3B012E8956FFC6A4219EB /* FAKZocial.m in Sources */,
+				C7DA2447575E683C18E8A452A886B85C /* FontAwesomeKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2283DC0565F46D7ACD91759E21A83877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D7C486572E5A90022B4BB839F06DEF /* Pods-CertiWineTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473746D209B50441D33A0C746273C170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6D63929C555092395F0536F960D1C4 /* CircleMenu-dummy.m in Sources */,
+				CEC8FC4A3321340F48708DCECA1B0EB7 /* CircleMenu.swift in Sources */,
+				8F418BCF1151FB34F297F908475B048D /* CircleMenuButton.swift in Sources */,
+				3DD8CAA7CBB4F9B90855F31858D30924 /* CircleMenuLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D9946B1B99DBCFBEF27EDC20B9173D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03141771231498E20C3058324607C640 /* FaceAware-dummy.m in Sources */,
+				302BA79F7DBB6B6E09EC10F46AA6903D /* UIImageView+FaceAware.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51939CF808A8AD03A5E37CB8C1090A43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61430A34EB37246ABC3F8E8E29806F38 /* Configuring.swift in Sources */,
+				85EE7A0CB68505A4ABBC14C8B528EABB /* ConstraintsHelper.swift in Sources */,
+				4F5FAA1BFB6846C4C80D881F3B9355A7 /* FillAnimationView.swift in Sources */,
+				2D30889B4E1FC09CB6FDB15B96AD30E9 /* GestureControl.swift in Sources */,
+				409BCBFBF2161753E6B85649EF6633C5 /* OnboardingContantViewItem.swift in Sources */,
+				5A1AE014B6FF9AC20A3402A7B05BA7E5 /* OnboardingContentView.swift in Sources */,
+				3346ABD8DBFC61551BA6DD0AEC5CB9DE /* PageContainer.swift in Sources */,
+				10BD6D329B02C3275995F12648C56B90 /* PageView.swift in Sources */,
+				48696FE82A4D8086055541E81DC94107 /* PageViewItem.swift in Sources */,
+				DC1474A8A5F9C27D852181B661944619 /* paper-onboarding-dummy.m in Sources */,
+				CD0A71E316A3C77C88AE6C30C3562CB0 /* PaperOnboarding.swift in Sources */,
+				CDEAFF50FED59401B66C354798994E30 /* PaperOnboardingDataSource.swift in Sources */,
+				66D2E16A248430B979133176DCC3B109 /* PaperOnboardingDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5447F17F074A6885C2DE5EA00B620E76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70CBCB67007D356F14B8EC15118BA9E3 /* Hue-dummy.m in Sources */,
+				83790D4473D3F8965A7705C0EE1ADFC6 /* UIColor+Hue.swift in Sources */,
+				F85030977A6D1BAC697812B41A5905C7 /* UIImage+Hue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD74F7DBD6F908CEFE226022EA7D1A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE061A1D694BAAD2291C9D7FF78DB7B /* Pods-CertiWine-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4930F73C5FA50C6B13645ABD00289827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Hue;
+			target = B2542602E50EDF091ADB18B4688DF34F /* Hue */;
+			targetProxy = 86A0F8CB708BB764DDC7591F76487D80 /* PBXContainerItemProxy */;
+		};
+		4EBE6045894D72383A23347A09262124 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "paper-onboarding";
+			target = 738B2050D3EE6CEF2F8FC5020EAB44A1 /* paper-onboarding */;
+			targetProxy = 99B85A061C6183B5D14F14698630CFA5 /* PBXContainerItemProxy */;
+		};
+		89FC5578CA4AC5958BEEC59DD9B61276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesomeKit;
+			target = A8E1DFAA9703A5C068D915A4C272EA21 /* FontAwesomeKit */;
+			targetProxy = 3DBAD11C9704BFA379CD90F6A3EBDC10 /* PBXContainerItemProxy */;
+		};
+		D6CCD0A2C0C8EB2B8990C05CBFF0E5B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FaceAware;
+			target = 9C0D4D60FC8558D0199CE0C958E22855 /* FaceAware */;
+			targetProxy = 3D44276D2B9646F0CD05B5D6B86523CB /* PBXContainerItemProxy */;
+		};
+		EC5DB9257B2F7C283B4260A7EA82A2CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CircleMenu;
+			target = FE0EA4A854B31B97AB23A6135FCBFABD /* CircleMenu */;
+			targetProxy = 8A2A905B8D6C47E086FBCB9903D8F5FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		004F50F93D93A56FB8856B5CABD68951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14EAE578239921DE628213DDDC01B6BE /* paper-onboarding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/paper-onboarding/paper-onboarding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/paper-onboarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/paper-onboarding/paper-onboarding.modulemap";
+				PRODUCT_NAME = paper_onboarding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		13DBEF06DE6A8D3109EF8BCC2ACB12A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82AE594D608CADD4987F0D5D7EFE1F4 /* FontAwesomeKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeKit/FontAwesomeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesomeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesomeKit/FontAwesomeKit.modulemap";
+				PRODUCT_NAME = FontAwesomeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		388B9498FDAEB474D45BD46C535EFFF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80AC8B949361223B93921D9728A051C /* FaceAware.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FaceAware/FaceAware-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FaceAware/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FaceAware/FaceAware.modulemap";
+				PRODUCT_NAME = FaceAware;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39C5BC78A31CDE101068C530CAC7FA0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5356D94F03555E5E6A444F3E7778EACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80AC8B949361223B93921D9728A051C /* FaceAware.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FaceAware/FaceAware-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FaceAware/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FaceAware/FaceAware.modulemap";
+				PRODUCT_NAME = FaceAware;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5C8BD6E80094468C7229CB7661D0F9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82AE594D608CADD4987F0D5D7EFE1F4 /* FontAwesomeKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeKit/FontAwesomeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesomeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesomeKit/FontAwesomeKit.modulemap";
+				PRODUCT_NAME = FontAwesomeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		997D3CD0E3A6D4589FAA03724EE9F8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65BF2A6118658DF3645311485FE6E0EB /* Pods-CertiWineTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CertiWineTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CertiWineTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A8EF088EABAC45023505B6A78E41AE54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CAF7EE65780CFF2B92A4FF3616652BC /* Pods-CertiWine.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CertiWine/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CertiWine/Pods-CertiWine.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CertiWine;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BD0F035BC15A3681D1B41395D05C2101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76FCEEF9F5AA1F87794ECCBEB6B688EF /* CircleMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CircleMenu/CircleMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CircleMenu/CircleMenu.modulemap";
+				PRODUCT_NAME = CircleMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9B88205904806C3B0AEFA0FB413A49A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18DF11E6ED38C22F77B7F03337555C67 /* Pods-CertiWine.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CertiWine/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CertiWine/Pods-CertiWine.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CertiWine;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CF1E677AB6042E52C8A7C5B42206A158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCAD7D2165250F85A982D61793CB7608 /* Pods-CertiWineTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CertiWineTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CertiWineTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0D43AD66A76D56480713AFF68346245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25663C5851214E73BE1C365873124E9D /* Hue.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hue/Hue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hue/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hue/Hue.modulemap";
+				PRODUCT_NAME = Hue;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D18DC9C1F03619F21F56121CCA9B140E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76FCEEF9F5AA1F87794ECCBEB6B688EF /* CircleMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CircleMenu/CircleMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CircleMenu/CircleMenu.modulemap";
+				PRODUCT_NAME = CircleMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D49B009CD5EF3ABAAF87B30EFA3B5F25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25663C5851214E73BE1C365873124E9D /* Hue.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hue/Hue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hue/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hue/Hue.modulemap";
+				PRODUCT_NAME = Hue;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F07C1873D6D0928E56BE4987D10EDB2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14EAE578239921DE628213DDDC01B6BE /* paper-onboarding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/paper-onboarding/paper-onboarding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/paper-onboarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/paper-onboarding/paper-onboarding.modulemap";
+				PRODUCT_NAME = paper_onboarding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04EF0251B435B1FD8A5D405A1E79A639 /* Build configuration list for PBXNativeTarget "FontAwesomeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13DBEF06DE6A8D3109EF8BCC2ACB12A8 /* Debug */,
+				5C8BD6E80094468C7229CB7661D0F9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C0F1C8062762AC00D8F9FF77BD2BCD9 /* Build configuration list for PBXNativeTarget "paper-onboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				004F50F93D93A56FB8856B5CABD68951 /* Debug */,
+				F07C1873D6D0928E56BE4987D10EDB2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A40B397D803C8F1AFE1CFAC2F2ECE5B /* Build configuration list for PBXNativeTarget "CircleMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD0F035BC15A3681D1B41395D05C2101 /* Debug */,
+				D18DC9C1F03619F21F56121CCA9B140E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39C5BC78A31CDE101068C530CAC7FA0F /* Debug */,
+				89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9950655C9CBC5E137F56C6CB99862F /* Build configuration list for PBXNativeTarget "FaceAware" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388B9498FDAEB474D45BD46C535EFFF3 /* Debug */,
+				5356D94F03555E5E6A444F3E7778EACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67E6BFFFB7E3B82140392430B37DC259 /* Build configuration list for PBXNativeTarget "Pods-CertiWineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1E677AB6042E52C8A7C5B42206A158 /* Debug */,
+				997D3CD0E3A6D4589FAA03724EE9F8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7517784A4541FCDE27289AB3A48C7E6 /* Build configuration list for PBXNativeTarget "Hue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49B009CD5EF3ABAAF87B30EFA3B5F25 /* Debug */,
+				D0D43AD66A76D56480713AFF68346245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF6976CFA7B73D782B561FB35CE5C9F /* Build configuration list for PBXNativeTarget "Pods-CertiWine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8EF088EABAC45023505B6A78E41AE54 /* Debug */,
+				C9B88205904806C3B0AEFA0FB413A49A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

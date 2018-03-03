@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42034693204A9C6F00CE2D56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42034692204A9C6F00CE2D56 /* AppDelegate.swift */; };
+		42034695204A9C6F00CE2D56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42034694204A9C6F00CE2D56 /* ViewController.swift */; };
+		42034698204A9C6F00CE2D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42034696204A9C6F00CE2D56 /* Main.storyboard */; };
+		4203469A204A9C6F00CE2D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42034699204A9C6F00CE2D56 /* Assets.xcassets */; };
+		4203469D204A9C6F00CE2D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */; };
+		420346A8204A9C6F00CE2D56 /* CertiWineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346A7204A9C6F00CE2D56 /* CertiWineTests.swift */; };
+		431B601B528E918029AC9BAC /* Pods_CertiWineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9359238305233B05134070 /* Pods_CertiWineTests.framework */; };
+		DFF4B5C1CD12F3C4DCA884E6 /* Pods_CertiWine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93869E715A841712808D042C /* Pods_CertiWine.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		420346A4204A9C6F00CE2D56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42034687204A9C6F00CE2D56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4203468E204A9C6F00CE2D56;
+			remoteInfo = CertiWine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4203468F204A9C6F00CE2D56 /* CertiWine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CertiWine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42034692204A9C6F00CE2D56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42034694204A9C6F00CE2D56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42034697204A9C6F00CE2D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42034699204A9C6F00CE2D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4203469C204A9C6F00CE2D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4203469E204A9C6F00CE2D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		420346A3204A9C6F00CE2D56 /* CertiWineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CertiWineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		420346A7204A9C6F00CE2D56 /* CertiWineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiWineTests.swift; sourceTree = "<group>"; };
+		420346A9204A9C6F00CE2D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E9359238305233B05134070 /* Pods_CertiWineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CertiWineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		93869E715A841712808D042C /* Pods_CertiWine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CertiWine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C479593ED983DB6A3CEF760E /* Pods-CertiWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWine/Pods-CertiWine.release.xcconfig"; sourceTree = "<group>"; };
+		D2CADD1715B6B87D4FE14E0B /* Pods-CertiWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWine/Pods-CertiWine.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4203468C204A9C6F00CE2D56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF4B5C1CD12F3C4DCA884E6 /* Pods_CertiWine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		420346A0204A9C6F00CE2D56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				431B601B528E918029AC9BAC /* Pods_CertiWineTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42034686204A9C6F00CE2D56 = {
+			isa = PBXGroup;
+			children = (
+				42034691204A9C6F00CE2D56 /* CertiWine */,
+				420346A6204A9C6F00CE2D56 /* CertiWineTests */,
+				42034690204A9C6F00CE2D56 /* Products */,
+				B932C4EEE0BD48921E496455 /* Pods */,
+				77805BA6FB8DF071565EF256 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		42034690204A9C6F00CE2D56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4203468F204A9C6F00CE2D56 /* CertiWine.app */,
+				420346A3204A9C6F00CE2D56 /* CertiWineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42034691204A9C6F00CE2D56 /* CertiWine */ = {
+			isa = PBXGroup;
+			children = (
+				42034692204A9C6F00CE2D56 /* AppDelegate.swift */,
+				42034694204A9C6F00CE2D56 /* ViewController.swift */,
+				42034696204A9C6F00CE2D56 /* Main.storyboard */,
+				42034699204A9C6F00CE2D56 /* Assets.xcassets */,
+				4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */,
+				4203469E204A9C6F00CE2D56 /* Info.plist */,
+			);
+			path = CertiWine;
+			sourceTree = "<group>";
+		};
+		420346A6204A9C6F00CE2D56 /* CertiWineTests */ = {
+			isa = PBXGroup;
+			children = (
+				420346A7204A9C6F00CE2D56 /* CertiWineTests.swift */,
+				420346A9204A9C6F00CE2D56 /* Info.plist */,
+			);
+			path = CertiWineTests;
+			sourceTree = "<group>";
+		};
+		77805BA6FB8DF071565EF256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93869E715A841712808D042C /* Pods_CertiWine.framework */,
+				4E9359238305233B05134070 /* Pods_CertiWineTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B932C4EEE0BD48921E496455 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2CADD1715B6B87D4FE14E0B /* Pods-CertiWine.debug.xcconfig */,
+				C479593ED983DB6A3CEF760E /* Pods-CertiWine.release.xcconfig */,
+				83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */,
+				49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4203468E204A9C6F00CE2D56 /* CertiWine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420346AC204A9C6F00CE2D56 /* Build configuration list for PBXNativeTarget "CertiWine" */;
+			buildPhases = (
+				971F126DE29FF021EE708424 /* [CP] Check Pods Manifest.lock */,
+				4203468B204A9C6F00CE2D56 /* Sources */,
+				4203468C204A9C6F00CE2D56 /* Frameworks */,
+				4203468D204A9C6F00CE2D56 /* Resources */,
+				4B9211642DBAF57B631394F1 /* [CP] Embed Pods Frameworks */,
+				61A0463289C98010E94F2FD9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CertiWine;
+			productName = CertiWine;
+			productReference = 4203468F204A9C6F00CE2D56 /* CertiWine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		420346A2204A9C6F00CE2D56 /* CertiWineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420346AF204A9C6F00CE2D56 /* Build configuration list for PBXNativeTarget "CertiWineTests" */;
+			buildPhases = (
+				7BC82617AD8CAAB123465FF5 /* [CP] Check Pods Manifest.lock */,
+				4203469F204A9C6F00CE2D56 /* Sources */,
+				420346A0204A9C6F00CE2D56 /* Frameworks */,
+				420346A1204A9C6F00CE2D56 /* Resources */,
+				E23ABE2A7C548E70F16F3AAF /* [CP] Embed Pods Frameworks */,
+				45691ADA850EB85524B8694D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				420346A5204A9C6F00CE2D56 /* PBXTargetDependency */,
+			);
+			name = CertiWineTests;
+			productName = CertiWineTests;
+			productReference = 420346A3204A9C6F00CE2D56 /* CertiWineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42034687204A9C6F00CE2D56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = CertiWine;
+				TargetAttributes = {
+					4203468E204A9C6F00CE2D56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					420346A2204A9C6F00CE2D56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4203468E204A9C6F00CE2D56;
+					};
+				};
+			};
+			buildConfigurationList = 4203468A204A9C6F00CE2D56 /* Build configuration list for PBXProject "CertiWine" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42034686204A9C6F00CE2D56;
+			productRefGroup = 42034690204A9C6F00CE2D56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4203468E204A9C6F00CE2D56 /* CertiWine */,
+				420346A2204A9C6F00CE2D56 /* CertiWineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4203468D204A9C6F00CE2D56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4203469D204A9C6F00CE2D56 /* LaunchScreen.storyboard in Resources */,
+				4203469A204A9C6F00CE2D56 /* Assets.xcassets in Resources */,
+				42034698204A9C6F00CE2D56 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		420346A1204A9C6F00CE2D56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45691ADA850EB85524B8694D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B9211642DBAF57B631394F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CertiWine/Pods-CertiWine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/FaceAware/FaceAware.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceAware.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CertiWine/Pods-CertiWine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61A0463289C98010E94F2FD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CertiWine/Pods-CertiWine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BC82617AD8CAAB123465FF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CertiWineTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		971F126DE29FF021EE708424 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CertiWine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E23ABE2A7C548E70F16F3AAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4203468B204A9C6F00CE2D56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42034695204A9C6F00CE2D56 /* ViewController.swift in Sources */,
+				42034693204A9C6F00CE2D56 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4203469F204A9C6F00CE2D56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				420346A8204A9C6F00CE2D56 /* CertiWineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		420346A5204A9C6F00CE2D56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4203468E204A9C6F00CE2D56 /* CertiWine */;
+			targetProxy = 420346A4204A9C6F00CE2D56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42034696204A9C6F00CE2D56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42034697204A9C6F00CE2D56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4203469C204A9C6F00CE2D56 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		420346AA204A9C6F00CE2D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		420346AB204A9C6F00CE2D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		420346AD204A9C6F00CE2D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2CADD1715B6B87D4FE14E0B /* Pods-CertiWine.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S5F5K22NW;
+				INFOPLIST_FILE = CertiWine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iocreate.CertiWine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		420346AE204A9C6F00CE2D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C479593ED983DB6A3CEF760E /* Pods-CertiWine.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S5F5K22NW;
+				INFOPLIST_FILE = CertiWine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iocreate.CertiWine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		420346B0204A9C6F00CE2D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S5F5K22NW;
+				INFOPLIST_FILE = CertiWineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iocreate.CertiWineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CertiWine.app/CertiWine";
+			};
+			name = Debug;
+		};
+		420346B1204A9C6F00CE2D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S5F5K22NW;
+				INFOPLIST_FILE = CertiWineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iocreate.CertiWineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CertiWine.app/CertiWine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4203468A204A9C6F00CE2D56 /* Build configuration list for PBXProject "CertiWine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				420346AA204A9C6F00CE2D56 /* Debug */,
+				420346AB204A9C6F00CE2D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		420346AC204A9C6F00CE2D56 /* Build configuration list for PBXNativeTarget "CertiWine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				420346AD204A9C6F00CE2D56 /* Debug */,
+				420346AE204A9C6F00CE2D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		420346AF204A9C6F00CE2D56 /* Build configuration list for PBXNativeTarget "CertiWineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				420346B0204A9C6F00CE2D56 /* Debug */,
+				420346B1204A9C6F00CE2D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42034687204A9C6F00CE2D56 /* Project object */;
+}
