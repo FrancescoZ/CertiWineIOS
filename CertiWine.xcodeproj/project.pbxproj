@@ -13,6 +13,7 @@
 		4203469A204A9C6F00CE2D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42034699204A9C6F00CE2D56 /* Assets.xcassets */; };
 		4203469D204A9C6F00CE2D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */; };
 		420346A8204A9C6F00CE2D56 /* CertiWineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346A7204A9C6F00CE2D56 /* CertiWineTests.swift */; };
+		420346BC204AACD400CE2D56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346BB204AACD400CE2D56 /* Constants.swift */; };
 		431B601B528E918029AC9BAC /* Pods_CertiWineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9359238305233B05134070 /* Pods_CertiWineTests.framework */; };
 		DFF4B5C1CD12F3C4DCA884E6 /* Pods_CertiWine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93869E715A841712808D042C /* Pods_CertiWine.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,10 @@
 		420346A3204A9C6F00CE2D56 /* CertiWineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CertiWineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		420346A7204A9C6F00CE2D56 /* CertiWineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiWineTests.swift; sourceTree = "<group>"; };
 		420346A9204A9C6F00CE2D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		420346B7204AAAC300CE2D56 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		420346B8204AAAC300CE2D56 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		420346BA204AABD100CE2D56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		420346BB204AACD400CE2D56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E9359238305233B05134070 /* Pods_CertiWineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CertiWineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +94,12 @@
 		42034691204A9C6F00CE2D56 /* CertiWine */ = {
 			isa = PBXGroup;
 			children = (
+				4227C43D204AB44D0036EC77 /* API */,
+				420346B6204AA94A00CE2D56 /* Stores */,
+				420346B5204AA94200CE2D56 /* Helpers */,
+				420346B4204AA93700CE2D56 /* Controllers */,
+				420346B3204AA92C00CE2D56 /* Views */,
+				420346B2204AA92200CE2D56 /* Models */,
 				42034692204A9C6F00CE2D56 /* AppDelegate.swift */,
 				42034694204A9C6F00CE2D56 /* ViewController.swift */,
 				42034696204A9C6F00CE2D56 /* Main.storyboard */,
@@ -106,6 +117,49 @@
 				420346A9204A9C6F00CE2D56 /* Info.plist */,
 			);
 			path = CertiWineTests;
+			sourceTree = "<group>";
+		};
+		420346B2204AA92200CE2D56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		420346B3204AA92C00CE2D56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		420346B4204AA93700CE2D56 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		420346B5204AA94200CE2D56 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				420346BB204AACD400CE2D56 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		420346B6204AA94A00CE2D56 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		4227C43D204AB44D0036EC77 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		77805BA6FB8DF071565EF256 /* Frameworks */ = {
@@ -255,18 +309,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CertiWine/Pods-CertiWine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/FaceAware/FaceAware.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceAware.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +411,7 @@
 			files = (
 				42034695204A9C6F00CE2D56 /* ViewController.swift in Sources */,
 				42034693204A9C6F00CE2D56 /* AppDelegate.swift in Sources */,
+				420346BC204AACD400CE2D56 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +438,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				42034697204A9C6F00CE2D56 /* Base */,
+				420346B7204AAAC300CE2D56 /* it */,
+				420346BA204AABD100CE2D56 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -383,6 +448,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4203469C204A9C6F00CE2D56 /* Base */,
+				420346B8204AAAC300CE2D56 /* it */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -394,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -451,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

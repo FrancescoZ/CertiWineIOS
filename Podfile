@@ -14,7 +14,10 @@ target 'CertiWine' do
   pod 'FontAwesomeKit'
   #Tutorial Pod
   pod 'paper-onboarding'
-  # Pods for CertiWine
+  #Charts Pod
+  pod 'Charts'
+  #API Manager
+  pod 'Moya'
 
   target 'CertiWineTests' do
     inherit! :search_paths
