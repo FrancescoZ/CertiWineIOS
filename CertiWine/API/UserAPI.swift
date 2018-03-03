@@ -42,6 +42,9 @@ enum UserAPI{
   
   case getStations(ofUserId: String)
   case createStation(ofUserId: String, name: String)
+  
+  case getSensors(ofUserId: String)
+  case createSensor(ofUserId: String, name: String)
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -55,15 +58,17 @@ extension UserAPI: TargetType {
       return "/users"
     case .login(_, _):
       return "/authenticate"
-    case .getStations(ofUserId), .createStation(ofUserId, _):
+    case .getStations(let ofUserId), .createStation(let ofUserId, _):
       return "/\(ofUserId)/stations"
+    case .getSensors(let ofUserId), .createSensor(let ofUserId, _):
+        return "/\(ofUserId)/sensors"
     }
   }
   var method: Moya.Method {
     switch self {
-    case .getUser, .getStations:
+    case .getUser, .getStations, .getSensors:
       return .get
-    case .createUser, .updateUser, .createStation
+    case .createUser, .updateUser, .createStation, .createSensor
       return .put
     case .login:
       return .post
@@ -71,7 +76,7 @@ extension UserAPI: TargetType {
   }
   var task: Task {
     switch self {
-    case .getUser, .getStations:
+    case .getUser, .getStations, .getSensors:
       return .requestPlain
     case let .updateUser(_, email, passwrd, name):
       return .requestParameters(parameters: ["email": email, "password": passwrd, "name": name],
@@ -81,7 +86,7 @@ extension UserAPI: TargetType {
     case let .login(email,passwrd):
       return .requestParameters(parameters: ["email": email, "password": passwrd],
         encoding: JSONEncoding.default)
-    case let .createStation(_,name):
+    case let .createStation(_,name), .createSensor(_, name):
       return .requestParameters(parameters: ["name": name], encoding: JSONEncoding.default)
     }
   }
