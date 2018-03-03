@@ -14,6 +14,8 @@
 		4203469D204A9C6F00CE2D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */; };
 		420346A8204A9C6F00CE2D56 /* CertiWineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346A7204A9C6F00CE2D56 /* CertiWineTests.swift */; };
 		420346BC204AACD400CE2D56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346BB204AACD400CE2D56 /* Constants.swift */; };
+		4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C446204AB92F0036EC77 /* UserAPI.swift */; };
+		4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C448204ABAE70036EC77 /* StringHelper.swift */; };
 		431B601B528E918029AC9BAC /* Pods_CertiWineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9359238305233B05134070 /* Pods_CertiWineTests.framework */; };
 		DFF4B5C1CD12F3C4DCA884E6 /* Pods_CertiWine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93869E715A841712808D042C /* Pods_CertiWine.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		420346B8204AAAC300CE2D56 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		420346BA204AABD100CE2D56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		420346BB204AACD400CE2D56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4227C446204AB92F0036EC77 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		4227C448204ABAE70036EC77 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E9359238305233B05134070 /* Pods_CertiWineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CertiWineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				420346BB204AACD400CE2D56 /* Constants.swift */,
+				4227C448204ABAE70036EC77 /* StringHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		4227C43D204AB44D0036EC77 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4227C446204AB92F0036EC77 /* UserAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -409,8 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */,
 				42034695204A9C6F00CE2D56 /* ViewController.swift in Sources */,
 				42034693204A9C6F00CE2D56 /* AppDelegate.swift in Sources */,
+				4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */,
 				420346BC204AACD400CE2D56 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

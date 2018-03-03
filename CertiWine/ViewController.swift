@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Moya
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let provider = MoyaProvider<UserAPI>()
+        provider.request(.getUser(withId: "5a9839dccfd499511cfa977f")) { result in
+         let a = 0
+      }
     }
 
     override func didReceiveMemoryWarning() {
