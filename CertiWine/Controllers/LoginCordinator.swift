@@ -64,10 +64,10 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
         default:
           var message = ""
           do{
-            let json = try response.map(<#T##type: Decodable.Protocol##Decodable.Protocol#>, atKeyPath: <#T##String?#>, using: <#T##JSONDecoder#>) mapObjectOptional()
-            message = ""
+            let responseJson = try response.map(Error.self, using: JSONDecoder.init())
+            message = responseJson.message
           } catch _ {
-            message = "Check your network and try again"
+            message = "A Strange error happend, please try again"
           }
           
           let alertController = UIAlertController(title: "Invalid Login", message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -89,12 +89,23 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
     let provider = MoyaProvider<UserAPI>()
     provider.request(.createUser(email: email, name: name, passwrd: password, passwrdConfirmation: password )){ result in
       switch result {
-      case let .success(moyaResponse):
-        switch moyaResponse.statusCode{
+      case let .success(response):
+        switch response.statusCode{
         case 200:
         return //TODO redirect
         default:
-          //TODO Manage exception
+          var message = ""
+          do{
+            let responseJson = try response.map(Error.self, using: JSONDecoder.init())
+            message = responseJson.message
+          } catch _ {
+            message = "A Strange error happend, please try again"
+          }
+          
+          let alertController = UIAlertController(title: "Invalid Login", message: message, preferredStyle: UIAlertControllerStyle.alert)
+          alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+          
+          super.navigationController.present(alertController, animated: true, completion: nil)
           break
         }
       default:
@@ -109,12 +120,11 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
     let provider = MoyaProvider<UserAPI>()
     provider.request(.loginFacebook(email: profile.email, token: profile.facebookToken)) { result in
       switch result {
-      case let .success(moyaResponse):
-        switch moyaResponse.statusCode{
+      case let .success(response):
+        switch response.statusCode{
         case 200:
           return //TODO redirect
         default:
-          //TODO Manage exception
           break
         }
       default:
@@ -123,12 +133,22 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
       }
       provider.request(.createUserFacebook(email: profile.email, name: profile.fullName, token: profile.facebookToken)){ result in
         switch result {
-        case let .success(moyaResponse):
-          switch moyaResponse.statusCode{
+        case let .success(response):
+          switch response.statusCode{
           case 200:
             return //TODO redirect
           default:
-            //TODO Manage exception
+            var message = ""
+            do{
+              let responseJson = try response.map(Error.self, using: JSONDecoder.init())
+              message = responseJson.message
+            } catch _ {
+              message = "A Strange error happend, please try again"
+            }
+            
+            let alertController = UIAlertController(title: "Invalid Login", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            super.navigationController.present(alertController, animated: true, completion: nil)
             break
           }
           default:
