@@ -33,7 +33,7 @@ import Foundation
 import Moya
 
 enum UserAPI{
-  case getUser(withId userId: String)
+  case getUser(withId: String)
   case updateUser(userId: String, email: String, passwrd: String, name: String)
   case createUser(email: String, name: String, passwrd: String, passwrdConfirmation: String)
   case login(email: String, passwd: String)
@@ -44,7 +44,7 @@ extension UserAPI: TargetType {
   var baseURL: URL { return URL(string: Config.APIUrl)! }
   var path: String {
     switch self {
-    case .getUser(let userId), updateUser(let userId, _, _, _):
+    case .getUser(let userId), .updateUser(let userId, _, _, _):
       return "/users/\(userId)"
     case .createUser(_, _, _, _):
       return "/users"
@@ -73,11 +73,17 @@ extension UserAPI: TargetType {
       return .requestParameters(parameters: ["email": email, "password": passwrd, "name": name, "passwordConf": passwrdConfirmation], encoding: JSONEncoding.default)
     case let .login(email,passwrd):
       return .requestParameters(parameters: ["email": email, "password": passwrd],
-        encoding: JSONEncoding.default])
+        encoding: JSONEncoding.default)
     }
   }
   var headers: [String: String]? {
     return ["Content-type": "application/json"]
+  }
+  var sampleData: Data {
+    switch self {
+    default:
+      return "data".utf8Encoded
+    }
   }
 }
 
