@@ -16,6 +16,8 @@ target 'CertiWine' do
   pod 'Charts'
   #API Manager
   pod 'Moya'
+  #Login
+  pod "ILLoginKit"
 
   target 'CertiWineTests' do
     inherit! :search_paths

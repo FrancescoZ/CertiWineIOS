@@ -37,8 +37,10 @@ enum UserAPI{
   
   case updateUser(userId: String, email: String, passwrd: String, name: String)
   case createUser(email: String, name: String, passwrd: String, passwrdConfirmation: String)
+  case createUserFacebook(email: String, name: String, token: String)
   
-  case login(email: String, passwd: String)
+  case login(email: String, passwrd: String)
+  case loginFacebook(email: String, token: String)
   
   case getStations(ofUserId: String)
   case createStation(ofUserId: String, name: String)
@@ -56,8 +58,12 @@ extension UserAPI: TargetType {
       return "/users/\(userId)"
     case .createUser(_, _, _, _):
       return "/users"
+    case .createUserFacebook(_, _, _):
+      return "/usersfacebook"
     case .login(_, _):
       return "/authenticate"
+    case .loginFacebook(_, _):
+      return "/authenticatefacebook"
     case .getStations(let ofUserId), .createStation(let ofUserId, _):
       return "/\(ofUserId)/stations"
     case .getSensors(let ofUserId), .createSensor(let ofUserId, _):
@@ -68,9 +74,9 @@ extension UserAPI: TargetType {
     switch self {
     case .getUser, .getStations, .getSensors:
       return .get
-    case .createUser, .updateUser, .createStation, .createSensor
+    case .createUser, .updateUser, .createStation, .createSensor, .createUserFacebook:
       return .put
-    case .login:
+    case .login, .loginFacebook:
       return .post
     }
   }
@@ -83,10 +89,18 @@ extension UserAPI: TargetType {
         encoding: JSONEncoding.default)
     case let .createUser(email, name, passwrd, passwrdConfirmation):
       return .requestParameters(parameters: ["email": email, "password": passwrd, "name": name, "passwordConf": passwrdConfirmation], encoding: JSONEncoding.default)
+    case let .createUserFacebook(email, name, token):
+      return .requestParameters(parameters: ["email": email, "facebook": token, "name": name],
+                                encoding: JSONEncoding.default)
     case let .login(email,passwrd):
       return .requestParameters(parameters: ["email": email, "password": passwrd],
         encoding: JSONEncoding.default)
-    case let .createStation(_,name), .createSensor(_, name):
+    case let .loginFacebook(email,token):
+      return .requestParameters(parameters: ["email": email, "facebook": token],
+                               encoding: JSONEncoding.default)
+    case let .createStation(_, name):
+      return .requestParameters(parameters: ["name": name], encoding: JSONEncoding.default)
+    case let .createSensor(_, name):
       return .requestParameters(parameters: ["name": name], encoding: JSONEncoding.default)
     }
   }

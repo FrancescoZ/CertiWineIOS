@@ -22,6 +22,12 @@
 		4227C454204AC6F20036EC77 /* StationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C453204AC6F20036EC77 /* StationAPI.swift */; };
 		4227C456204AC6FF0036EC77 /* SensorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C455204AC6FF0036EC77 /* SensorAPI.swift */; };
 		4227C458204AC7150036EC77 /* ValueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C457204AC7150036EC77 /* ValueAPI.swift */; };
+		4227C45A204AEFFA0036EC77 /* LoginCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C459204AEFFA0036EC77 /* LoginCordinator.swift */; };
+		4227C45C204B09FE0036EC77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45B204B09FE0036EC77 /* User.swift */; };
+		4227C45E204B0A090036EC77 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45D204B0A090036EC77 /* Error.swift */; };
+		4227C460204B0A130036EC77 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45F204B0A130036EC77 /* Station.swift */; };
+		4227C462204B0A1D0036EC77 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C461204B0A1D0036EC77 /* Sensor.swift */; };
+		4227C464204B0A2E0036EC77 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C463204B0A2E0036EC77 /* Value.swift */; };
 		431B601B528E918029AC9BAC /* Pods_CertiWineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9359238305233B05134070 /* Pods_CertiWineTests.framework */; };
 		DFF4B5C1CD12F3C4DCA884E6 /* Pods_CertiWine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93869E715A841712808D042C /* Pods_CertiWine.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +65,12 @@
 		4227C453204AC6F20036EC77 /* StationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAPI.swift; sourceTree = "<group>"; };
 		4227C455204AC6FF0036EC77 /* SensorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorAPI.swift; sourceTree = "<group>"; };
 		4227C457204AC7150036EC77 /* ValueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueAPI.swift; sourceTree = "<group>"; };
+		4227C459204AEFFA0036EC77 /* LoginCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCordinator.swift; sourceTree = "<group>"; };
+		4227C45B204B09FE0036EC77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4227C45D204B0A090036EC77 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		4227C45F204B0A130036EC77 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		4227C461204B0A1D0036EC77 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		4227C463204B0A2E0036EC77 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E9359238305233B05134070 /* Pods_CertiWineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CertiWineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,10 +129,7 @@
 				420346B3204AA92C00CE2D56 /* Views */,
 				420346B2204AA92200CE2D56 /* Models */,
 				42034692204A9C6F00CE2D56 /* AppDelegate.swift */,
-				42034694204A9C6F00CE2D56 /* ViewController.swift */,
-				42034696204A9C6F00CE2D56 /* Main.storyboard */,
 				42034699204A9C6F00CE2D56 /* Assets.xcassets */,
-				4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */,
 				4203469E204A9C6F00CE2D56 /* Info.plist */,
 			);
 			path = CertiWine;
@@ -138,6 +147,11 @@
 		420346B2204AA92200CE2D56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4227C45B204B09FE0036EC77 /* User.swift */,
+				4227C45D204B0A090036EC77 /* Error.swift */,
+				4227C45F204B0A130036EC77 /* Station.swift */,
+				4227C461204B0A1D0036EC77 /* Sensor.swift */,
+				4227C463204B0A2E0036EC77 /* Value.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +159,8 @@
 		420346B3204AA92C00CE2D56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				42034696204A9C6F00CE2D56 /* Main.storyboard */,
+				4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +168,8 @@
 		420346B4204AA93700CE2D56 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				42034694204A9C6F00CE2D56 /* ViewController.swift */,
+				4227C459204AEFFA0036EC77 /* LoginCordinator.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,25 +376,33 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CertiWine/Pods-CertiWine-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FaceAware/FaceAware.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/ILLoginKit/ILLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceAware.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ILLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,16 +483,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4227C45C204B09FE0036EC77 /* User.swift in Sources */,
+				4227C462204B0A1D0036EC77 /* Sensor.swift in Sources */,
+				4227C460204B0A130036EC77 /* Station.swift in Sources */,
 				4227C458204AC7150036EC77 /* ValueAPI.swift in Sources */,
 				4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */,
+				4227C464204B0A2E0036EC77 /* Value.swift in Sources */,
 				4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */,
 				42034695204A9C6F00CE2D56 /* ViewController.swift in Sources */,
 				4227C454204AC6F20036EC77 /* StationAPI.swift in Sources */,
 				4227C456204AC6FF0036EC77 /* SensorAPI.swift in Sources */,
+				4227C45A204AEFFA0036EC77 /* LoginCordinator.swift in Sources */,
 				42034693204A9C6F00CE2D56 /* AppDelegate.swift in Sources */,
 				4227C452204AC6480036EC77 /* CircleMenuButton.swift in Sources */,
 				4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */,
 				4227C451204AC6480036EC77 /* CircleMenuLoader.swift in Sources */,
+				4227C45E204B0A090036EC77 /* Error.swift in Sources */,
 				420346BC204AACD400CE2D56 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

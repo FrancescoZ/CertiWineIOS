@@ -7,17 +7,16 @@
 //
 
 import UIKit
-import Moya
 
 class ViewController: UIViewController {
 
+    lazy var loginCoordinator = LoginCoordinator(rootViewController: self)
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let provider = MoyaProvider<UserAPI>()
-        provider.request(.getUser(withId: "5a9839dccfd499511cfa977f")) { result in
-         print(result)
-      }
+        loginCoordinator.start()
+
     }
 
     override func didReceiveMemoryWarning() {
