@@ -1,4 +1,4 @@
-//  User API
+//  Station API
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -32,57 +32,41 @@
 import Foundation
 import Moya
 
-enum UserAPI{
-  case getUser(withId: String)
-  
-  case updateUser(userId: String, email: String, passwrd: String, name: String)
-  case createUser(email: String, name: String, passwrd: String, passwrdConfirmation: String)
-  
-  case login(email: String, passwd: String)
-  
-  case getStations(ofUserId: String)
-  case createStation(ofUserId: String, name: String)
+enum StationAPI{
+  case changeName(stationId: String, ofUserId: String, name: String)
+  case getSensors(stationId: String, ofUserId: String)
+  case pairSensor(stationId: String, ofUserId: String, sensorId: String)
+  case getSensorsValues(stationId: String, ofUserId: String, sensorId: String)
 }
 
 // MARK: - TargetType Protocol Implementation
-extension UserAPI: TargetType {
+extension StationAPI: TargetType {
   var baseURL: URL { return URL(string: Config.APIUrl)! }
   var path: String {
     switch self {
-    case .getUser(let userId), .updateUser(let userId, _, _, _):
-      return "/users/\(userId)"
-    case .createUser(_, _, _, _):
-      return "/users"
-    case .login(_, _):
-      return "/authenticate"
-    case .getStations(ofUserId), .createStation(ofUserId, _):
-      return "/\(ofUserId)/stations"
+    case .getSensors(let stationId, let ofUserId):
+      return "\(ofUserId)/stations/\(stationId)/sensors"
+    case .changeName(let stationId, let ofUserId, _):
+      return "\(ofUserId)/stations/\(stationId)"
+    case .getSensorsValues(let stationId, let ofUserId, let sensorId), .pairSensor(let stationId, let ofUserId, let sensorId):
+      return "\(ofUserId)/stations/\(stationId)/sensors/\(sensorId)"
     }
   }
   var method: Moya.Method {
     switch self {
-    case .getUser, .getStations:
+    case .getSensors, .getSensorsValues:
       return .get
-    case .createUser, .updateUser, .createStation
+    case .changeName, .pairSensor:
       return .put
-    case .login:
-      return .post
     }
   }
   var task: Task {
     switch self {
-    case .getUser, .getStations:
+    case .getSensors, .getSensorsValues, .pairSensor:
       return .requestPlain
-    case let .updateUser(_, email, passwrd, name):
-      return .requestParameters(parameters: ["email": email, "password": passwrd, "name": name],
-        encoding: JSONEncoding.default)
-    case let .createUser(email, name, passwrd, passwrdConfirmation):
-      return .requestParameters(parameters: ["email": email, "password": passwrd, "name": name, "passwordConf": passwrdConfirmation], encoding: JSONEncoding.default)
-    case let .login(email,passwrd):
-      return .requestParameters(parameters: ["email": email, "password": passwrd],
-        encoding: JSONEncoding.default)
-    case let .createStation(_,name):
-      return .requestParameters(parameters: ["name": name], encoding: JSONEncoding.default)
+    case let .changeName(_, _, name):
+      return .requestParameters(parameters: ["name": name],
+                                encoding: JSONEncoding.default)
     }
   }
   var headers: [String: String]? {
@@ -95,5 +79,6 @@ extension UserAPI: TargetType {
     }
   }
 }
+
 
 

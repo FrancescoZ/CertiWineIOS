@@ -16,6 +16,12 @@
 		420346BC204AACD400CE2D56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346BB204AACD400CE2D56 /* Constants.swift */; };
 		4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C446204AB92F0036EC77 /* UserAPI.swift */; };
 		4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C448204ABAE70036EC77 /* StringHelper.swift */; };
+		4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44B204AC6480036EC77 /* CircleMenu.swift */; };
+		4227C451204AC6480036EC77 /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44D204AC6480036EC77 /* CircleMenuLoader.swift */; };
+		4227C452204AC6480036EC77 /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44F204AC6480036EC77 /* CircleMenuButton.swift */; };
+		4227C454204AC6F20036EC77 /* StationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C453204AC6F20036EC77 /* StationAPI.swift */; };
+		4227C456204AC6FF0036EC77 /* SensorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C455204AC6FF0036EC77 /* SensorAPI.swift */; };
+		4227C458204AC7150036EC77 /* ValueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C457204AC7150036EC77 /* ValueAPI.swift */; };
 		431B601B528E918029AC9BAC /* Pods_CertiWineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9359238305233B05134070 /* Pods_CertiWineTests.framework */; };
 		DFF4B5C1CD12F3C4DCA884E6 /* Pods_CertiWine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93869E715A841712808D042C /* Pods_CertiWine.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +53,12 @@
 		420346BB204AACD400CE2D56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4227C446204AB92F0036EC77 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		4227C448204ABAE70036EC77 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
+		4227C44B204AC6480036EC77 /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenu.swift; sourceTree = "<group>"; };
+		4227C44D204AC6480036EC77 /* CircleMenuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuLoader.swift; sourceTree = "<group>"; };
+		4227C44F204AC6480036EC77 /* CircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuButton.swift; sourceTree = "<group>"; };
+		4227C453204AC6F20036EC77 /* StationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAPI.swift; sourceTree = "<group>"; };
+		4227C455204AC6FF0036EC77 /* SensorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorAPI.swift; sourceTree = "<group>"; };
+		4227C457204AC7150036EC77 /* ValueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueAPI.swift; sourceTree = "<group>"; };
 		49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E9359238305233B05134070 /* Pods_CertiWineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CertiWineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +159,7 @@
 		420346B5204AA94200CE2D56 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4227C44A204AC6480036EC77 /* CircularMenu */,
 				420346BB204AACD400CE2D56 /* Constants.swift */,
 				4227C448204ABAE70036EC77 /* StringHelper.swift */,
 			);
@@ -164,8 +177,37 @@
 			isa = PBXGroup;
 			children = (
 				4227C446204AB92F0036EC77 /* UserAPI.swift */,
+				4227C453204AC6F20036EC77 /* StationAPI.swift */,
+				4227C455204AC6FF0036EC77 /* SensorAPI.swift */,
+				4227C457204AC7150036EC77 /* ValueAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		4227C44A204AC6480036EC77 /* CircularMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4227C44B204AC6480036EC77 /* CircleMenu.swift */,
+				4227C44C204AC6480036EC77 /* CircleMenuLoader */,
+				4227C44E204AC6480036EC77 /* CircleMenuButton */,
+			);
+			path = CircularMenu;
+			sourceTree = "<group>";
+		};
+		4227C44C204AC6480036EC77 /* CircleMenuLoader */ = {
+			isa = PBXGroup;
+			children = (
+				4227C44D204AC6480036EC77 /* CircleMenuLoader.swift */,
+			);
+			path = CircleMenuLoader;
+			sourceTree = "<group>";
+		};
+		4227C44E204AC6480036EC77 /* CircleMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				4227C44F204AC6480036EC77 /* CircleMenuButton.swift */,
+			);
+			path = CircleMenuButton;
 			sourceTree = "<group>";
 		};
 		77805BA6FB8DF071565EF256 /* Frameworks */ = {
@@ -415,10 +457,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4227C458204AC7150036EC77 /* ValueAPI.swift in Sources */,
+				4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */,
 				4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */,
 				42034695204A9C6F00CE2D56 /* ViewController.swift in Sources */,
+				4227C454204AC6F20036EC77 /* StationAPI.swift in Sources */,
+				4227C456204AC6FF0036EC77 /* SensorAPI.swift in Sources */,
 				42034693204A9C6F00CE2D56 /* AppDelegate.swift in Sources */,
+				4227C452204AC6480036EC77 /* CircleMenuButton.swift in Sources */,
 				4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */,
+				4227C451204AC6480036EC77 /* CircleMenuLoader.swift in Sources */,
 				420346BC204AACD400CE2D56 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
