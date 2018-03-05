@@ -40,24 +40,23 @@ class LoginController: LoginCoordinator {
   // MARK: - LoginCoordinator
   
   override func start() {
+    super.start()
+    configureAppearance()
+  }
+  
+  func authenticate() -> Bool{
     guard let retrievedPassword = KeychainWrapper.standard.string(forKey: "authCertiWine"),
-          let retrivedId = KeychainWrapper.standard.string(forKey: "idUserCertiWine") else {
-      super.start()
-      configureAppearance()
-      return
+      let retrivedId = KeychainWrapper.standard.string(forKey: "idUserCertiWine") else {
+        start()
+        return false
     }
     Config.Auth = retrievedPassword
     Config.ID = retrivedId
-    super.finish()
-    let secondViewController = self.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! UIViewController
-    rootViewController?.present(secondViewController, animated: true)
-  }
-  
-  func isAuthenticated() -> Bool{
-    guard let _ = KeychainWrapper.standard.string(forKey: "authCertiWine"),
-      let _ = KeychainWrapper.standard.string(forKey: "idUserCertiWine") else {
-        return false
-    }
+    API.getUser(withId: retrivedId, onSuccess: { usr in
+      Config.User = User(apiModel: usr as! API.User)
+      let secondViewController = self.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+      self.rootViewController?.present(secondViewController, animated: true)
+    }, onFailure: showError)
     return true
   }
   

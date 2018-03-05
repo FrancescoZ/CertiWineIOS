@@ -1,4 +1,4 @@
-//  Constants.swift
+//  User
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,14 +29,52 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-enum Color{
-  static let Background = UIColor(red: 1, green: 1 , blue: 0.97, alpha: 1)
-  static let Foreground = UIColor.black
-  static let Title = UIColor.black
-  static let Description = UIColor.gray
-  static let Font = UIColor.black
-  static let Deactive = UIColor.gray
-  static let Error = UIColor.red
+struct User{
+  var id: String{
+    get{
+      return model._id
+    }
+  }
+  var fullName: String {
+    get {
+      return model.name
+    }
+    set(newName) {
+      model.name = newName
+    }
+  }
+  
+  var email: String {
+    get {
+      return model.email
+    }
+    set(newMail) {
+      model.email = newMail
+    }
+  }
+  
+  var settings: Settings
+  
+  var stations: [Station]
+  var sensors: [Sensor]
+  
+  var model: API.User
+  
+  init(apiModel: API.User){
+    settings = Settings(apiModel: apiModel)
+    model = apiModel
+    stations = []
+    sensors = []
+  }
+  
+  mutating func save() -> API.User{
+    model.alert_vib = settings.maxVibration
+    model.alert_temp = settings.maxTemperature
+    model.alert_hum = settings.maxHumidity
+    model.alert_light = settings.maxLight
+    
+    return model
+  }
 }

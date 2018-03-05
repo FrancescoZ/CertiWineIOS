@@ -38,14 +38,11 @@ class LoginTutorialViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      if loginController.isAuthenticated() {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! UIViewController
-        self.present(secondViewController, animated: true)
-      }else {
+      if !loginController.authenticate(){
         setupPaperOnboardingView()
         view.bringSubview(toFront: skipButton)
       }
-    }
+  }
   
   @IBAction func skipButtonTouch() {
     loginController.start()

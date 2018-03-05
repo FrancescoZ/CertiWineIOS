@@ -72,7 +72,8 @@ extension API.StationAPI: TargetType {
     }
   }
   var headers: [String: String]? {
-    return ["Content-type": "application/json"]
+    return ["Content-type": "application/json",
+      "x-access-token": Config.Auth ]
   }
   var sampleData: Data {
     switch self {

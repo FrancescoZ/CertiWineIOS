@@ -1,4 +1,4 @@
-//  Constants.swift
+//  ProfileViewController
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -31,12 +31,36 @@
 
 import UIKit
 
-enum Color{
-  static let Background = UIColor(red: 1, green: 1 , blue: 0.97, alpha: 1)
-  static let Foreground = UIColor.black
-  static let Title = UIColor.black
-  static let Description = UIColor.gray
-  static let Font = UIColor.black
-  static let Deactive = UIColor.gray
-  static let Error = UIColor.red
+class ProfileViewController: UIViewController{
+  
+  @IBOutlet weak var profileImageView: UIImageView!
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var emailLabel: UILabel!
+  
+  @IBOutlet weak var vibrationLabel: UILabel!
+  @IBOutlet weak var vibrationSlider: UISlider!
+  
+  @IBOutlet weak var temperatureLabel: UILabel!
+  @IBOutlet weak var temperatureSlider: UISlider!
+  
+  @IBOutlet weak var lightLabel: UILabel!
+  @IBOutlet weak var lightSlider: UISlider!
+  
+  @IBOutlet weak var humidityLabel: UILabel!
+  @IBOutlet weak var humiditySlider: UISlider!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    profileImageView.layer.borderWidth = 1
+    profileImageView.layer.masksToBounds = false
+    profileImageView.layer.borderColor = UIColor.black.cgColor
+    profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+    profileImageView.clipsToBounds = true
+    
+    nameLabel.text = Config.User?.fullName
+    emailLabel.text = Config.User?.email
+    
+    //TODO Connect and set min max
+  }
 }

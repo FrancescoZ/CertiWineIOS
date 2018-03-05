@@ -23,11 +23,11 @@
 		4227C456204AC6FF0036EC77 /* SensorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C455204AC6FF0036EC77 /* SensorAPI.swift */; };
 		4227C458204AC7150036EC77 /* ValueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C457204AC7150036EC77 /* ValueAPI.swift */; };
 		4227C45A204AEFFA0036EC77 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C459204AEFFA0036EC77 /* LoginController.swift */; };
-		4227C45C204B09FE0036EC77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45B204B09FE0036EC77 /* User.swift */; };
+		4227C45C204B09FE0036EC77 /* UserModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45B204B09FE0036EC77 /* UserModelAPI.swift */; };
 		4227C45E204B0A090036EC77 /* ErrorCertiWine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45D204B0A090036EC77 /* ErrorCertiWine.swift */; };
-		4227C460204B0A130036EC77 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45F204B0A130036EC77 /* Station.swift */; };
-		4227C462204B0A1D0036EC77 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C461204B0A1D0036EC77 /* Sensor.swift */; };
-		4227C464204B0A2E0036EC77 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C463204B0A2E0036EC77 /* Value.swift */; };
+		4227C460204B0A130036EC77 /* StationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C45F204B0A130036EC77 /* StationModelAPI.swift */; };
+		4227C462204B0A1D0036EC77 /* SensorModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C461204B0A1D0036EC77 /* SensorModelAPI.swift */; };
+		4227C464204B0A2E0036EC77 /* ValueModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C463204B0A2E0036EC77 /* ValueModelAPI.swift */; };
 		4227C466204B141C0036EC77 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C465204B141C0036EC77 /* KeychainPasswordItem.swift */; };
 		4227C468204B18CF0036EC77 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C467204B18CF0036EC77 /* Authentication.swift */; };
 		424F2AA0204BF028008FDE30 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F2A89204BF028008FDE30 /* Media.xcassets */; };
@@ -53,7 +53,14 @@
 		42BFC81D204C8BEF008BF9B1 /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFC810204C8BEF008BF9B1 /* GestureControl.swift */; };
 		42BFC81E204C8BEF008BF9B1 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFC811204C8BEF008BF9B1 /* PaperOnboarding.swift */; };
 		42BFC81F204C8BEF008BF9B1 /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFC813204C8BEF008BF9B1 /* ConstraintsHelper.swift */; };
+		42D418A1204DA101009F2807 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D418A0204DA101009F2807 /* Station.swift */; };
+		42D418A3204DA1B5009F2807 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D418A2204DA1B5009F2807 /* Sensor.swift */; };
+		42D418A5204DA1C4009F2807 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D418A4204DA1C4009F2807 /* Value.swift */; };
+		42D418A8204DA372009F2807 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D418A7204DA372009F2807 /* Settings.swift */; };
+		42D418AA204DC679009F2807 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D418A9204DC679009F2807 /* Config.swift */; };
 		42DE765E204CB90F00684584 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE765D204CB90F00684584 /* MenuViewController.swift */; };
+		42DE7660204D480B00684584 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE765F204D480B00684584 /* ProfileViewController.swift */; };
+		42DE7662204D9B0D00684584 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE7661204D9B0D00684584 /* User.swift */; };
 		431B601B528E918029AC9BAC /* Pods_CertiWineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9359238305233B05134070 /* Pods_CertiWineTests.framework */; };
 		DFF4B5C1CD12F3C4DCA884E6 /* Pods_CertiWine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93869E715A841712808D042C /* Pods_CertiWine.framework */; };
 /* End PBXBuildFile section */
@@ -92,11 +99,11 @@
 		4227C455204AC6FF0036EC77 /* SensorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorAPI.swift; sourceTree = "<group>"; };
 		4227C457204AC7150036EC77 /* ValueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueAPI.swift; sourceTree = "<group>"; };
 		4227C459204AEFFA0036EC77 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		4227C45B204B09FE0036EC77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4227C45B204B09FE0036EC77 /* UserModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelAPI.swift; sourceTree = "<group>"; };
 		4227C45D204B0A090036EC77 /* ErrorCertiWine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCertiWine.swift; sourceTree = "<group>"; };
-		4227C45F204B0A130036EC77 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		4227C461204B0A1D0036EC77 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
-		4227C463204B0A2E0036EC77 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		4227C45F204B0A130036EC77 /* StationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModelAPI.swift; sourceTree = "<group>"; };
+		4227C461204B0A1D0036EC77 /* SensorModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModelAPI.swift; sourceTree = "<group>"; };
+		4227C463204B0A2E0036EC77 /* ValueModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueModelAPI.swift; sourceTree = "<group>"; };
 		4227C465204B141C0036EC77 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		4227C467204B18CF0036EC77 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		424F2A89204BF028008FDE30 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -122,7 +129,14 @@
 		42BFC810204C8BEF008BF9B1 /* GestureControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureControl.swift; sourceTree = "<group>"; };
 		42BFC811204C8BEF008BF9B1 /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
 		42BFC813204C8BEF008BF9B1 /* ConstraintsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHelper.swift; sourceTree = "<group>"; };
+		42D418A0204DA101009F2807 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		42D418A2204DA1B5009F2807 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		42D418A4204DA1C4009F2807 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		42D418A7204DA372009F2807 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		42D418A9204DC679009F2807 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		42DE765D204CB90F00684584 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		42DE765F204D480B00684584 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		42DE7661204D9B0D00684584 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49EF67712C29174D7DBFA5CB /* Pods-CertiWineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E9359238305233B05134070 /* Pods_CertiWineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CertiWineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A7A20D21EF3DE1B696F399 /* Pods-CertiWineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CertiWineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CertiWineTests/Pods-CertiWineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +197,7 @@
 				42034692204A9C6F00CE2D56 /* AppDelegate.swift */,
 				42034699204A9C6F00CE2D56 /* Assets.xcassets */,
 				4203469E204A9C6F00CE2D56 /* Info.plist */,
+				42D418A9204DC679009F2807 /* Config.swift */,
 			);
 			path = CertiWine;
 			sourceTree = "<group>";
@@ -199,6 +214,11 @@
 		420346B2204AA92200CE2D56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				42DE7661204D9B0D00684584 /* User.swift */,
+				42D418A0204DA101009F2807 /* Station.swift */,
+				42D418A2204DA1B5009F2807 /* Sensor.swift */,
+				42D418A4204DA1C4009F2807 /* Value.swift */,
+				42D418A7204DA372009F2807 /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +230,7 @@
 				42034696204A9C6F00CE2D56 /* Main.storyboard */,
 				4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */,
 				42DE765D204CB90F00684584 /* MenuViewController.swift */,
+				42DE765F204D480B00684584 /* ProfileViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,11 +304,11 @@
 		424F2A71204BEECA008FDE30 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4227C45B204B09FE0036EC77 /* User.swift */,
+				4227C45B204B09FE0036EC77 /* UserModelAPI.swift */,
 				4227C45D204B0A090036EC77 /* ErrorCertiWine.swift */,
-				4227C45F204B0A130036EC77 /* Station.swift */,
-				4227C461204B0A1D0036EC77 /* Sensor.swift */,
-				4227C463204B0A2E0036EC77 /* Value.swift */,
+				4227C45F204B0A130036EC77 /* StationModelAPI.swift */,
+				4227C461204B0A1D0036EC77 /* SensorModelAPI.swift */,
+				4227C463204B0A2E0036EC77 /* ValueModelAPI.swift */,
 				4227C467204B18CF0036EC77 /* Authentication.swift */,
 			);
 			path = Models;
@@ -673,16 +694,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BFC81C204C8BEF008BF9B1 /* PaperOnboardingDataSource.swift in Sources */,
-				4227C45C204B09FE0036EC77 /* User.swift in Sources */,
-				4227C462204B0A1D0036EC77 /* Sensor.swift in Sources */,
-				4227C460204B0A130036EC77 /* Station.swift in Sources */,
+				42D418A3204DA1B5009F2807 /* Sensor.swift in Sources */,
+				4227C45C204B09FE0036EC77 /* UserModelAPI.swift in Sources */,
+				4227C462204B0A1D0036EC77 /* SensorModelAPI.swift in Sources */,
+				4227C460204B0A130036EC77 /* StationModelAPI.swift in Sources */,
 				42BFC818204C8BEF008BF9B1 /* OnboardingContentView.swift in Sources */,
 				42BFC81E204C8BEF008BF9B1 /* PaperOnboarding.swift in Sources */,
 				4227C458204AC7150036EC77 /* ValueAPI.swift in Sources */,
 				42BFC81F204C8BEF008BF9B1 /* ConstraintsHelper.swift in Sources */,
 				4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */,
 				4227C466204B141C0036EC77 /* KeychainPasswordItem.swift in Sources */,
-				4227C464204B0A2E0036EC77 /* Value.swift in Sources */,
+				42D418AA204DC679009F2807 /* Config.swift in Sources */,
+				4227C464204B0A2E0036EC77 /* ValueModelAPI.swift in Sources */,
+				42D418A5204DA1C4009F2807 /* Value.swift in Sources */,
 				42BFC817204C8BEF008BF9B1 /* PageView.swift in Sources */,
 				424F2AAE204C46C5008FDE30 /* UserControllerAPI.swift in Sources */,
 				4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */,
@@ -690,6 +714,7 @@
 				42BFC816204C8BEF008BF9B1 /* PageViewItem.swift in Sources */,
 				4227C454204AC6F20036EC77 /* StationAPI.swift in Sources */,
 				42BFC81A204C8BEF008BF9B1 /* PaperOnboardingDelegate.swift in Sources */,
+				42DE7662204D9B0D00684584 /* User.swift in Sources */,
 				4227C456204AC6FF0036EC77 /* SensorAPI.swift in Sources */,
 				4227C468204B18CF0036EC77 /* Authentication.swift in Sources */,
 				4227C45A204AEFFA0036EC77 /* LoginController.swift in Sources */,
@@ -701,11 +726,14 @@
 				424F2AAC204C281C008FDE30 /* ControllerAPI.swift in Sources */,
 				4227C452204AC6480036EC77 /* CircleMenuButton.swift in Sources */,
 				4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */,
+				42D418A8204DA372009F2807 /* Settings.swift in Sources */,
 				424F2AB0204C84AC008FDE30 /* Font.swift in Sources */,
+				42D418A1204DA101009F2807 /* Station.swift in Sources */,
 				42BFC81B204C8BEF008BF9B1 /* FillAnimationView.swift in Sources */,
 				42DE765E204CB90F00684584 /* MenuViewController.swift in Sources */,
 				42BFC819204C8BEF008BF9B1 /* OnboardingContantViewItem.swift in Sources */,
 				4227C451204AC6480036EC77 /* CircleMenuLoader.swift in Sources */,
+				42DE7660204D480B00684584 /* ProfileViewController.swift in Sources */,
 				4227C45E204B0A090036EC77 /* ErrorCertiWine.swift in Sources */,
 				420346BC204AACD400CE2D56 /* Constants.swift in Sources */,
 			);

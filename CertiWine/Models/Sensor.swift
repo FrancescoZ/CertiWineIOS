@@ -1,4 +1,4 @@
-//  Constants.swift
+//  Sensor
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -14,7 +14,7 @@
 /// all copies or substantial portions of the Software.
 ///
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
+// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
 /// instructional purposes related to programming, coding, application development,
 /// or information technology.  Permission for such use, copying, modification,
@@ -29,14 +29,10 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-enum Color{
-  static let Background = UIColor(red: 1, green: 1 , blue: 0.97, alpha: 1)
-  static let Foreground = UIColor.black
-  static let Title = UIColor.black
-  static let Description = UIColor.gray
-  static let Font = UIColor.black
-  static let Deactive = UIColor.gray
-  static let Error = UIColor.red
+struct Sensor{
+  
 }
+
+

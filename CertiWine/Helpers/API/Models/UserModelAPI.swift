@@ -34,9 +34,14 @@ import Foundation
 extension API {
   struct User: Decodable{
     let _id: String
-    let email: String
-    let name: String
-    let password: String
+    var email: String
+    var name: String
+    var password: String
+    
+    var alert_vib: Double
+    var alert_temp: Double
+    var alert_light: Double
+    var alert_hum: Double
   }
 }
 
