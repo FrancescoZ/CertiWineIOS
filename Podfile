@@ -10,14 +10,13 @@ target 'CertiWine' do
   pod 'Hue'
   #Font Pod
   pod 'FontAwesomeKit'
-  #Tutorial Pod
-  pod 'paper-onboarding'
   #Charts Pod
   pod 'Charts'
   #API Manager
   pod 'Moya'
   #Login
   pod "ILLoginKit"
+  pod 'SwiftKeychainWrapper'
 
   target 'CertiWineTests' do
     inherit! :search_paths

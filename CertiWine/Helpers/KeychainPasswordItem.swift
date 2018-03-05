@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct KeychainPasswordItem {
+struct KeychainConfiguration {
+  static let serviceName = "CertiWine"
+  static let accessGroup: String? = nil
+}
+
+struct KeychainAuthenticationItem {
     // MARK: Types
     
     enum KeychainError: Error {
@@ -41,7 +46,7 @@ struct KeychainPasswordItem {
             Build a query to find the item that matches the service, account and
             access group.
         */
-        var query = KeychainPasswordItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
+        var query = KeychainAuthenticationItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
         query[kSecMatchLimit as String] = kSecMatchLimitOne
         query[kSecReturnAttributes as String] = kCFBooleanTrue
         query[kSecReturnData as String] = kCFBooleanTrue
@@ -79,7 +84,7 @@ struct KeychainPasswordItem {
             var attributesToUpdate = [String : AnyObject]()
             attributesToUpdate[kSecValueData as String] = encodedPassword as AnyObject?
 
-            let query = KeychainPasswordItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
+            let query = KeychainAuthenticationItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
             let status = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
             
             // Throw an error if an unexpected status was returned.
@@ -90,7 +95,7 @@ struct KeychainPasswordItem {
                 No password was found in the keychain. Create a dictionary to save
                 as a new keychain item.
             */
-            var newItem = KeychainPasswordItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
+            var newItem = KeychainAuthenticationItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
             newItem[kSecValueData as String] = encodedPassword as AnyObject?
             
             // Add a the new item to the keychain.
@@ -106,7 +111,7 @@ struct KeychainPasswordItem {
         var attributesToUpdate = [String : AnyObject]()
         attributesToUpdate[kSecAttrAccount as String] = newAccountName as AnyObject?
         
-        let query = KeychainPasswordItem.keychainQuery(withService: service, account: self.account, accessGroup: accessGroup)
+        let query = KeychainAuthenticationItem.keychainQuery(withService: service, account: self.account, accessGroup: accessGroup)
         let status = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
         
         // Throw an error if an unexpected status was returned.
@@ -117,16 +122,16 @@ struct KeychainPasswordItem {
     
     func deleteItem() throws {
         // Delete the existing item from the keychain.
-        let query = KeychainPasswordItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
+        let query = KeychainAuthenticationItem.keychainQuery(withService: service, account: account, accessGroup: accessGroup)
         let status = SecItemDelete(query as CFDictionary)
         
         // Throw an error if an unexpected status was returned.
         guard status == noErr || status == errSecItemNotFound else { throw KeychainError.unhandledError(status: status) }
     }
     
-    static func passwordItems(forService service: String, accessGroup: String? = nil) throws -> [KeychainPasswordItem] {
+    static func passwordItems(forService service: String, accessGroup: String? = nil) throws -> [KeychainAuthenticationItem] {
         // Build a query for all items that match the service and access group.
-        var query = KeychainPasswordItem.keychainQuery(withService: service, accessGroup: accessGroup)
+        var query = KeychainAuthenticationItem.keychainQuery(withService: service, accessGroup: accessGroup)
         query[kSecMatchLimit as String] = kSecMatchLimitAll
         query[kSecReturnAttributes as String] = kCFBooleanTrue
         query[kSecReturnData as String] = kCFBooleanFalse
@@ -147,11 +152,11 @@ struct KeychainPasswordItem {
         guard let resultData = queryResult as? [[String : AnyObject]] else { throw KeychainError.unexpectedItemData }
         
         // Create a `KeychainPasswordItem` for each dictionary in the query result.
-        var passwordItems = [KeychainPasswordItem]()
+        var passwordItems = [KeychainAuthenticationItem]()
         for result in resultData {
             guard let account  = result[kSecAttrAccount as String] as? String else { throw KeychainError.unexpectedItemData }
             
-            let passwordItem = KeychainPasswordItem(service: service, account: account, accessGroup: accessGroup)
+            let passwordItem = KeychainAuthenticationItem(service: service, account: account, accessGroup: accessGroup)
             passwordItems.append(passwordItem)
         }
         

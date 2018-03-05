@@ -33,10 +33,16 @@ import UIKit
 
 enum Config{
   static let APIUrl = "http://localhost:3000"
+  static var Auth = ""
+  static var ID = ""
 }
 
 enum Color{
-  static let Background = UIColor.white
+  static let Background = UIColor(red: 1, green: 1 , blue: 0.97, alpha: 1)
+  static let Foreground = UIColor.black
+  static let Title = UIColor.black
+  static let Description = UIColor.gray
   static let Font = UIColor.black
   static let Deactive = UIColor.gray
+  static let Error = UIColor.red
 }
