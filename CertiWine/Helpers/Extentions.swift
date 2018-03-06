@@ -1,7 +1,4 @@
-//  ProfileViewController
-//  CertiWine
-//
-//  Created by Francesco Zanoli on 03/03/2018.
+///  Created by Francesco Zanoli on 03/03/2018.
 //  Copyright © 2018 CertiWine.
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -29,38 +26,30 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import Foundation
+
+// MARK: - Helpers
+extension String {
+  var urlEscaped: String {
+    return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+  }
+  
+  var utf8Encoded: Data {
+    return data(using: .utf8)!
+  }
+}
+
 import UIKit
 
-class ProfileViewController: UIViewController{
+extension UIImageView {
   
-  @IBOutlet weak var profileImageView: UIImageView!
-  @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var emailLabel: UILabel!
-  
-  @IBOutlet weak var vibrationLabel: UILabel!
-  @IBOutlet weak var vibrationSlider: UISlider!
-  
-  @IBOutlet weak var temperatureLabel: UILabel!
-  @IBOutlet weak var temperatureSlider: UISlider!
-  
-  @IBOutlet weak var lightLabel: UILabel!
-  @IBOutlet weak var lightSlider: UISlider!
-  
-  @IBOutlet weak var humidityLabel: UILabel!
-  @IBOutlet weak var humiditySlider: UISlider!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    profileImageView.layer.borderWidth = 1
-    profileImageView.layer.masksToBounds = false
-    profileImageView.layer.borderColor = UIColor.black.cgColor
-    profileImageView.layer.cornerRadius = profileImageView.frame.height/2
-    profileImageView.clipsToBounds = true
-    
-    nameLabel.text = Config.User?.fullName
-    emailLabel.text = Config.User?.email
-    
-    //TODO Connect and set min max
+  func roundedImage() {
+    if self.frame.size.width > self.frame.size.height{
+      self.layer.cornerRadius = self.frame.size.width / 2
+    }else {
+      self.layer.cornerRadius = self.frame.size.height / 2
+    }
+    self.clipsToBounds = true
   }
+  
 }

@@ -15,7 +15,7 @@
 		420346A8204A9C6F00CE2D56 /* CertiWineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346A7204A9C6F00CE2D56 /* CertiWineTests.swift */; };
 		420346BC204AACD400CE2D56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346BB204AACD400CE2D56 /* Constants.swift */; };
 		4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C446204AB92F0036EC77 /* UserAPI.swift */; };
-		4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C448204ABAE70036EC77 /* StringHelper.swift */; };
+		4227C449204ABAE70036EC77 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C448204ABAE70036EC77 /* Extentions.swift */; };
 		4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44B204AC6480036EC77 /* CircleMenu.swift */; };
 		4227C451204AC6480036EC77 /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44D204AC6480036EC77 /* CircleMenuLoader.swift */; };
 		4227C452204AC6480036EC77 /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44F204AC6480036EC77 /* CircleMenuButton.swift */; };
@@ -42,6 +42,7 @@
 		424F2AAC204C281C008FDE30 /* ControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F2AAB204C281C008FDE30 /* ControllerAPI.swift */; };
 		424F2AAE204C46C5008FDE30 /* UserControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F2AAD204C46C5008FDE30 /* UserControllerAPI.swift */; };
 		424F2AB0204C84AC008FDE30 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F2AAF204C84AC008FDE30 /* Font.swift */; };
+		427114E2204E1B86007E6814 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427114E1204E1B86007E6814 /* StationCell.swift */; };
 		42BFC815204C8BEF008BF9B1 /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFC803204C8BEF008BF9B1 /* PageContainer.swift */; };
 		42BFC816204C8BEF008BF9B1 /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFC805204C8BEF008BF9B1 /* PageViewItem.swift */; };
 		42BFC817204C8BEF008BF9B1 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFC806204C8BEF008BF9B1 /* PageView.swift */; };
@@ -91,7 +92,7 @@
 		420346BA204AABD100CE2D56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		420346BB204AACD400CE2D56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4227C446204AB92F0036EC77 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
-		4227C448204ABAE70036EC77 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
+		4227C448204ABAE70036EC77 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		4227C44B204AC6480036EC77 /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenu.swift; sourceTree = "<group>"; };
 		4227C44D204AC6480036EC77 /* CircleMenuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuLoader.swift; sourceTree = "<group>"; };
 		4227C44F204AC6480036EC77 /* CircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuButton.swift; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 		424F2AAB204C281C008FDE30 /* ControllerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAPI.swift; sourceTree = "<group>"; };
 		424F2AAD204C46C5008FDE30 /* UserControllerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserControllerAPI.swift; sourceTree = "<group>"; };
 		424F2AAF204C84AC008FDE30 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		427114E1204E1B86007E6814 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		42BFC803204C8BEF008BF9B1 /* PageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContainer.swift; sourceTree = "<group>"; };
 		42BFC805204C8BEF008BF9B1 /* PageViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewItem.swift; sourceTree = "<group>"; };
 		42BFC806204C8BEF008BF9B1 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
@@ -226,11 +228,10 @@
 		420346B3204AA92C00CE2D56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				42034694204A9C6F00CE2D56 /* LoginTutorialViewController.swift */,
+				427114E0204E1B63007E6814 /* Compontents */,
+				427114DF204E1B4C007E6814 /* ViewControllers */,
 				42034696204A9C6F00CE2D56 /* Main.storyboard */,
 				4203469B204A9C6F00CE2D56 /* LaunchScreen.storyboard */,
-				42DE765D204CB90F00684584 /* MenuViewController.swift */,
-				42DE765F204D480B00684584 /* ProfileViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,7 +252,7 @@
 				4227C465204B141C0036EC77 /* KeychainPasswordItem.swift */,
 				4227C44A204AC6480036EC77 /* CircularMenu */,
 				420346BB204AACD400CE2D56 /* Constants.swift */,
-				4227C448204ABAE70036EC77 /* StringHelper.swift */,
+				4227C448204ABAE70036EC77 /* Extentions.swift */,
 				424F2AAF204C84AC008FDE30 /* Font.swift */,
 			);
 			path = Helpers;
@@ -347,6 +348,24 @@
 				424F2A8F204BF028008FDE30 /* SignupViewController.xib */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		427114DF204E1B4C007E6814 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				42034694204A9C6F00CE2D56 /* LoginTutorialViewController.swift */,
+				42DE765D204CB90F00684584 /* MenuViewController.swift */,
+				42DE765F204D480B00684584 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		427114E0204E1B63007E6814 /* Compontents */ = {
+			isa = PBXGroup;
+			children = (
+				427114E1204E1B86007E6814 /* StationCell.swift */,
+			);
+			path = Compontents;
 			sourceTree = "<group>";
 		};
 		42BFC800204C8BEF008BF9B1 /* PaperOnBoarding */ = {
@@ -725,12 +744,13 @@
 				42BFC815204C8BEF008BF9B1 /* PageContainer.swift in Sources */,
 				424F2AAC204C281C008FDE30 /* ControllerAPI.swift in Sources */,
 				4227C452204AC6480036EC77 /* CircleMenuButton.swift in Sources */,
-				4227C449204ABAE70036EC77 /* StringHelper.swift in Sources */,
+				4227C449204ABAE70036EC77 /* Extentions.swift in Sources */,
 				42D418A8204DA372009F2807 /* Settings.swift in Sources */,
 				424F2AB0204C84AC008FDE30 /* Font.swift in Sources */,
 				42D418A1204DA101009F2807 /* Station.swift in Sources */,
 				42BFC81B204C8BEF008BF9B1 /* FillAnimationView.swift in Sources */,
 				42DE765E204CB90F00684584 /* MenuViewController.swift in Sources */,
+				427114E2204E1B86007E6814 /* StationCell.swift in Sources */,
 				42BFC819204C8BEF008BF9B1 /* OnboardingContantViewItem.swift in Sources */,
 				4227C451204AC6480036EC77 /* CircleMenuLoader.swift in Sources */,
 				42DE7660204D480B00684584 /* ProfileViewController.swift in Sources */,
