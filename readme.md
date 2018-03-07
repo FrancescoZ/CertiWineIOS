@@ -2,7 +2,7 @@
 
 The app for IOS to manage the Wine Certification System CertiWine
 
-#Improvements
+# Improvements
 - Connect SearchViewController
 - Connect Setting in user profile
 - Create function to save new wine
