@@ -36,6 +36,7 @@ import Result
 extension API{
   static let userProvider = MoyaProvider<UserAPI>()
   static let stationProvider = MoyaProvider<StationAPI>()
+  static let wineProvider = MoyaProvider<WineAPI>()
 
   static func handleResponse<toDecode:Decodable>(result: Result<Moya.Response, MoyaError>,
                              to: toDecode.Type,

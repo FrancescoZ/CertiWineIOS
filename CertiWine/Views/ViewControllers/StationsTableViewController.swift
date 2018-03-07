@@ -1,4 +1,4 @@
-//  Station
+//  StationsTableViewController
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -30,16 +30,32 @@
 /// THE SOFTWARE.
 
 
-import Foundation
+import UIKit
 
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
-  }
+class StationsTableViewController: UIViewController{
+  
+  lazy var stationsController = StationsController(rootViewController: self)
+    @IBOutlet weak var stationsTableView: UITableView!
+
+  
 }
 
-
+extension StationsTableViewController: UITableViewDataSource, UITableViewDelegate {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return stationsController.data.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "StationCell", for: indexPath) as! StationCell
+    cell.setup(withText: stationsController.data[indexPath.row].name)
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let next = self.storyboard?.instantiateViewController(withIdentifier: "WinesTableViewController") as! WinesTableViewController
+    next.stationId = stationsController.data[indexPath.row].id
+    next.stationName = stationsController.data[indexPath.row].name
+    self.show(next, sender: self)  
+  }
+  
+}

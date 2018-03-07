@@ -1,4 +1,4 @@
-//  Station
+//  StationCell
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -28,18 +28,17 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-
-
 import Foundation
+import UIKit
 
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
+class WineCell: UITableViewCell{
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var wineImageView: UIImageView!
+  
+  func setup(withText text: String) {
+    wineImageView.image = #imageLiteral(resourceName: "wine-blue")
+    wineImageView.roundedImage()    
+    nameLabel.text = text
   }
+  
 }
-
-

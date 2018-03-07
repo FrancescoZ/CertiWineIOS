@@ -35,8 +35,6 @@ import ILLoginKit
 
 class LoginController: LoginCoordinator {
   
-  var passwordItems: [KeychainAuthenticationItem] = []
-  
   // MARK: - LoginCoordinator
   
   override func start() {
@@ -54,8 +52,8 @@ class LoginController: LoginCoordinator {
     Config.ID = retrivedId
     API.getUser(withId: retrivedId, onSuccess: { usr in
       Config.User = User(apiModel: usr as! API.User)
-      let secondViewController = self.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-      self.rootViewController?.present(secondViewController, animated: true)
+      let next = self.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "StationsTableViewController") as! StationsTableViewController
+      self.rootViewController?.present(next, animated: true)
     }, onFailure: showError)
     return true
   }
@@ -71,9 +69,9 @@ class LoginController: LoginCoordinator {
   // Customize LoginKit. All properties have defaults, only set the ones you want.
   func configureAppearance() {
     // Customize the look with background & logo images
-    //backgroundImage = 
-    // mainLogoImage =
-    // secondaryLogoImage =
+    backgroundImage = #imageLiteral(resourceName: "cover")
+    mainLogoImage = #imageLiteral(resourceName: "grapes-blue")
+    secondaryLogoImage = #imageLiteral(resourceName: "grapes")
     
     // Change colors
     tintColor = UIColor(red: 52.0/255.0, green: 152.0/255.0, blue: 219.0/255.0, alpha: 1)

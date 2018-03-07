@@ -1,4 +1,4 @@
-//  Station
+//  StationsController
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,17 +29,33 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-
 import Foundation
+import UIKit
 
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
+class StationsController{
+  
+  var rootView: UIViewController!
+  lazy var data: [Station] = []
+  
+  init(rootViewController: UIViewController){
+    rootView = rootViewController
+    if Config.User?.stations.count == 0{
+      API.getStations(ofUserId: (Config.User?.id)!, onSuccess: { stations in
+          Config.User?.addStations(stations: stations as! Array<API.Station>)
+          self.data = (Config.User?.stations)!
+          (rootViewController as! StationsTableViewController).stationsTableView.reloadData()
+      }, onFailure: self.showError)
+    }
+    else {
+      data = (Config.User?.stations)!
+    }
+  }
+  
+  func showError(_ err:Error){
+    let error = err as! API.ErrorCertiWine
+    let alertController = UIAlertController(title: "Application Error", message: error.message, preferredStyle: UIAlertControllerStyle.alert)
+    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+    rootView.present(alertController, animated: true, completion: nil)
   }
 }
-
 

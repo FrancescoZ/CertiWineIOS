@@ -58,7 +58,7 @@ struct User{
   var settings: Settings
   
   var stations: [Station]
-  var sensors: [Sensor]
+  var wines: [Wine]
   
   var model: API.User
   
@@ -66,7 +66,20 @@ struct User{
     settings = Settings(apiModel: apiModel)
     model = apiModel
     stations = []
-    sensors = []
+    wines = []
+  }
+  
+  mutating func addStations(stations: [API.Station]){
+    for (_, station) in stations.enumerated(){
+      self.stations.append(Station(apiModel: station))
+    }
+  }
+  
+  mutating func addWines(wines: [API.Wine]){
+    self.wines.removeAll()
+    for (_, wine) in wines.enumerated(){
+      self.wines.append(Wine(apiModel: wine))
+    }
   }
   
   mutating func save() -> API.User{

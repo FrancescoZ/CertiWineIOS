@@ -1,4 +1,4 @@
-//  Station
+//  Wine Add Controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,17 +29,35 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import UIKit
 
-import Foundation
-
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
+class WineAddController{
+  
+  var rootView: UIViewController!
+  var sensors: [Sensor] = []
+  var _stationId:String?
+  var stationId: String{
+    get{
+      return _stationId!
+    }
+    set(newStation){
+      _stationId = newStation
+      API.getSensors(stationId: newStation, ofUserId: (Config.User?.id)!, onSuccess: { sensors in
+        for (_, sensor) in (sensors as! Array<API.Sensor>).enumerated(){
+          self.sensors.append(Sensor(apiModel: sensor))
+        }
+      }, onFailure: showError)
+    }
+  }
+  
+  init(rootViewController: UIViewController){
+    rootView = rootViewController
+  }
+  
+  func showError(_ err:Error){
+    let error = err as! API.ErrorCertiWine
+    let alertController = UIAlertController(title: "Application Error", message: error.message, preferredStyle: UIAlertControllerStyle.alert)
+    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+    rootView.present(alertController, animated: true, completion: nil)
   }
 }
-
-

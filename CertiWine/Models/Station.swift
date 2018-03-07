@@ -32,6 +32,49 @@
 import Foundation
 
 struct Station{
+  var id: String{
+    get{
+      return model._id
+    }
+  }
+  var name: String {
+    get {
+      return model.name
+    }
+    set(newName) {
+      model.name = newName
+    }
+  }
+  var state: String {
+    get {
+      return model.state
+    }
+    set(state) {
+      model.state = state
+    }
+  }
+  var user: String {
+    get {
+      return model.user
+    }
+    set(user) {
+      model.user = user
+    }
+  }
   
+  var battery: Float {
+    get {
+      return model.battery
+    }
+    set(bettery) {
+      model.battery = battery
+    }
+  }
+  
+  var model: API.Station
+  
+  init(apiModel: API.Station){
+    model = apiModel
+  }
 }
 

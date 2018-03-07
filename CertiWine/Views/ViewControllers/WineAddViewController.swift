@@ -1,4 +1,4 @@
-//  Station
+//  Wine Add View Controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,17 +29,60 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import UIKit
+import Charts
 
-import Foundation
-
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
+class WineAddViewContoller: UIViewController{
+  
+  @IBOutlet weak var infoTextView: UITextView!
+  @IBOutlet weak var nameTextField: UITextField!
+  @IBOutlet weak var datePicker: UIDatePicker!
+  @IBOutlet weak var sensorPicker: UIPickerView!
+  @IBOutlet weak var imageView: UIImageView!
+  
+  lazy var wineAddController = WineAddController(rootViewController: self)
+  
+  override func viewDidLoad() {
+    infoTextView.text = "Wine Information"
+    infoTextView.textColor = UIColor.lightGray
+    
+    imageView.roundedImage()
+  }
+  
+  @IBAction func backTouch(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
   }
 }
 
+extension WineAddViewContoller: UIPickerViewDelegate, UIPickerViewDataSource{
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return wineAddController.sensors.count
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    return wineAddController.sensors[row].name
+  }
+  
+
+}
+
+extension WineAddViewContoller: UITextViewDelegate{
+  func textViewDidBeginEditing(_ textField: UITextView) {
+    if infoTextView.textColor == UIColor.lightGray {
+      infoTextView.text = nil
+      infoTextView.textColor = UIColor.black
+    }
+  }
+  
+  func textViewDidEndEditing(_ textField: UITextView) {
+    if infoTextView.text.isEmpty {
+      infoTextView.text = "Wine Information"
+      infoTextView.textColor = UIColor.lightGray
+    }
+  }
+}
 

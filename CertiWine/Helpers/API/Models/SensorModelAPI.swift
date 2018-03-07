@@ -33,12 +33,12 @@ import Foundation
 
 extension API {
   struct Sensor: Decodable{
-    let _id: String
-    let name: String
-    let state: String
-    let battery: Double
-    let user: String
-    let station: String
+    var _id: String
+    var name: String
+    var state: String
+    var battery: Float
+    var user: String
+    var station: String
   }
 }
 

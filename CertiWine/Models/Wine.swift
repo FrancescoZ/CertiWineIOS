@@ -1,4 +1,4 @@
-//  Station
+//  Wine
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,17 +29,46 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-
 import Foundation
 
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
+struct Wine{
+  var id: String{
+    get{
+      return model._id
+    }
   }
-}
+  var name: String {
+    get {
+      return model.name
+    }
+    set(newName) {
+      model.name = newName
+    }
+  }
+  
+  var info: String {
+    get {
+      return model.info
+    }
+    set(info) {
+      model.info = info
+    }
+  }
+  
+  var year: Float {
+    get {
+      return model.year
+    }
+    set(year) {
+      model.year = year
+    }
+  }
+  
+  var model: API.Wine
+  
+  init(apiModel: API.Wine){
+    model = apiModel
+  }
 
+}
 

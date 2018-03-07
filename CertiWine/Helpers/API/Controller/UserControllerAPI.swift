@@ -44,7 +44,7 @@ extension API{
                           onSuccess success: @escaping (_ response: Any) -> Void,
                           onFailure failure: @escaping (_ error: Error) -> Void){
     API.userProvider.request(.getStations(ofUserId: ofUserId)) { result in
-      handleResponse(result: result, to: Station.self, onSuccess: success, onFailure: failure)
+      handleResponse(result: result, to: [Station].self, onSuccess: success, onFailure: failure)
     }
   }
 }

@@ -14,7 +14,7 @@
 /// all copies or substantial portions of the Software.
 ///
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-// distribute, sublicense, create a derivative work, and/or sell copies of the
+/// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
 /// instructional purposes related to programming, coding, application development,
 /// or information technology.  Permission for such use, copying, modification,
@@ -32,7 +32,49 @@
 import Foundation
 
 struct Sensor{
+  var id: String{
+    get{
+      return model._id
+    }
+  }
+  var name: String {
+    get {
+      return model.name
+    }
+    set(newName) {
+      model.name = newName
+    }
+  }
+  var state: String {
+    get {
+      return model.state
+    }
+    set(state) {
+      model.state = state
+    }
+  }
+  var user: String {
+    get {
+      return model.user
+    }
+    set(user) {
+      model.user = user
+    }
+  }
   
+  var battery: Float {
+    get {
+      return model.battery
+    }
+    set(bettery) {
+      model.battery = battery
+    }
+  }
+  
+  var model: API.Sensor
+  
+  init(apiModel: API.Sensor){
+    model = apiModel
+  }
 }
-
 

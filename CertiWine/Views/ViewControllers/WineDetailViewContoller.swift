@@ -1,4 +1,4 @@
-//  Station
+//  Wine Detail View Controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,17 +29,19 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import UIKit
+import Charts
 
-import Foundation
-
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
+class WineDetailViewContoller: UIViewController{
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var yearLabel: UILabel!
+  @IBOutlet weak var informationLabel: UILabel!
+  @IBOutlet weak var temperatureChart: LineChartView!
+  @IBOutlet weak var humidityChart: LineChartView!
+  @IBOutlet weak var vibrationChart: LineChartView!
+  @IBOutlet weak var lightChart: LineChartView!
+  
+  @IBAction func backTouch(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
   }
 }
-
-

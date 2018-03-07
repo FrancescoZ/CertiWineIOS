@@ -1,4 +1,4 @@
-//  Station
+//  Station Controller API
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,17 +29,16 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-
 import Foundation
 
-extension API {
-  struct Station: Decodable{
-    var _id: String
-    var name: String
-    var state: String
-    var battery: Float
-    var user: String
+extension API{
+  static func getSensors(stationId: String,
+                         ofUserId: String,
+                          onSuccess success: @escaping (_ response: Any) -> Void,
+                          onFailure failure: @escaping (_ error: Error) -> Void){
+    API.stationProvider.request(.getSensors(stationId: stationId, ofUserId: ofUserId)) { result in
+      handleResponse(result: result, to: [Sensor].self, onSuccess: success, onFailure: failure)
+    }
   }
 }
-
 

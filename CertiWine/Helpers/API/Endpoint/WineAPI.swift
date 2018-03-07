@@ -1,4 +1,4 @@
-//  Station API
+//  Wine API
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -32,44 +32,54 @@
 import Foundation
 import Moya
 
+
 extension API {
-  enum StationAPI{
-    case changeName(stationId: String, ofUserId: String, name: String)
-    case getSensors(stationId: String, ofUserId: String)
+  
+  enum WineAPI{
+    case getWine(withId: String, sensorId: String, userId: String, stationId: String)
+    case getWines(userId: String, stationId: String)
+    
+    case createWine(name: String, year: Float, info: String, sensorId: String, userId: String, stationId: String)
+    
+    case getWineValues(stationId: String, ofUserId: String, sensorId: String, wineId: String)
   }
 }
 
 // MARK: - TargetType Protocol Implementation
-extension API.StationAPI: TargetType {
+extension API.WineAPI: TargetType {
   var baseURL: URL { return URL(string: Config.APIUrl)! }
   var path: String {
     switch self {
-    case .getSensors(let stationId, let ofUserId):
-      return "\(ofUserId)/stations/\(stationId)/sensors"
-    case .changeName(let stationId, let ofUserId, _):
-      return "\(ofUserId)/stations/\(stationId)"
+    case .getWineValues(let stationId,let ofUserId,let sensorId,let wineId):
+        return "/\(ofUserId)/stations/\(stationId)/sensors/\(sensorId)/wines/\(wineId)"
+    case .createWine(_,_,_,let sensorId, let userId, let stationId):
+        return "/\(userId)/stations/\(stationId)/sensors/\(sensorId)/wines"
+    case .getWine(let withId, let sensorId, let userId, let stationId):
+        return "/\(userId)/stations/\(stationId)/sensors/\(sensorId)/wines\(withId)"
+    case .getWines(let userId, let stationId):
+      return "/\(userId)/stations/\(stationId)/sensors/wines"
     }
   }
   var method: Moya.Method {
     switch self {
-    case .getSensors:
+    case .getWine, .getWines, .getWineValues:
       return .get
-    case .changeName :
+    case .createWine:
       return .put
     }
   }
   var task: Task {
     switch self {
-    case .getSensors :
+    case .getWine, .getWines, .getWineValues:
       return .requestPlain
-    case let .changeName(_, _, name):
-      return .requestParameters(parameters: ["name": name],
+    case let .createWine(name, year, info,_,_,_):
+      return .requestParameters(parameters: ["name": name, "info": info, "year": year],
                                 encoding: JSONEncoding.default)
     }
   }
   var headers: [String: String]? {
     return ["Content-type": "application/json",
-      "x-access-token": Config.Auth ]
+            "x-access-token": Config.Auth ]
   }
   var sampleData: Data {
     switch self {
@@ -78,6 +88,4 @@ extension API.StationAPI: TargetType {
     }
   }
 }
-
-
 

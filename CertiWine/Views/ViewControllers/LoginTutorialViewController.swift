@@ -45,7 +45,8 @@ class LoginTutorialViewController: UIViewController {
   }
   
   @IBAction func skipButtonTouch() {
-    loginController.start()
+    let next = self.storyboard?.instantiateViewController(withIdentifier: "StationsTableViewController") as! StationsTableViewController
+    self.navigationController?.pushViewController(next, animated: true)
   }
   
   private func setupPaperOnboardingView() {
@@ -115,7 +116,7 @@ extension LoginTutorialViewController : PaperOnboardingDelegate {
   func onboardingWillTransitonToIndex(_ index: Int) {
     skipButton.setTitle("Skip...", for: .normal)
     if index == 2{
-      skipButton.setTitle("Login...", for: .normal)
+      skipButton.setTitle("Start...", for: .normal)
     }
   }
   
