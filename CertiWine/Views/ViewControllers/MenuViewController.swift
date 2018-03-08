@@ -38,6 +38,10 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   @IBOutlet weak var profileButton: UIButton!
   @IBOutlet weak var menuButton: CircleMenu!
 
+  @IBAction func profileTouch(_ sender: UIButton) {
+    let viewControllerType: ViewControllerType = .Profile
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+  }
   
   let items: [(icon: String, color: UIColor)] = [
     ("grapes", UIColor(red:0.19, green:0.57, blue:1, alpha:1)),

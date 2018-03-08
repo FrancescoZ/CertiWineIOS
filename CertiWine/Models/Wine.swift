@@ -55,7 +55,7 @@ struct Wine{
     }
   }
   
-  var year: Float {
+  var year: Int {
     get {
       return model.year
     }
@@ -64,6 +64,14 @@ struct Wine{
     }
   }
   
+  var sensor: String{
+    get{
+      return model.sensor
+    }
+    set(sensor){
+      model.sensor = sensor
+    }
+  }
   var model: API.Wine
   
   init(apiModel: API.Wine){

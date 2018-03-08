@@ -1,4 +1,4 @@
-//  Wine Add Controller
+//  Manger Sensor controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -28,48 +28,22 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
+import Foundation
 
-import UIKit
-
-class WineAddController{
+extension ManagerController{
   
-  var rootView: UIViewController!
-  var sensors: [Sensor] = []
-  var _stationId:String?
-  var stationId: String{
-    get{
-      return _stationId!
-    }
-    set(newStation){
-      _stationId = newStation
-      API.getSensors(stationId: newStation, ofUserId: (Config.User?.id)!, onSuccess: { sensors in
-        let convertedSensor = (sensors as! Array<API.Sensor>)
-        if convertedSensor.count == 0{
-          self.rootView.dismiss(animated: true, completion: nil)
-          self.showError(API.ErrorCertiWine(message: API.ErrorType.sensorError.rawValue))
-        }
-        for (_, sensor) in convertedSensor.enumerated(){
-          self.sensors.append(Sensor(apiModel: sensor))
-        }
-      }, onFailure: showError)
-    }
-  }
-  
-  init(rootViewController: UIViewController){
-    rootView = rootViewController
-  }
-  
-  func save(name: String, info: String, sensorId: String, year: Date) {
-    API.createWine(name: name, year: 1990, info: info, sensorId: sensorId, userId: (Config.User?.id)!, stationId: stationId, onSuccess: { wine in
-      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
-      self.rootView.dismiss(animated: true, completion: nil)
+  @objc func refreshSensors(notification: NotificationCenter){
+    API.getSensors(stationId: Shared.StationId, ofUserId: Shared.UserId, onSuccess: { sensors in
+      let convertedSensor = (sensors as! Array<API.Sensor>)
+      if convertedSensor.count == 0{
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
+        self.showError(API.ErrorCertiWine(message: API.ErrorType.sensorError.rawValue))
+      }
+      for (_, sensor) in convertedSensor.enumerated(){
+        Shared.Sensors.append(Sensor(apiModel: sensor))
+      }
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshSensorPicker"), object: nil)
     }, onFailure: showError)
   }
-  
-  func showError(_ err:Error){
-    let error = err as! API.ErrorCertiWine
-    let alertController = UIAlertController(title: "Application Error", message: error.message, preferredStyle: UIAlertControllerStyle.alert)
-    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-    rootView.present(alertController, animated: true, completion: nil)
-  }
 }
+

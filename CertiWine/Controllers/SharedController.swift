@@ -1,4 +1,4 @@
-//  Wine Detail Controller
+//  Shared controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -31,25 +31,31 @@
 
 import UIKit
 
-class WineDetailContoller{
+enum SensorType{
+  case Temperature
+  case Light
+  case Vibration
+  case Humidity
+  case None
+}
+
+struct Shared{
+  static var Manager: ManagerController? = nil
   
-  var rootView: UIViewController!
-  var data:Wine?
-  var wineId: String{
-    get{
-      return ""
-    }
-    set(station){
-      API.getWines(userId: Config.ID, stationId: station, onSuccess: { wine in
-        self.data = Wine(apiModel: wine as! API.Wine)
-      }, onFailure: self.showError)
-    }
-  }
+  static let UserId = Config.ID
+  static var Stations: [Station] = []
+  static var Sensors: [Sensor] = []
   
-  func showError(_ err:Error){
-    let error = err as! API.ErrorCertiWine
-    let alertController = UIAlertController(title: "Application Error", message: error.message, preferredStyle: UIAlertControllerStyle.alert)
-    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-    rootView.present(alertController, animated: true, completion: nil)
-  }
+  static var StationName: String = ""
+  static var StationId: String = ""
+  
+  static var Wines: [Wine] = []
+  static var WineId: String = ""
+  static var WineName: String = ""
+  
+  static var Values: [Value] = []
+  static var SensorType :SensorType = .None
+  
+  static var oldViewController: UIViewController?
+  static var currentViewController: UIViewController?
 }

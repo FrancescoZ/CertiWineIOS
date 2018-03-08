@@ -1,4 +1,4 @@
-//  LoginController
+//  Login Controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -50,11 +50,8 @@ class LoginController: LoginCoordinator {
     }
     Config.Auth = retrievedPassword
     Config.ID = retrivedId
-    API.getUser(withId: retrivedId, onSuccess: { usr in
-      Config.User = User(apiModel: usr as! API.User)
-      let next = self.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "StationsTableViewController") as! StationsTableViewController
-      self.rootViewController?.present(next, animated: true)
-    }, onFailure: showError)
+    
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshUser"), object: nil)
     return true
   }
   
@@ -96,21 +93,21 @@ class LoginController: LoginCoordinator {
   override func login(email: String, password: String) {
     API.login(email: email, password: password, onSuccess: { auth in
       self.finish(auth: (auth as! API.Authentication).message, id: (auth as! API.Authentication).userid)
-    } , onFailure: showError)
+    } , onFailure: (Shared.Manager?.showError)!)
   }
   
   // Signup
   override func signup(name: String, email: String, password: String) {
     API.createUser(email: email, fullName: name, password: password, onSuccess: { auth in
       self.finish(auth: (auth as! API.Authentication).message, id: (auth as! API.Authentication).userid)
-    } , onFailure: showError)
+    } , onFailure: (Shared.Manager?.showError)!)
   }
   
   // Facebook
   override func enterWithFacebook(profile: FacebookProfile) {
     API.loginFacebook(email: profile.email, fullName: profile.fullName, facebookToken: profile.facebookToken, onSuccess: { auth in
       self.finish(auth: (auth as! API.Authentication).message, id: (auth as! API.Authentication).userid)
-    } , onFailure: showError)
+    } , onFailure: (Shared.Manager?.showError)!)
   }
 
   
@@ -119,10 +116,4 @@ class LoginController: LoginCoordinator {
     //TODO Add recover Password
   }
   
-  func showError(_ err:Error){
-    let error = err as! API.ErrorCertiWine
-    let alertController = UIAlertController(title: "Invalid Login", message: error.message, preferredStyle: UIAlertControllerStyle.alert)
-    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-    super.navigationController.present(alertController, animated: true, completion: nil)
-  }
 }

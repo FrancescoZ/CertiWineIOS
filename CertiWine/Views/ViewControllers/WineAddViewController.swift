@@ -42,14 +42,14 @@ class WineAddViewContoller: UIViewController{
   @IBOutlet weak var nameValidationLabel: UILabel!
   @IBOutlet weak var doneButton: UIButton!
   
-  lazy var wineAddController = WineAddController(rootViewController: self)
-  
   override func viewDidLoad() {
     infoTextView.text = "Wine Information"
     infoTextView.textColor = UIColor.lightGray
     
     datePicker.maximumDate = Date()
     imageView.roundedImage()
+    NotificationCenter.default.addObserver(self, selector: #selector(refreshSensorPicker), name: NSNotification.Name(rawValue: "refreshSensorPicker"), object: nil)
+    super.viewDidLoad()
   }
   
   @IBAction func saveTouch(_ sender: UIButton) {
@@ -61,14 +61,18 @@ class WineAddViewContoller: UIViewController{
       nameValidationLabel.text = "This cannot be empty"
       return
     }
-    wineAddController.save(name: nameTextField.text!,
-                           info: infoTextView.text,
-                           sensorId: wineAddController.sensors[sensorPicker.selectedRow(inComponent: 0)].id,
-                           year: datePicker.date)
+    let wineModel = Wine(apiModel: API.Wine.init(_id: "",
+                                  name: nameTextField.text!,
+                                  info: infoTextView.text,
+                                  year: datePicker.calendar.dateComponents([.year], from: datePicker.date).year!,
+                                  sensor: Shared.Sensors[sensorPicker.selectedRow(inComponent: 0)].id,
+                                  user: "",
+                                  station: ""))
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "saveWine"), object: wineModel)
   }
   
   @IBAction func backTouch(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
   }
 }
 
@@ -78,14 +82,16 @@ extension WineAddViewContoller: UIPickerViewDelegate, UIPickerViewDataSource{
   }
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    return wineAddController.sensors.count
+    return Shared.Sensors.count
   }
   
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    return wineAddController.sensors[row].name
+    return Shared.Sensors[row].name
   }
   
-
+  @objc func refreshSensorPicker(notification: NotificationCenter){
+    sensorPicker.reloadAllComponents()
+  }
 }
 
 extension WineAddViewContoller: UITextFieldDelegate{

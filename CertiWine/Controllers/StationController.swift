@@ -1,4 +1,4 @@
-//  Wines Controller
+//  Manger Station controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -28,37 +28,18 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
+import Foundation
 
-import UIKit
-
-class WinesController{
+extension ManagerController{
   
-  var rootView: UIViewController!
-  lazy var data: [Wine] = []
-  var _stationId: String?
-  var stationId: String{
-    get{
-      return _stationId!
-    }
-    set(station){
-        _stationId = station
-        API.getWines(userId: Config.ID, stationId: station, onSuccess: { wines in
-          Config.User?.addWines(wines: wines as! Array<API.Wine>)
-          self.data = (Config.User?.wines)!
-          (self.rootView as! WinesTableViewController).winesTableView.reloadData()
-        }, onFailure: self.showError)
-    }
+  
+  @objc func refreshStations(notification: NotificationCenter){
+    API.getStations(ofUserId: Shared.UserId, onSuccess: { stations in
+      Config.User?.addStations(stations: stations as! Array<API.Station>)
+      Shared.Stations = (Config.User?.stations)!
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshStationTableView"), object: nil)
+    }, onFailure: self.showError)
   }
   
-  init(rootViewController: UIViewController){
-    rootView = rootViewController
-  }
-  
-  func showError(_ err:Error){
-    let error = err as! API.ErrorCertiWine
-    let alertController = UIAlertController(title: "Application Error", message: error.message, preferredStyle: UIAlertControllerStyle.alert)
-    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-    rootView.present(alertController, animated: true, completion: nil)
-  }
-  
+  @objc func refreshValues(notification: NotificationCenter){}
 }

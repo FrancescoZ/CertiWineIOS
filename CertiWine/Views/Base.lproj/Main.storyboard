@@ -77,7 +77,7 @@
                                 <rect key="frame" x="309" y="597" width="50" height="50"/>
                                 <state key="normal" title="Button" image="jenkins_filled"/>
                                 <connections>
-                                    <segue destination="Fq9-sg-P2H" kind="show" id="AAf-TQ-OnZ"/>
+                                    <action selector="profileTouch:" destination="I50-No-3v9" eventType="touchDown" id="oTc-Lb-nzn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDG-tn-eJL" customClass="CircleMenu" customModule="CertiWine" customModuleProvider="target">
@@ -690,7 +690,7 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <segue destination="OB0-oM-jj2" kind="show" id="EnX-By-Nh9"/>
+                                    <action selector="backTouch:" destination="qm5-jv-2c8" eventType="touchDown" id="Dtf-ul-pJo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="421-H4-w2P">
@@ -1266,6 +1266,6 @@
         <image name="wine-blue" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LGo-TM-lLg"/>
+        <segue reference="KsY-R1-su2"/>
     </inferredMetricsTieBreakers>
 </document>

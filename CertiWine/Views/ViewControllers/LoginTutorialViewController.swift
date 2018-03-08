@@ -45,8 +45,8 @@ class LoginTutorialViewController: UIViewController {
   }
   
   @IBAction func skipButtonTouch() {
-    let next = self.storyboard?.instantiateViewController(withIdentifier: "StationsTableViewController") as! StationsTableViewController
-    self.navigationController?.pushViewController(next, animated: true)
+    let viewControllerType: ViewControllerType = .Stations
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
   }
   
   private func setupPaperOnboardingView() {

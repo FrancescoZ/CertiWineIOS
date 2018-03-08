@@ -34,46 +34,47 @@ import UIKit
 
 class WinesTableViewController: UIViewController{
   
-  lazy var winesController = WinesController(rootViewController: self)
-  var stationId: String = ""
-  var stationName: String?
   @IBOutlet weak var winesTableView: UITableView!
   @IBOutlet weak var titleLabel: UILabel!
   
   var addViewController: WineAddViewContoller!
   
   override func viewDidLoad() {
-    titleLabel.text = stationName! + "'s Wines"
-    NotificationCenter.default.addObserver(self, selector: #selector(refreshList), name: NSNotification.Name(rawValue: "refresh"), object: nil)
+    titleLabel.text = Shared.StationName + "'s Wines"
+    NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: NSNotification.Name(rawValue: "refreshWinesTableView"), object: nil)
+    super.viewDidLoad()
   }
   
-  @objc func refreshList(notification: NotificationCenter){
-    winesController.stationId = stationId
+  @IBAction func backTouch(_ sender: UIButton) {
+    let viewControllerType: ViewControllerType = .Stations
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
   }
   
   @IBAction func addTouch(_ sender: UIButton) {
-    addViewController = self.storyboard?.instantiateViewController(withIdentifier: "WineAddViewController") as! WineAddViewContoller
-    addViewController.wineAddController.stationId = winesController.stationId
-    self.show(addViewController, sender: self)
+    let viewControllerType: ViewControllerType = .AddWine
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
   }
 }
 
 extension WinesTableViewController: UITableViewDataSource, UITableViewDelegate {
+  @objc func refreshTableView(notification: NotificationCenter){
+    winesTableView.reloadData()
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return winesController.data.count
+    return Shared.Wines.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "WineCell", for: indexPath) as! WineCell
-    cell.setup(withText: winesController.data[indexPath.row].name)
+    cell.setup(withText: Shared.Wines[indexPath.row].name)
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    let next = self.storyboard?.instantiateViewController(withIdentifier: "WinesTableViewController") as! WinesTableViewController
-//    next.winesController.stationId = stationsController.data[indexPath.row].id
-//    next.stationName = stationsController.data[indexPath.row].name
-//    self.show(next, sender: self)  
+    let viewControllerType: ViewControllerType = .WineDetail
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+
   }
   
 }

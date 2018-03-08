@@ -70,6 +70,7 @@ struct User{
   }
   
   mutating func addStations(stations: [API.Station]){
+    self.stations.removeAll()
     for (_, station) in stations.enumerated(){
       self.stations.append(Station(apiModel: station))
     }

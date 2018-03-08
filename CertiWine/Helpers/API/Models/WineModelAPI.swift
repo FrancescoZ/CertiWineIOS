@@ -36,7 +36,7 @@ extension API {
     let _id: String
     var name: String
     var info: String
-    var year: Float
+    var year: Int
     
     var sensor: String
     var user: String

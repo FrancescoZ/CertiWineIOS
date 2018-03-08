@@ -39,7 +39,7 @@ extension API {
     case getWine(withId: String, sensorId: String, userId: String, stationId: String)
     case getWines(userId: String, stationId: String)
     
-    case createWine(name: String, year: Float, info: String, sensorId: String, userId: String, stationId: String)
+    case createWine(name: String, year: Int, info: String, sensorId: String, userId: String, stationId: String)
     
     case getWineValues(stationId: String, ofUserId: String, sensorId: String, wineId: String)
   }

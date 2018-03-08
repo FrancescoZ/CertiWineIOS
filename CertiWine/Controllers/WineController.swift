@@ -1,4 +1,4 @@
-//  StationsController
+//  Manager Wine Controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,33 +29,24 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
 import UIKit
 
-class StationsController{
+extension ManagerController{
   
-  var rootView: UIViewController!
-  lazy var data: [Station] = []
-  
-  init(rootViewController: UIViewController){
-    rootView = rootViewController
-    if Config.User?.stations.count == 0{
-      API.getStations(ofUserId: (Config.User?.id)!, onSuccess: { stations in
-          Config.User?.addStations(stations: stations as! Array<API.Station>)
-          self.data = (Config.User?.stations)!
-          (rootViewController as! StationsTableViewController).stationsTableView.reloadData()
-      }, onFailure: self.showError)
-    }
-    else {
-      data = (Config.User?.stations)!
-    }
+  @objc func refreshWines(notification: NotificationCenter){
+    API.getWines(userId: Config.ID, stationId: Shared.StationId, onSuccess: { wines in
+      Config.User?.addWines(wines: wines as! Array<API.Wine>)
+      Shared.Wines = (Config.User?.wines)!
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshWinesTableView"), object: nil)
+    }, onFailure: self.showError)
   }
   
-  func showError(_ err:Error){
-    let error = err as! API.ErrorCertiWine
-    let alertController = UIAlertController(title: "Application Error", message: error.message, preferredStyle: UIAlertControllerStyle.alert)
-    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-    rootView.present(alertController, animated: true, completion: nil)
+  @objc func saveWine(notification: Notification) {
+    let wineModel = notification.object as! Wine
+    API.createWine(name: wineModel.name, year: wineModel.year, info: wineModel.info, sensorId: wineModel.sensor, userId: Shared.UserId, stationId: Shared.StationId, onSuccess: { wine in
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshWines"), object: nil)
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
+    }, onFailure: showError)
   }
-}
 
+}

@@ -53,7 +53,7 @@ extension API{
   }
   
   static func createWine(name: String,
-                        year: Float,
+                        year: Int,
                         info: String,
                         sensorId: String,
                         userId: String,

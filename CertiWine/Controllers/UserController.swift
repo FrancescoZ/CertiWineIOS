@@ -1,4 +1,4 @@
-//  StationsTableViewController
+//  Manger User controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -28,40 +28,15 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
+import Foundation
 
-
-import UIKit
-
-class StationsTableViewController: UIViewController{
-  @IBOutlet weak var stationsTableView: UITableView!
+extension ManagerController{
   
-  override func viewDidLoad() {
-    NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: NSNotification.Name(rawValue: "refreshStationTableView"), object: nil)
-    super.viewDidLoad()
+  @objc func loadUser(notification: NotificationCenter){
+    API.getUser(withId: Shared.UserId, onSuccess: { usr in
+      Config.User = User(apiModel: usr as! API.User)
+      let viewControllerType: ViewControllerType = .Stations
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    }, onFailure: showError)
   }
-}
-
-extension StationsTableViewController: UITableViewDataSource, UITableViewDelegate {
-  @objc func refreshTableView(notification: NotificationCenter){
-    stationsTableView.reloadData()
-  }
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return Shared.Stations.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "StationCell", for: indexPath) as! StationCell
-    cell.setup(withText: Shared.Stations[indexPath.row].name)
-    return cell
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    Shared.StationId = Shared.Stations[indexPath.row].id
-    Shared.StationName = Shared.Stations[indexPath.row].name
-    
-    let viewControllerType: ViewControllerType = .Wines
-    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
-  }
-  
 }
