@@ -72,6 +72,11 @@ extension WinesTableViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    Shared.WineId = Shared.Wines[indexPath.row].id
+    Shared.WineName = Shared.Wines[indexPath.row].name
+    Shared.SensorId = Shared.Wines[indexPath.row].sensor
+    
+    tableView.deselectRow(at: indexPath, animated: true)
     let viewControllerType: ViewControllerType = .WineDetail
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
 

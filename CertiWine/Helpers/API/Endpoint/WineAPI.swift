@@ -55,7 +55,7 @@ extension API.WineAPI: TargetType {
     case .createWine(_,_,_,let sensorId, let userId, let stationId):
         return "/\(userId)/stations/\(stationId)/sensors/\(sensorId)/wines"
     case .getWine(let withId, let sensorId, let userId, let stationId):
-        return "/\(userId)/stations/\(stationId)/sensors/\(sensorId)/wines\(withId)"
+        return "/\(userId)/stations/\(stationId)/sensors/\(sensorId)/wines/\(withId)"
     case .getWines(let userId, let stationId):
       return "/\(userId)/stations/\(stationId)/sensors/wines"
     }

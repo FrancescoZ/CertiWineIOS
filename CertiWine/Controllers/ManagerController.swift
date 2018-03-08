@@ -31,6 +31,8 @@ class ManagerController{
     
     NotificationCenter.default.addObserver(self, selector: #selector(pushViewController), name: NSNotification.Name(rawValue: "pushViewController"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(dismiss), name: NSNotification.Name(rawValue: "dismiss"), object: nil)
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(getWine), name: NSNotification.Name(rawValue: "getWine"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(saveWine), name: NSNotification.Name(rawValue: "saveWine"), object: nil)
 
   }

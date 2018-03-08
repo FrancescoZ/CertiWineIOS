@@ -52,7 +52,9 @@ struct Shared{
   static var Wines: [Wine] = []
   static var WineId: String = ""
   static var WineName: String = ""
+  static var SensorId: String = ""
   
+  static var Wine: Wine?
   static var Values: [Value] = []
   static var SensorType :SensorType = .None
   

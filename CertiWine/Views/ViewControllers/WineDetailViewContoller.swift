@@ -41,7 +41,23 @@ class WineDetailViewContoller: UIViewController{
   @IBOutlet weak var vibrationChart: LineChartView!
   @IBOutlet weak var lightChart: LineChartView!
   
+  override func viewDidLoad() {
+    refreshInterface()
+    NotificationCenter.default.addObserver(self, selector: #selector(refreshWine), name: NSNotification.Name(rawValue: "refreshWineData"), object: nil)
+    super.viewDidLoad()
+  }
+  
   @IBAction func backTouch(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
+  }
+  
+  @objc func refreshWine(notification: NotificationCenter){
+    refreshInterface()
+  }
+  
+  func refreshInterface(){
+    nameLabel.text = Shared.Wine?.name
+    yearLabel.text = String(describing: Shared.Wine?.year)
+    informationLabel.text = Shared.Wine?.info
   }
 }
