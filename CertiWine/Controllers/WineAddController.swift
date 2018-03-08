@@ -43,7 +43,12 @@ class WineAddController{
     set(newStation){
       _stationId = newStation
       API.getSensors(stationId: newStation, ofUserId: (Config.User?.id)!, onSuccess: { sensors in
-        for (_, sensor) in (sensors as! Array<API.Sensor>).enumerated(){
+        let convertedSensor = (sensors as! Array<API.Sensor>)
+        if convertedSensor.count == 0{
+          self.rootView.dismiss(animated: true, completion: nil)
+          self.showError(API.ErrorCertiWine(message: API.ErrorType.sensorError.rawValue))
+        }
+        for (_, sensor) in convertedSensor.enumerated(){
           self.sensors.append(Sensor(apiModel: sensor))
         }
       }, onFailure: showError)
@@ -52,6 +57,13 @@ class WineAddController{
   
   init(rootViewController: UIViewController){
     rootView = rootViewController
+  }
+  
+  func save(name: String, info: String, sensorId: String, year: Date) {
+    API.createWine(name: name, year: 1990, info: info, sensorId: sensorId, userId: (Config.User?.id)!, stationId: stationId, onSuccess: { wine in
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
+      self.rootView.dismiss(animated: true, completion: nil)
+    }, onFailure: showError)
   }
   
   func showError(_ err:Error){

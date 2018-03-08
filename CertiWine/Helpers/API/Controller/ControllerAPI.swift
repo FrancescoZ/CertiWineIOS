@@ -49,7 +49,9 @@ extension API{
         do{
           let responseJson = try response.map(to, using: JSONDecoder.init())
           success(responseJson)
-        } catch _ {}
+        } catch _ {
+          
+        }
         break
       default:
         var message = ""
@@ -71,5 +73,6 @@ extension API{
   enum ErrorType: String{
     case networkError = "There was a network error, check your connection or our server availability"
     case strangeError = "A Strange error happend, please try again or contact our customer service"
+    case sensorError = "You have conneted all your sensor, buy/pair a new one"
   }
 }

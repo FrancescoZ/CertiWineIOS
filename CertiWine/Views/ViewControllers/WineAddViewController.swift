@@ -30,7 +30,6 @@
 /// THE SOFTWARE.
 
 import UIKit
-import Charts
 
 class WineAddViewContoller: UIViewController{
   
@@ -40,13 +39,32 @@ class WineAddViewContoller: UIViewController{
   @IBOutlet weak var sensorPicker: UIPickerView!
   @IBOutlet weak var imageView: UIImageView!
   
+  @IBOutlet weak var nameValidationLabel: UILabel!
+  @IBOutlet weak var doneButton: UIButton!
+  
   lazy var wineAddController = WineAddController(rootViewController: self)
   
   override func viewDidLoad() {
     infoTextView.text = "Wine Information"
     infoTextView.textColor = UIColor.lightGray
     
+    datePicker.maximumDate = Date()
     imageView.roundedImage()
+  }
+  
+  @IBAction func saveTouch(_ sender: UIButton) {
+    guard let _ = nameTextField.text else {
+      nameValidationLabel.text = "This cannot be empty"
+      return
+    }
+    if (nameTextField.text?.isEmpty)! {
+      nameValidationLabel.text = "This cannot be empty"
+      return
+    }
+    wineAddController.save(name: nameTextField.text!,
+                           info: infoTextView.text,
+                           sensorId: wineAddController.sensors[sensorPicker.selectedRow(inComponent: 0)].id,
+                           year: datePicker.date)
   }
   
   @IBAction func backTouch(_ sender: UIButton) {
@@ -70,7 +88,19 @@ extension WineAddViewContoller: UIPickerViewDelegate, UIPickerViewDataSource{
 
 }
 
+extension WineAddViewContoller: UITextFieldDelegate{
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+   
+    doneButton.isEnabled = true
+    nameValidationLabel.text = ""
+    infoTextView.becomeFirstResponder()
+    return true
+  }
+}
+
 extension WineAddViewContoller: UITextViewDelegate{
+  
   func textViewDidBeginEditing(_ textField: UITextView) {
     if infoTextView.textColor == UIColor.lightGray {
       infoTextView.text = nil
@@ -79,6 +109,7 @@ extension WineAddViewContoller: UITextViewDelegate{
   }
   
   func textViewDidEndEditing(_ textField: UITextView) {
+    sensorPicker.becomeFirstResponder()
     if infoTextView.text.isEmpty {
       infoTextView.text = "Wine Information"
       infoTextView.textColor = UIColor.lightGray

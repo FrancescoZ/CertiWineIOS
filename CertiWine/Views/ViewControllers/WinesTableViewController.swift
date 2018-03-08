@@ -44,11 +44,16 @@ class WinesTableViewController: UIViewController{
   
   override func viewDidLoad() {
     titleLabel.text = stationName! + "'s Wines"
+    NotificationCenter.default.addObserver(self, selector: #selector(refreshList), name: NSNotification.Name(rawValue: "refresh"), object: nil)
+  }
+  
+  @objc func refreshList(notification: NotificationCenter){
+    winesController.stationId = stationId
   }
   
   @IBAction func addTouch(_ sender: UIButton) {
     addViewController = self.storyboard?.instantiateViewController(withIdentifier: "WineAddViewController") as! WineAddViewContoller
-    addViewController.wineAddController.stationId = stationId
+    addViewController.wineAddController.stationId = winesController.stationId
     self.show(addViewController, sender: self)
   }
 }

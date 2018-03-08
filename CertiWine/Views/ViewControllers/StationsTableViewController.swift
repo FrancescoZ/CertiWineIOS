@@ -54,6 +54,7 @@ extension StationsTableViewController: UITableViewDataSource, UITableViewDelegat
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let next = self.storyboard?.instantiateViewController(withIdentifier: "WinesTableViewController") as! WinesTableViewController
     next.stationId = stationsController.data[indexPath.row].id
+    next.winesController.stationId = stationsController.data[indexPath.row].id
     next.stationName = stationsController.data[indexPath.row].name
     self.show(next, sender: self)  
   }
