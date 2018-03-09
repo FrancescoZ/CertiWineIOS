@@ -34,13 +34,16 @@ import UIKit
 class LoginTutorialViewController: UIViewController {
 
     @IBOutlet weak var skipButton: UIButton!
-    lazy var loginController = LoginController(rootViewController: self)
+    var loginController: LoginController!
   
     override func viewDidLoad() {
-        super.viewDidLoad()
-      if !loginController.authenticate(){
+      loginController = LoginController(rootViewController: self)
+      super.viewDidLoad()
+      if !loginController.authenticate() && loginController.isNewUser(){
         setupPaperOnboardingView()
         view.bringSubview(toFront: skipButton)
+      }else{
+        skipButton.isHidden = true
       }
   }
   

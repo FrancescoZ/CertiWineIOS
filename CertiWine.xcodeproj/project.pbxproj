@@ -16,6 +16,7 @@
 		420346BC204AACD400CE2D56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420346BB204AACD400CE2D56 /* Constants.swift */; };
 		422397F7205192940017B92B /* SearchWineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397F6205192940017B92B /* SearchWineViewController.swift */; };
 		422397F92051A1BD0017B92B /* WineAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397F82051A1BD0017B92B /* WineAllCell.swift */; };
+		422397FB2052F3010017B92B /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397FA2052F3010017B92B /* ThanksViewController.swift */; };
 		4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C446204AB92F0036EC77 /* UserAPI.swift */; };
 		4227C449204ABAE70036EC77 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C448204ABAE70036EC77 /* Extentions.swift */; };
 		4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44B204AC6480036EC77 /* CircleMenu.swift */; };
@@ -111,6 +112,7 @@
 		420346BB204AACD400CE2D56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		422397F6205192940017B92B /* SearchWineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWineViewController.swift; sourceTree = "<group>"; };
 		422397F82051A1BD0017B92B /* WineAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineAllCell.swift; sourceTree = "<group>"; };
+		422397FA2052F3010017B92B /* ThanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		4227C446204AB92F0036EC77 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		4227C448204ABAE70036EC77 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		4227C44B204AC6480036EC77 /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenu.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				424C8DFD204F0BF50077E609 /* WineDetailViewContoller.swift */,
 				427C7424204F4FE20065752E /* WineAddViewController.swift */,
 				422397F6205192940017B92B /* SearchWineViewController.swift */,
+				422397FA2052F3010017B92B /* ThanksViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				42DE7660204D480B00684584 /* ProfileViewController.swift in Sources */,
 				4227C45E204B0A090036EC77 /* ErrorCertiWine.swift in Sources */,
 				420346BC204AACD400CE2D56 /* Constants.swift in Sources */,
+				422397FB2052F3010017B92B /* ThanksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

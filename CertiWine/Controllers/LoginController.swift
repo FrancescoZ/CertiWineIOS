@@ -43,8 +43,8 @@ class LoginController: LoginCoordinator {
   }
   
   func authenticate() -> Bool{
-    guard let retrievedPassword = KeychainWrapper.standard.string(forKey: "authCertiWine"),
-      let retrivedId = KeychainWrapper.standard.string(forKey: "idUserCertiWine") else {
+    guard let retrievedPassword = KeychainWrapper.standard.string(forKey: Config.authVar),
+      let retrivedId = KeychainWrapper.standard.string(forKey: Config.idVar) else {
         start()
         return false
     }
@@ -53,10 +53,10 @@ class LoginController: LoginCoordinator {
   }
   
   func isNewUser() -> Bool{
-    guard let alreadyHere = KeychainWrapper.standard.string(forKey: "certiWineVisited") else {
-      return false
+    guard let _ = KeychainWrapper.standard.string(forKey: "certiWineVisited") else {
+      return true
     }
-    return alreadyHere == "true"
+    return false
   }
   
   func finish(auth: String, id: String, tutorial: Bool) {
@@ -64,8 +64,8 @@ class LoginController: LoginCoordinator {
     Config.ID = id
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshUser"), object: tutorial)
     KeychainWrapper.standard.set("true", forKey: "certiWineVisited")
-    KeychainWrapper.standard.set(auth, forKey: "authCertiWine")
-    KeychainWrapper.standard.set(id, forKey: "idUserCertiWine")
+    KeychainWrapper.standard.set(auth, forKey: Config.authVar)
+    KeychainWrapper.standard.set(id, forKey: Config.idVar)
     super.finish()
   }
   

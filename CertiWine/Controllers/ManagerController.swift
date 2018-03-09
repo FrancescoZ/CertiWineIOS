@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 enum ViewControllerType{
   case Wines
@@ -18,12 +19,14 @@ enum ViewControllerType{
   case SearchWine
   case Menu
   case None
+  case Login
+  case Thanks
 }
 
 class ManagerController{
   init(currentViewController: UIViewController){
     Shared.currentViewController = currentViewController
-    
+    NotificationCenter.default.addObserver(self, selector: #selector(logout), name: NSNotification.Name(rawValue: "logout"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(refreshWines), name: NSNotification.Name(rawValue: "refreshWines"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(getAllWines), name: NSNotification.Name(rawValue: "getAllWines"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(refreshStations), name: NSNotification.Name(rawValue: "refreshStations"), object: nil)
@@ -71,6 +74,10 @@ extension ManagerController{
       storyBoardName = "SearchWinesViewController"
     case .Menu, .None:
       storyBoardName = "MenuViewController"
+    case .Login:
+      storyBoardName = "LoginTutorialViewController"
+    case .Thanks:
+      storyBoardName = "ThanksViewController"
     }
     let next = Shared.currentViewController?.storyboard?.instantiateViewController(withIdentifier: storyBoardName)
     Shared.oldViewController = Shared.currentViewController
@@ -80,12 +87,29 @@ extension ManagerController{
  
   @objc func handleError(notification: NotificationCenter){}
   
+  @objc func logout(notification: NotificationCenter){
+    let alertController = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.alert)
+    alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel,handler: { (action: UIAlertAction!) in
+      let viewControllerType: ViewControllerType = .Menu
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    }))
+    alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default,handler: { (action: UIAlertAction!) in
+      KeychainWrapper.standard.removeObject(forKey: Config.authVar)
+      KeychainWrapper.standard.removeObject(forKey: Config.idVar)
+      let viewControllerType: ViewControllerType = .Thanks
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    }))
+    Shared.currentViewController?.present(alertController, animated: true, completion: nil)
+  }
+  
   @objc func dismiss(notification: NotificationCenter){
     let temp = Shared.oldViewController
     Shared.oldViewController = Shared.currentViewController
     Shared.currentViewController?.dismiss(animated: true, completion: nil)
     Shared.currentViewController = temp
   }
+  
+  
   
   func showError(_ err:Error){
     let error = err as! API.ErrorCertiWine

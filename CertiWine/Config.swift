@@ -13,4 +13,6 @@ enum Config{
   static var Auth = ""
   static var ID = ""
   static var User: User?
+  static var idVar = "idUserCertiWine"
+  static var authVar = "authCertiWine"
 }

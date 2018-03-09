@@ -47,7 +47,7 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   let items: [(icon: String, color: UIColor)] = [
     ("grapes", UIColor(red:0.19, green:0.57, blue:1, alpha:1)),
     ("search_filled", UIColor(red:0.96, green:0.23, blue:0.21, alpha:1)),
-    ("wine_filled", UIColor(red:0.51, green:0.15, blue:1, alpha:1)),
+    ("logout", UIColor(red:0.51, green:0.15, blue:1, alpha:1)),
     ("wine_glass_filled", UIColor(red:1, green:0.39, blue:0, alpha:1)),
     ]
   
@@ -91,7 +91,8 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
     case 1:
       viewControllerType = .SearchWine
     case 2:
-      viewControllerType = .Profile
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "logout"), object: nil)
+      return
     default:
       viewControllerType = .None
     }
