@@ -38,7 +38,7 @@ extension API {
   enum UserAPI{
     case getUser(withId: String)
     
-    case updateUser(userId: String, email: String, passwrd: String, name: String)
+    case updateUser(userId: String, email: String, name: String)
     case updateAlerts(userId: String, vib: Float, hum: Float, temp: Float, light: Float)
     case createUser(email: String, name: String, passwrd: String, passwrdConfirmation: String)
     case createUserFacebook(email: String, name: String, token: String)
@@ -59,7 +59,7 @@ extension API.UserAPI: TargetType {
   var baseURL: URL { return URL(string: Config.APIUrl)! }
   var path: String {
     switch self {
-    case .getUser(let userId), .updateUser(let userId, _, _, _):
+    case .getUser(let userId), .updateUser(let userId, _, _):
       return "/users/\(userId)"
     case .createUser(_, _, _, _):
       return "/users"
@@ -91,8 +91,8 @@ extension API.UserAPI: TargetType {
     switch self {
     case .getUser, .getStations, .getSensors:
       return .requestPlain
-    case let .updateUser(_, email, passwrd, name):
-      return .requestParameters(parameters: ["email": email, "password": passwrd, "name": name],
+    case let .updateUser(_, email, name):
+      return .requestParameters(parameters: ["email": email, "name": name],
                                 encoding: JSONEncoding.default)
     case let .createUser(email, name, passwrd, passwrdConfirmation):
       return .requestParameters(parameters: ["email": email, "password": passwrd, "name": name, "passwordConf": passwrdConfirmation], encoding: JSONEncoding.default)

@@ -41,14 +41,17 @@ extension ManagerController{
                      onSuccess: { usr in
       Config.User = User(apiModel: usr as! API.User)
       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshProfileView"), object: nil)
+                    
     }, onFailure: showError)
   }
   
-  @objc func loadUser(notification: NotificationCenter){
+  @objc func loadUser(notification: Notification){
     API.getUser(withId: Shared.UserId, onSuccess: { usr in
       Config.User = User(apiModel: usr as! API.User)
-      let viewControllerType: ViewControllerType = .Stations
-      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+      if !(notification.object as! Bool){
+        let viewControllerType: ViewControllerType = .Stations
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+      }
     }, onFailure: showError)
   }
 }
