@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-748" y="2810"/>
+            <point key="canvasLocation" x="-1426" y="1755"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="0ED-Cx-kFu">
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qb6-LL-Atm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="1228"/>
+            <point key="canvasLocation" x="-674" y="2051"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ye2-eC-iKj">
@@ -134,9 +134,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="menu-filled"/>
                                 <connections>
-                                    <segue destination="I50-No-3v9" kind="popoverPresentation" popoverAnchorView="hci-cF-qiI" id="KsY-R1-su2">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="menuTouch:" destination="Fq9-sg-P2H" eventType="touchDown" id="C7F-Gx-65U"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFa-UK-shn">
@@ -361,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvE-h7-QRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="443"/>
+            <point key="canvasLocation" x="-674" y="1347"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oh1-3t-idD">
@@ -378,30 +376,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RuS-6z-T3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-748" y="1944"/>
+            <point key="canvasLocation" x="-2169" y="1755"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Wine View Controller-->
         <scene sceneID="t6L-5O-mtf">
             <objects>
-                <viewController storyboardIdentifier="SearchWinesViewController" id="UcX-ls-PuZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchWinesViewController" id="UcX-ls-PuZ" customClass="SearchWineViewController" customModule="CertiWine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AEu-BC-tSJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-9A-ooU">
-                                <rect key="frame" x="24" y="31" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="OrE-kW-L0P"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="menu"/>
-                                <connections>
-                                    <segue destination="I50-No-3v9" kind="popoverPresentation" popoverAnchorView="fYC-9A-ooU" id="LGo-TM-lLg">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAX-RC-xrv">
-                                <rect key="frame" x="72" y="34" width="162" height="35"/>
+                                <rect key="frame" x="72" y="34" width="162" height="44"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -409,102 +395,104 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Francesco Zanoli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzw-P9-jg1">
                                 <rect key="frame" x="18" y="3822" width="337" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="bov-VB-Dab"/>
+                                    <constraint firstAttribute="height" constant="46" id="1d2-W5-gI5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="5ZH-5k-kG8">
-                                <rect key="frame" x="16" y="71" width="343" height="56"/>
+                                <rect key="frame" x="16" y="81" width="343" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="UcX-ls-PuZ" id="4M4-OT-llT"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpS-ev-hq2">
-                                <rect key="frame" x="-1" y="127" width="375" height="540"/>
+                                <rect key="frame" x="-1" y="137" width="375" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="68" id="qmx-Lw-RfY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WineAllCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WineAllCell" rowHeight="68" id="qmx-Lw-RfY" customClass="WineAllCell" customModule="CertiWine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmx-Lw-RfY" id="tfP-2p-hqu">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wine-blue" translatesAutoresizingMaskIntoConstraints="NO" id="KVT-kd-dz2">
+                                                    <rect key="frame" x="15" y="11" width="40" height="40"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="470-S5-sP8">
-                                                    <rect key="frame" x="70" y="10.5" width="263" height="21"/>
+                                                    <rect key="frame" x="71" y="21" width="263" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="263" id="T9B-lq-AYK"/>
+                                                        <constraint firstAttribute="width" constant="263" id="eEW-dP-irq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wine-blue" translatesAutoresizingMaskIntoConstraints="NO" id="KVT-kd-dz2">
-                                                    <rect key="frame" x="14" y="4" width="40" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="Mb4-7m-iHL"/>
-                                                        <constraint firstAttribute="height" constant="40" id="amE-Ep-3jx"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="470-S5-sP8" firstAttribute="trailing" secondItem="tfP-2p-hqu" secondAttribute="trailingMargin" constant="-1" id="4JF-MS-Fek"/>
-                                                <constraint firstItem="KVT-kd-dz2" firstAttribute="top" secondItem="tfP-2p-hqu" secondAttribute="topMargin" constant="-7" id="6j4-Hr-Dru"/>
-                                                <constraint firstItem="KVT-kd-dz2" firstAttribute="centerY" secondItem="tfP-2p-hqu" secondAttribute="centerY" constant="-9.75" id="FWX-PC-e1p"/>
-                                                <constraint firstItem="KVT-kd-dz2" firstAttribute="leading" secondItem="tfP-2p-hqu" secondAttribute="leadingMargin" constant="-1" id="fUm-JU-ftW"/>
-                                                <constraint firstItem="470-S5-sP8" firstAttribute="bottom" secondItem="tfP-2p-hqu" secondAttribute="bottomMargin" constant="-25.5" id="guk-aP-MjQ"/>
-                                                <constraint firstItem="470-S5-sP8" firstAttribute="leading" secondItem="KVT-kd-dz2" secondAttribute="trailing" constant="16" id="lrr-o5-fbR"/>
-                                                <constraint firstItem="470-S5-sP8" firstAttribute="centerY" secondItem="tfP-2p-hqu" secondAttribute="centerY" constant="-12.75" id="t9a-He-vAR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KVT-kd-dz2" secondAttribute="bottom" constant="6" id="7PD-ZA-W0U"/>
+                                                <constraint firstItem="KVT-kd-dz2" firstAttribute="leading" secondItem="tfP-2p-hqu" secondAttribute="leadingMargin" id="KC5-vq-QFf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="470-S5-sP8" secondAttribute="trailing" id="MbV-0w-eAk"/>
+                                                <constraint firstItem="470-S5-sP8" firstAttribute="leading" secondItem="KVT-kd-dz2" secondAttribute="trailing" constant="16" id="Rew-88-hxS"/>
+                                                <constraint firstItem="KVT-kd-dz2" firstAttribute="top" secondItem="tfP-2p-hqu" secondAttribute="topMargin" id="UcN-f2-vZ5"/>
+                                                <constraint firstItem="470-S5-sP8" firstAttribute="top" secondItem="tfP-2p-hqu" secondAttribute="topMargin" constant="10" id="g0q-Uz-eDU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nameLabel" destination="470-S5-sP8" id="Xy8-dv-QAo"/>
-                                            <outlet property="stationImageView" destination="KVT-kd-dz2" id="vC5-kx-TEh"/>
+                                            <outlet property="nameLabel" destination="470-S5-sP8" id="lEg-wq-Fkx"/>
+                                            <outlet property="wineImageView" destination="KVT-kd-dz2" id="su4-PK-15V"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UcX-ls-PuZ" id="ua2-62-r1S"/>
+                                    <outlet property="delegate" destination="UcX-ls-PuZ" id="8JU-Tj-kiU"/>
+                                </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-9A-ooU">
+                                <rect key="frame" x="18" y="41" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2qy-h5-TXZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="ATt-vH-ytQ"/>
+                                </constraints>
+                                <state key="normal" image="menu-filled"/>
+                                <connections>
+                                    <action selector="menuTouch:" destination="UcX-ls-PuZ" eventType="touchDown" id="0ak-2F-ABu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fYC-9A-ooU" firstAttribute="centerY" secondItem="sAX-RC-xrv" secondAttribute="centerY" id="10s-Ll-ftx"/>
-                            <constraint firstItem="sAX-RC-xrv" firstAttribute="leading" secondItem="fYC-9A-ooU" secondAttribute="trailing" constant="8" symbolic="YES" id="21b-K8-Ow2"/>
-                            <constraint firstItem="Tzw-P9-jg1" firstAttribute="top" secondItem="AEu-BC-tSJ" secondAttribute="top" constant="3822" id="BL1-oc-qkS"/>
-                            <constraint firstItem="5ZH-5k-kG8" firstAttribute="trailing" secondItem="AEu-BC-tSJ" secondAttribute="trailingMargin" id="BlJ-XN-ZJu"/>
-                            <constraint firstItem="wpS-ev-hq2" firstAttribute="centerX" secondItem="Tzw-P9-jg1" secondAttribute="centerX" id="DaR-xl-mE9"/>
-                            <constraint firstItem="TNo-Sc-vn8" firstAttribute="trailing" secondItem="sAX-RC-xrv" secondAttribute="trailing" constant="141" id="GLm-im-gAF"/>
-                            <constraint firstItem="Tzw-P9-jg1" firstAttribute="leading" secondItem="AEu-BC-tSJ" secondAttribute="leadingMargin" constant="2" id="KuF-Yb-Zuo"/>
-                            <constraint firstItem="wpS-ev-hq2" firstAttribute="bottom" secondItem="TNo-Sc-vn8" secondAttribute="bottom" id="S8e-p1-hOS"/>
-                            <constraint firstItem="5ZH-5k-kG8" firstAttribute="leading" secondItem="AEu-BC-tSJ" secondAttribute="leadingMargin" id="SOQ-iV-RhC"/>
-                            <constraint firstItem="sAX-RC-xrv" firstAttribute="top" secondItem="TNo-Sc-vn8" secondAttribute="top" constant="14" id="eUH-HL-Vdd"/>
-                            <constraint firstItem="fYC-9A-ooU" firstAttribute="top" secondItem="TNo-Sc-vn8" secondAttribute="top" constant="11" id="eiD-KZ-A0v"/>
-                            <constraint firstItem="wpS-ev-hq2" firstAttribute="leading" secondItem="AEu-BC-tSJ" secondAttribute="leadingMargin" constant="-17" id="ffH-0r-IRT"/>
-                            <constraint firstItem="fYC-9A-ooU" firstAttribute="leading" secondItem="TNo-Sc-vn8" secondAttribute="leading" constant="24" id="hea-GF-wZe"/>
-                            <constraint firstItem="wpS-ev-hq2" firstAttribute="top" secondItem="5ZH-5k-kG8" secondAttribute="bottom" id="pO2-4Z-6WQ"/>
-                            <constraint firstItem="5ZH-5k-kG8" firstAttribute="top" secondItem="fYC-9A-ooU" secondAttribute="bottom" id="u6A-gt-lhL"/>
-                            <constraint firstItem="TNo-Sc-vn8" firstAttribute="trailing" secondItem="wpS-ev-hq2" secondAttribute="trailing" constant="1" id="wuj-tI-7Yb"/>
+                            <constraint firstItem="fYC-9A-ooU" firstAttribute="centerY" secondItem="sAX-RC-xrv" secondAttribute="centerY" id="1RF-o1-Prh"/>
+                            <constraint firstItem="wpS-ev-hq2" firstAttribute="leading" secondItem="AEu-BC-tSJ" secondAttribute="leadingMargin" constant="-17" id="3Gf-yE-5RK"/>
+                            <constraint firstItem="fYC-9A-ooU" firstAttribute="leading" secondItem="TNo-Sc-vn8" secondAttribute="leading" constant="18" id="K3a-Ug-q75"/>
+                            <constraint firstItem="sAX-RC-xrv" firstAttribute="top" secondItem="TNo-Sc-vn8" secondAttribute="top" constant="14" id="VQA-64-ZhT"/>
+                            <constraint firstItem="wpS-ev-hq2" firstAttribute="top" secondItem="5ZH-5k-kG8" secondAttribute="bottom" id="WEk-Li-ix1"/>
+                            <constraint firstItem="wpS-ev-hq2" firstAttribute="bottom" secondItem="TNo-Sc-vn8" secondAttribute="bottom" id="WZ1-uX-4BM"/>
+                            <constraint firstItem="5ZH-5k-kG8" firstAttribute="top" secondItem="sAX-RC-xrv" secondAttribute="bottom" constant="3" id="Xtf-7o-4pM"/>
+                            <constraint firstItem="Tzw-P9-jg1" firstAttribute="top" secondItem="AEu-BC-tSJ" secondAttribute="top" constant="3822" id="ZXN-LV-NNj"/>
+                            <constraint firstItem="TNo-Sc-vn8" firstAttribute="trailing" secondItem="wpS-ev-hq2" secondAttribute="trailing" constant="1" id="fK8-dH-kye"/>
+                            <constraint firstItem="fYC-9A-ooU" firstAttribute="top" secondItem="TNo-Sc-vn8" secondAttribute="top" constant="21" id="jzf-sB-TFn"/>
+                            <constraint firstItem="sAX-RC-xrv" firstAttribute="leading" secondItem="fYC-9A-ooU" secondAttribute="trailing" constant="24" id="noH-94-faW"/>
+                            <constraint firstItem="5ZH-5k-kG8" firstAttribute="trailing" secondItem="AEu-BC-tSJ" secondAttribute="trailingMargin" id="oDk-EB-v2K"/>
+                            <constraint firstItem="fYC-9A-ooU" firstAttribute="leading" secondItem="Tzw-P9-jg1" secondAttribute="leading" id="sOx-qD-VVS"/>
+                            <constraint firstItem="5ZH-5k-kG8" firstAttribute="leading" secondItem="AEu-BC-tSJ" secondAttribute="leadingMargin" id="tPd-5S-AHX"/>
+                            <constraint firstItem="wpS-ev-hq2" firstAttribute="centerX" secondItem="Tzw-P9-jg1" secondAttribute="centerX" id="vgF-vU-nqI"/>
+                            <constraint firstItem="TNo-Sc-vn8" firstAttribute="trailing" secondItem="sAX-RC-xrv" secondAttribute="trailing" constant="141" id="x2B-JQ-WyL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TNo-Sc-vn8"/>
                     </view>
                     <connections>
-                        <outlet property="searchDisplayController" destination="jhc-Us-TVJ" id="rNh-x0-Itv"/>
+                        <outlet property="searchBar" destination="5ZH-5k-kG8" id="1IK-WR-rtc"/>
+                        <outlet property="winesTableView" destination="wpS-ev-hq2" id="eWC-gi-1Qu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EoK-gA-chb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="jhc-Us-TVJ">
-                    <connections>
-                        <outlet property="delegate" destination="UcX-ls-PuZ" id="CSs-qC-JD4"/>
-                        <outlet property="searchBar" destination="5ZH-5k-kG8" id="2La-bt-WSB"/>
-                        <outlet property="searchContentsController" destination="UcX-ls-PuZ" id="jTH-Wr-yrF"/>
-                        <outlet property="searchResultsDataSource" destination="UcX-ls-PuZ" id="bQh-S1-fnK"/>
-                        <outlet property="searchResultsDelegate" destination="UcX-ls-PuZ" id="uZv-5E-JRG"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-52" y="1971"/>
+            <point key="canvasLocation" x="97" y="1502"/>
         </scene>
         <!--Stations Table View Controller-->
         <scene sceneID="auh-tQ-xMu">
@@ -586,9 +574,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="menu-filled"/>
                                 <connections>
-                                    <segue destination="I50-No-3v9" kind="popoverPresentation" popoverAnchorView="9qk-zl-GLy" id="NYT-qf-xRO">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="menuTouch:" destination="OB0-oM-jj2" eventType="touchDown" id="sbc-F5-rm5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -616,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7V6-Hs-8xx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52" y="2810"/>
+            <point key="canvasLocation" x="98" y="2161"/>
         </scene>
         <!--Wines Table View Controller-->
         <scene sceneID="l39-vh-UUz">
@@ -738,7 +724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ya-Ft-bOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="1970"/>
+            <point key="canvasLocation" x="814" y="1755"/>
         </scene>
         <!--Wine Detail View Contoller-->
         <scene sceneID="Qmr-a9-JYD">
@@ -1010,7 +996,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKv-hR-s7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="1923.2383808095954"/>
+            <point key="canvasLocation" x="1593" y="1831"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="62w-pd-GgQ">
@@ -1065,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaG-hx-tbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2366" y="1970"/>
+            <point key="canvasLocation" x="2295" y="1755"/>
         </scene>
         <!--Wine Add View Contoller-->
         <scene sceneID="xUP-k1-NUu">
@@ -1245,7 +1231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3b-wr-qCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="2716.1919040479761"/>
+            <point key="canvasLocation" x="814" y="2468"/>
         </scene>
     </scenes>
     <resources>
@@ -1257,11 +1243,7 @@
         <image name="detail" width="25" height="25"/>
         <image name="grapes-blue" width="25" height="25"/>
         <image name="jenkins_filled" width="50" height="50"/>
-        <image name="menu" width="25" height="25"/>
         <image name="menu-filled" width="50" height="50"/>
         <image name="wine-blue" width="50" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="KsY-R1-su2"/>
-    </inferredMetricsTieBreakers>
 </document>

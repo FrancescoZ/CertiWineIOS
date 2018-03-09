@@ -15,6 +15,8 @@ enum ViewControllerType{
   case Stations
   case SensorDetail
   case Profile
+  case SearchWine
+  case Menu
 }
 
 class ManagerController{
@@ -22,6 +24,7 @@ class ManagerController{
     Shared.currentViewController = currentViewController
     
     NotificationCenter.default.addObserver(self, selector: #selector(refreshWines), name: NSNotification.Name(rawValue: "refreshWines"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(getAllWines), name: NSNotification.Name(rawValue: "getAllWines"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(refreshStations), name: NSNotification.Name(rawValue: "refreshStations"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(refreshValues), name: NSNotification.Name(rawValue: "refreshValues"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(refreshSensors), name: NSNotification.Name(rawValue: "refreshSensors"), object: nil)
@@ -61,6 +64,11 @@ extension ManagerController{
     case .AddWine:
       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshSensors"), object: nil)
       storyBoardName = "WineAddViewController"
+    case .SearchWine:
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getAllWines"), object: nil)
+      storyBoardName = "SearchWinesViewController"
+    case .Menu:
+      storyBoardName = "MenuViewController"
     }
     let next = Shared.currentViewController?.storyboard?.instantiateViewController(withIdentifier: storyBoardName)
     Shared.oldViewController = Shared.currentViewController

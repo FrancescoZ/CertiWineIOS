@@ -33,6 +33,14 @@ import UIKit
 
 extension ManagerController{
   
+  @objc func getAllWines(notification: NotificationCenter){
+    API.getAllWines(userId: Shared.UserId, onSuccess: { wines in
+      Config.User?.addWines(wines: wines as! Array<API.Wine>)
+      Shared.Wines = (Config.User?.wines)!
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshAllWinesTableView"), object: nil)
+    }, onFailure: self.showError)
+  }
+  
   @objc func getWine(notification: NotificationCenter){
     API.getWine(withId: Shared.WineId, sensorId: Shared.SensorId, userId: Shared.UserId, stationId: Shared.StationId, onSuccess: { wine in
       Shared.Wine = Wine(apiModel: wine as! API.Wine)

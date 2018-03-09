@@ -63,4 +63,9 @@ class ProfileViewController: UIViewController{
     
     //TODO Connect and set min max
   }
+  
+  @IBAction func menuTouch(_ sender: UIButton) {
+    let viewControllerType: ViewControllerType = .Menu
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+  }
 }

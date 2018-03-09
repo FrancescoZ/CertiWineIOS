@@ -87,30 +87,21 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   
   func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int) {
     print("button did selected: \(atIndex)")
-//    switch atIndex{
-//    case 0:
-//      let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Main") as! ImageCommentViewController
-//      self.present(secondViewController, animated: true)
-//    case 1:
-//      let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingComment") as! SettingCommentViewController
-//      self.present(secondViewController, animated: true)
-//      break
-//    case 2:
-//      let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Settings") as! SettingsViewController
-//      self.present(secondViewController, animated: true)
-//      break
-//    case 3:
-//      self.api.logout()
-//      let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "thanksView") as! SettingsViewController
-//      self.present(secondViewController, animated: true)
-//    default:
-//      break
-//    }
+    switch atIndex {
+    case 0:
+      let viewControllerType: ViewControllerType = .SearchWine
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    case 1:
+      let viewControllerType: ViewControllerType = .Stations
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    default:
+      print("TODO Logout")
+    }
     
   }
   
   func menuCollapsed(_ circleMenu: CircleMenu){
-    self.dismiss(animated: true, completion: nil)
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
   }
   
 }

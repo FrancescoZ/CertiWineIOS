@@ -1,4 +1,4 @@
-//  Wine Cell
+//  Wine All Cell
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -31,14 +31,15 @@
 import Foundation
 import UIKit
 
-class WineCell: UITableViewCell{
+class WineAllCell: UITableViewCell{
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var wineImageView: UIImageView!
   
   func setup(withText text: String) {
     wineImageView.image = #imageLiteral(resourceName: "wine-blue")
-    wineImageView.roundedImage()    
+    wineImageView.roundedImage()
     nameLabel.text = text
   }
   
 }
+

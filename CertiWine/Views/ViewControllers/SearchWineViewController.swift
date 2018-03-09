@@ -1,4 +1,4 @@
-//  WinesTableViewController
+//  Search Wine View Controller
 //  CertiWine
 //
 //  Created by Francesco Zanoli on 03/03/2018.
@@ -29,56 +29,78 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-
 import UIKit
 
-class WinesTableViewController: UIViewController{
+class SearchWineViewController: UIViewController{
+  
+  var filteredWine = [Wine]()
   
   @IBOutlet weak var winesTableView: UITableView!
-  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var searchBar: UISearchBar!
   
   override func viewDidLoad() {
-    titleLabel.text = Shared.StationName + "'s Wines"
-    NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: NSNotification.Name(rawValue: "refreshWinesTableView"), object: nil)
+    searchBar.delegate = self
+    filteredWine = Shared.Wines
+    NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: NSNotification.Name(rawValue: "refreshAllWinesTableView"), object: nil)
     super.viewDidLoad()
   }
   
-  @IBAction func backTouch(_ sender: UIButton) {
-    let viewControllerType: ViewControllerType = .Stations
-    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
-  }
-  
-  @IBAction func addTouch(_ sender: UIButton) {
-    let viewControllerType: ViewControllerType = .AddWine
+  @IBAction func menuTouch(_ sender: UIButton) {
+    let viewControllerType: ViewControllerType = .Menu
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
   }
 }
 
-extension WinesTableViewController: UITableViewDataSource, UITableViewDelegate {
+extension SearchWineViewController: UITableViewDataSource, UITableViewDelegate {
   @objc func refreshTableView(notification: NotificationCenter){
+    filteredWine = Shared.Wines
     winesTableView.reloadData()
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return Shared.Wines.count
+    return filteredWine.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "WineCell", for: indexPath) as! WineCell
-    cell.setup(withText: Shared.Wines[indexPath.row].name)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "WineAllCell", for: indexPath) as! WineAllCell
+    cell.setup(withText: filteredWine[indexPath.row].name)
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    Shared.WineId = Shared.Wines[indexPath.row].id
-    Shared.WineName = Shared.Wines[indexPath.row].name
-    Shared.SensorId = Shared.Wines[indexPath.row].sensor
+    Shared.WineId = filteredWine[indexPath.row].id
+    Shared.WineName = filteredWine[indexPath.row].name
+    Shared.SensorId = filteredWine[indexPath.row].sensor
     
     tableView.deselectRow(at: indexPath, animated: true)
     let viewControllerType: ViewControllerType = .WineDetail
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
-
+    
   }
-  
 }
 
+extension SearchWineViewController: UISearchBarDelegate{
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+      filteredWine = searchText.isEmpty ? Shared.Wines : Shared.Wines.filter({(obj: Wine) -> Bool in
+        return obj.name.lowercased().contains(searchText.lowercased())
+      })
+      winesTableView.reloadData()
+  }
+  
+  func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool{
+    return true
+  }
+  
+  func searchBarTextDidBeginEditing(_ searchBar: UISearchBar){
+    
+  }
+  
+
+  func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+   return true
+  }
+  
+  func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    
+  }
+}

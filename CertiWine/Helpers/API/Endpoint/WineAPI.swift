@@ -42,6 +42,8 @@ extension API {
     case createWine(name: String, year: Int, info: String, sensorId: String, userId: String, stationId: String)
     
     case getWineValues(stationId: String, ofUserId: String, sensorId: String, wineId: String)
+    
+    case getAllWine(ofUserId: String)
   }
 }
 
@@ -58,11 +60,13 @@ extension API.WineAPI: TargetType {
         return "/\(userId)/stations/\(stationId)/sensors/\(sensorId)/wines/\(withId)"
     case .getWines(let userId, let stationId):
       return "/\(userId)/stations/\(stationId)/sensors/wines"
+    case .getAllWine(let ofUserId):
+        return "\(ofUserId)/wines"
     }
   }
   var method: Moya.Method {
     switch self {
-    case .getWine, .getWines, .getWineValues:
+    case .getWine, .getWines, .getWineValues, .getAllWine:
       return .get
     case .createWine:
       return .put
@@ -70,7 +74,7 @@ extension API.WineAPI: TargetType {
   }
   var task: Task {
     switch self {
-    case .getWine, .getWines, .getWineValues:
+    case .getWine, .getWines, .getWineValues, .getAllWine:
       return .requestPlain
     case let .createWine(name, year, info,_,_,_):
       return .requestParameters(parameters: ["name": name, "info": info, "year": year],

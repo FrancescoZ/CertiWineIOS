@@ -32,6 +32,13 @@
 import Foundation
 
 extension API{
+  static func getAllWines(userId: String,onSuccess success: @escaping (_ response: Any) -> Void,
+                          onFailure failure: @escaping (_ error: Error) -> Void){
+    API.wineProvider.request(.getAllWine(ofUserId: userId)){ result in
+      handleResponse(result: result, to: [Wine].self, onSuccess: success, onFailure: failure)
+    }
+  }
+  
   static func getWines(userId: String,
                          stationId: String,
                          onSuccess success: @escaping (_ response: Any) -> Void,

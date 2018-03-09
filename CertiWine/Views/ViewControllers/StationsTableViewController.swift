@@ -39,6 +39,11 @@ class StationsTableViewController: UIViewController{
     NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: NSNotification.Name(rawValue: "refreshStationTableView"), object: nil)
     super.viewDidLoad()
   }
+  
+  @IBAction func menuTouch(_ sender: UIButton) {
+    let viewControllerType: ViewControllerType = .Menu
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+  }
 }
 
 extension StationsTableViewController: UITableViewDataSource, UITableViewDelegate {
