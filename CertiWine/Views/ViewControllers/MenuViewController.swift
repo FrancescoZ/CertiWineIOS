@@ -37,6 +37,7 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   
   @IBOutlet weak var profileButton: UIButton!
   @IBOutlet weak var menuButton: CircleMenu!
+  var closed = false
 
   @IBAction func profileTouch(_ sender: UIButton) {
     let viewControllerType: ViewControllerType = .Profile
@@ -45,9 +46,8 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   
   let items: [(icon: String, color: UIColor)] = [
     ("grapes", UIColor(red:0.19, green:0.57, blue:1, alpha:1)),
-    ("wine_filled", UIColor(red:0.22, green:0.74, blue:0, alpha:1)),
     ("search_filled", UIColor(red:0.96, green:0.23, blue:0.21, alpha:1)),
-    ("circle-medium", UIColor(red:0.51, green:0.15, blue:1, alpha:1)),
+    ("wine_filled", UIColor(red:0.51, green:0.15, blue:1, alpha:1)),
     ("wine_glass_filled", UIColor(red:1, green:0.39, blue:0, alpha:1)),
     ]
   
@@ -55,6 +55,7 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   override func viewDidLoad() {
     super.viewDidLoad()
     menuButton.delegate = self
+    menuButton.layer.cornerRadius = menuButton.frame.size.width / 2.0
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -65,10 +66,6 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-  
-  @IBAction func unwindToViewController(){
-    self.dismiss(animated: true, completion: nil)
   }
   
   func circleMenu(_ circleMenu: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
@@ -87,21 +84,26 @@ class MenuViewController: UIViewController,CircleMenuDelegate{
   
   func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int) {
     print("button did selected: \(atIndex)")
+    var viewControllerType: ViewControllerType = .None
     switch atIndex {
     case 0:
-      let viewControllerType: ViewControllerType = .SearchWine
-      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+      viewControllerType = .Stations
     case 1:
-      let viewControllerType: ViewControllerType = .Stations
-      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+      viewControllerType = .SearchWine
+    case 2:
+      viewControllerType = .Profile
     default:
-      print("TODO Logout")
+      viewControllerType = .None
     }
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
     
   }
   
   func menuCollapsed(_ circleMenu: CircleMenu){
-    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
+    if (!closed){
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
+    }
+    closed = true
   }
   
 }

@@ -33,6 +33,8 @@ import UIKit
 
 class ProfileViewController: UIViewController{
   
+  var changed:Bool = false
+  
   @IBOutlet weak var profileImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var emailLabel: UILabel!
@@ -51,7 +53,11 @@ class ProfileViewController: UIViewController{
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "refreshProfileView"), object: nil)
+    refresh()
+  }
+  
+  func refresh(){
     profileImageView.layer.borderWidth = 1
     profileImageView.layer.masksToBounds = false
     profileImageView.layer.borderColor = UIColor.black.cgColor
@@ -61,11 +67,45 @@ class ProfileViewController: UIViewController{
     nameLabel.text = Config.User?.fullName
     emailLabel.text = Config.User?.email
     
-    //TODO Connect and set min max
+    vibrationSlider.value = (Config.User?.settings.maxVibration)!
+    lightSlider.value = (Config.User?.settings.maxLight)!
+    humiditySlider.value = (Config.User?.settings.maxHumidity)!
+    temperatureSlider.value = (Config.User?.settings.maxTemperature)!
+    
+    humidityLabel.text = String(humiditySlider.value) + "%"
+    vibrationLabel.text = String(vibrationSlider.value) + " vib/min"
+    temperatureLabel.text = String(temperatureSlider.value)+" °C"
+    lightLabel.text = String(lightSlider.value) + " lumen"
+  }
+  
+  @objc func refreshInterface(notification: Notification){
+    refresh()
   }
   
   @IBAction func menuTouch(_ sender: UIButton) {
+    let _ = Config.User?.save()
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateUser"), object: nil)
     let viewControllerType: ViewControllerType = .Menu
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+  }
+  
+  @IBAction func temperatureSlideChanged(_ sender: Any) {
+    temperatureLabel.text = String(temperatureSlider.value)+" °C"
+    Config.User?.settings.maxTemperature = temperatureSlider.value
+  }
+  
+  @IBAction func lightSlideChanged(_ sender: Any) {
+    lightLabel.text = String(lightSlider.value) + " lumen"
+    Config.User?.settings.maxLight = lightSlider.value
+  }
+  
+  @IBAction func vibrationSlideChanged(_ sender: Any)  {
+    vibrationLabel.text = String(vibrationSlider.value) + " vib/min"
+    Config.User?.settings.maxVibration = vibrationSlider.value
+  }
+  
+  @IBAction func humiditySlideChanged(_ sender: Any) {
+    humidityLabel.text = String(humiditySlider.value) + "%"
+    Config.User?.settings.maxHumidity = humiditySlider.value
   }
 }

@@ -71,6 +71,7 @@ extension SearchWineViewController: UITableViewDataSource, UITableViewDelegate {
     Shared.WineId = filteredWine[indexPath.row].id
     Shared.WineName = filteredWine[indexPath.row].name
     Shared.SensorId = filteredWine[indexPath.row].sensor
+    Shared.StationId = filteredWine[indexPath.row].station
     
     tableView.deselectRow(at: indexPath, animated: true)
     let viewControllerType: ViewControllerType = .WineDetail

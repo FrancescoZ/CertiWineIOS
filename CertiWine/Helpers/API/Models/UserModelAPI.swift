@@ -38,10 +38,10 @@ extension API {
     var name: String
     var password: String
     
-    var alert_vib: Double
-    var alert_temp: Double
-    var alert_light: Double
-    var alert_hum: Double
+    var alert_vib: Float
+    var alert_temp: Float
+    var alert_light: Float
+    var alert_hum: Float
   }
 }
 

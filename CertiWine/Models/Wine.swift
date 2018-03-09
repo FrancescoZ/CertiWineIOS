@@ -72,6 +72,16 @@ struct Wine{
       model.sensor = sensor
     }
   }
+  
+  var station: String{
+    get{
+      return model.station
+    }
+    set(station){
+      model.station = station
+    }
+  }
+  
   var model: API.Wine
   
   init(apiModel: API.Wine){

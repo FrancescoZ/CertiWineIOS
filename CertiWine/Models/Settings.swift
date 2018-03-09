@@ -32,7 +32,7 @@
 import Foundation
 
 struct Settings{
-  var maxVibration: Double{
+  var maxVibration: Float{
     get {
       return model.alert_vib
     }
@@ -40,7 +40,7 @@ struct Settings{
       model.alert_vib = newVib
     }
   }
-  var maxHumidity: Double{
+  var maxHumidity: Float{
     get {
       return model.alert_hum
     }
@@ -48,7 +48,7 @@ struct Settings{
       model.alert_hum = newHum
     }
   }
-  var maxLight: Double{
+  var maxLight: Float{
     get {
       return model.alert_light
     }
@@ -56,7 +56,7 @@ struct Settings{
       model.alert_light = newLigh
     }
   }
-  var maxTemperature: Double{
+  var maxTemperature: Float{
     get {
       return model.alert_temp
     }

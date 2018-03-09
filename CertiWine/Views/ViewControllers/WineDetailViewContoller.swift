@@ -33,6 +33,7 @@ import UIKit
 import Charts
 
 class WineDetailViewContoller: UIViewController{
+  @IBOutlet weak var wineImage: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var yearLabel: UILabel!
   @IBOutlet weak var informationLabel: UILabel!
@@ -59,5 +60,6 @@ class WineDetailViewContoller: UIViewController{
     nameLabel.text = Shared.Wine?.name
     yearLabel.text = String(describing: Shared.Wine?.year)
     informationLabel.text = Shared.Wine?.info
+    wineImage.roundedImage()
   }
 }

@@ -47,5 +47,17 @@ extension API{
       handleResponse(result: result, to: [Station].self, onSuccess: success, onFailure: failure)
     }
   }
+  
+  static func updateAlerts(userId: String,
+                            vib: Float,
+                            hum: Float,
+                            temp: Float,
+                            light: Float,
+                          onSuccess success: @escaping (_ response: Any) -> Void,
+                          onFailure failure: @escaping (_ error: Error) -> Void){
+    API.userProvider.request(.updateAlerts(userId: userId, vib: vib, hum: hum, temp: temp, light: light) ) { result in
+      handleResponse(result: result, to: User.self, onSuccess: success, onFailure: failure)
+    }
+  }
 }
 

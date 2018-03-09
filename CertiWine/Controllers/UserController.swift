@@ -32,6 +32,18 @@ import Foundation
 
 extension ManagerController{
   
+  @objc func updateUser(notification: NotificationCenter){
+    API.updateAlerts(userId: Shared.UserId,
+                     vib: (Config.User?.settings.maxVibration)!,
+                     hum: (Config.User?.settings.maxHumidity)!,
+                     temp: (Config.User?.settings.maxTemperature)!,
+                     light: (Config.User?.settings.maxLight)!,
+                     onSuccess: { usr in
+      Config.User = User(apiModel: usr as! API.User)
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshProfileView"), object: nil)
+    }, onFailure: showError)
+  }
+  
   @objc func loadUser(notification: NotificationCenter){
     API.getUser(withId: Shared.UserId, onSuccess: { usr in
       Config.User = User(apiModel: usr as! API.User)

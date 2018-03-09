@@ -39,6 +39,7 @@ extension API {
     case getUser(withId: String)
     
     case updateUser(userId: String, email: String, passwrd: String, name: String)
+    case updateAlerts(userId: String, vib: Float, hum: Float, temp: Float, light: Float)
     case createUser(email: String, name: String, passwrd: String, passwrdConfirmation: String)
     case createUserFacebook(email: String, name: String, token: String)
     
@@ -72,13 +73,15 @@ extension API.UserAPI: TargetType {
       return "/\(ofUserId)/stations"
     case .getSensors(let ofUserId), .createSensor(let ofUserId, _):
       return "/\(ofUserId)/sensors"
+    case .updateAlerts(let userId, _, _, _, _):
+      return "/users/\(userId)/alerts"
     }
   }
   var method: Moya.Method {
     switch self {
     case .getUser, .getStations, .getSensors:
       return .get
-    case .createUser, .updateUser, .createStation, .createSensor, .createUserFacebook:
+    case .createUser, .updateUser, .createStation, .createSensor, .createUserFacebook, .updateAlerts:
       return .put
     case .login, .loginFacebook:
       return .post
@@ -106,6 +109,8 @@ extension API.UserAPI: TargetType {
       return .requestParameters(parameters: ["name": name], encoding: JSONEncoding.default)
     case let .createSensor(_, name):
       return .requestParameters(parameters: ["name": name], encoding: JSONEncoding.default)
+    case let .updateAlerts(_, vib, hum, temp, light):
+      return .requestParameters(parameters: ["alert_vib": vib, "alert_hum": hum, "alert_temp": temp, "alert_light": light], encoding: JSONEncoding.default)
     }
   }
   var headers: [String: String]? {
