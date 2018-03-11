@@ -42,9 +42,11 @@ class WineDetailViewContoller: UIViewController{
   @IBOutlet weak var vibrationChart: LineChartView!
   @IBOutlet weak var lightChart: LineChartView!
   
+  
   override func viewDidLoad() {
     refreshInterface()
     NotificationCenter.default.addObserver(self, selector: #selector(refreshWine), name: NSNotification.Name(rawValue: "refreshWineData"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(refreshSensors), name: NSNotification.Name(rawValue: "refreshCharts"), object: nil)
     super.viewDidLoad()
   }
   
@@ -56,10 +58,94 @@ class WineDetailViewContoller: UIViewController{
     refreshInterface()
   }
   
+  @objc func refreshSensors(notification: NotificationCenter){
+    
+    setTemperatureChart()
+    setLightChart()
+    setVibrationChart()
+    setHumidityChart()
+  }
+  
   func refreshInterface(){
-    nameLabel.text = Shared.Wine?.name
-    yearLabel.text = String(describing: Shared.Wine?.year)
-    informationLabel.text = Shared.Wine?.info
+    guard let wine = Shared.Wine else{
+      return
+    }
+    nameLabel.text = wine.name
+    yearLabel.text = String(describing: wine.year)
+    informationLabel.text = wine.info
     wineImage.roundedImage()
+  }
+  
+  func setChart(dataset: LineChartDataSet, xAxis: XAxis) {
+    dataset.lineWidth = 1.75
+    
+    dataset.drawCirclesEnabled = false
+    dataset.mode =  .horizontalBezier
+    dataset.drawValuesEnabled = false
+    dataset.drawFilledEnabled = true
+    dataset.cubicIntensity = 0.5;
+    
+    xAxis.labelPosition = .bottom
+    xAxis.labelCount = dataset.entryCount
+    xAxis.drawLabelsEnabled = true
+    xAxis.drawLimitLinesBehindDataEnabled = true
+    xAxis.avoidFirstLastClippingEnabled = true
+    // Set the x values date formatter
+    let xValuesNumberFormatter = DateAxisFormatter()
+    xAxis.valueFormatter = xValuesNumberFormatter
+  }
+  
+  
+  func setTemperatureChart(){
+    var dataEntries: [ChartDataEntry] = []
+    for (index, value) in Shared.Values.enumerated() {
+      let dataEntry = ChartDataEntry(x: Double(index), y: Double(value.temperature))
+      dataEntries.append(dataEntry)
+    }
+    let chartDataSet = LineChartDataSet(values: dataEntries, label: "Temperature")
+    setChart(dataset: chartDataSet, xAxis: temperatureChart.xAxis)
+    let chartData = LineChartData(dataSet: chartDataSet)
+    temperatureChart.data = chartData
+    temperatureChart.doubleTapToZoomEnabled = false
+    temperatureChart.chartDescription?.text = ""
+  }
+  
+  func setLightChart(){
+    var dataEntries: [ChartDataEntry] = []
+    for (index, value) in Shared.Values.enumerated() {
+      let dataEntry = ChartDataEntry(x: Double(index), y: Double(value.light))
+      dataEntries.append(dataEntry)
+    }
+    let chartDataSet = LineChartDataSet(values: dataEntries, label: "Light")
+    setChart(dataset: chartDataSet, xAxis: lightChart.xAxis)
+    let chartData = LineChartData(dataSet: chartDataSet)
+    lightChart.data = chartData
+    lightChart.chartDescription?.text = ""
+  }
+  
+  func setVibrationChart(){
+    var dataEntries: [ChartDataEntry] = []
+    for (index, value) in Shared.Values.enumerated() {
+      let dataEntry = ChartDataEntry(x: Double(index), y: Double(value.vibration))
+      dataEntries.append(dataEntry)
+    }
+    let chartDataSet = LineChartDataSet(values: dataEntries, label: "Vibration")
+    setChart(dataset: chartDataSet, xAxis: vibrationChart.xAxis)
+    let chartData = LineChartData(dataSet: chartDataSet)
+    vibrationChart.data = chartData
+    vibrationChart.chartDescription?.text = ""
+  }
+  
+  func setHumidityChart(){
+    var dataEntries: [ChartDataEntry] = []
+    for (index, value) in Shared.Values.enumerated() {
+      let dataEntry = ChartDataEntry(x: Double(index), y: Double(value.humidity))
+      dataEntries.append(dataEntry)
+    }
+    let chartDataSet = LineChartDataSet(values: dataEntries, label: "Humidity")
+    setChart(dataset: chartDataSet, xAxis: humidityChart.xAxis)
+    let chartData = LineChartData(dataSet: chartDataSet)
+    humidityChart.data = chartData
+    humidityChart.chartDescription?.text = ""
   }
 }

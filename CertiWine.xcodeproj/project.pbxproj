@@ -17,6 +17,9 @@
 		422397F7205192940017B92B /* SearchWineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397F6205192940017B92B /* SearchWineViewController.swift */; };
 		422397F92051A1BD0017B92B /* WineAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397F82051A1BD0017B92B /* WineAllCell.swift */; };
 		422397FB2052F3010017B92B /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397FA2052F3010017B92B /* ThanksViewController.swift */; };
+		422397FD2053CCF60017B92B /* SensorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397FC2053CCF60017B92B /* SensorDetailViewController.swift */; };
+		422397FF205585BE0017B92B /* DateAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422397FE205585BE0017B92B /* DateAxisFormatter.swift */; };
+		42239801205589590017B92B /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42239800205589590017B92B /* DateFormatterExtension.swift */; };
 		4227C447204AB92F0036EC77 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C446204AB92F0036EC77 /* UserAPI.swift */; };
 		4227C449204ABAE70036EC77 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C448204ABAE70036EC77 /* Extentions.swift */; };
 		4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227C44B204AC6480036EC77 /* CircleMenu.swift */; };
@@ -113,6 +116,9 @@
 		422397F6205192940017B92B /* SearchWineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWineViewController.swift; sourceTree = "<group>"; };
 		422397F82051A1BD0017B92B /* WineAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineAllCell.swift; sourceTree = "<group>"; };
 		422397FA2052F3010017B92B /* ThanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
+		422397FC2053CCF60017B92B /* SensorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailViewController.swift; sourceTree = "<group>"; };
+		422397FE205585BE0017B92B /* DateAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAxisFormatter.swift; sourceTree = "<group>"; };
+		42239800205589590017B92B /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		4227C446204AB92F0036EC77 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		4227C448204ABAE70036EC77 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		4227C44B204AC6480036EC77 /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenu.swift; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 				420346BB204AACD400CE2D56 /* Constants.swift */,
 				4227C448204ABAE70036EC77 /* Extentions.swift */,
 				424F2AAF204C84AC008FDE30 /* Font.swift */,
+				42239800205589590017B92B /* DateFormatterExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -411,6 +418,7 @@
 				427C7424204F4FE20065752E /* WineAddViewController.swift */,
 				422397F6205192940017B92B /* SearchWineViewController.swift */,
 				422397FA2052F3010017B92B /* ThanksViewController.swift */,
+				422397FC2053CCF60017B92B /* SensorDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -421,6 +429,7 @@
 				427114E1204E1B86007E6814 /* StationCell.swift */,
 				424C8DF3204EDCF50077E609 /* WineCell.swift */,
 				422397F82051A1BD0017B92B /* WineAllCell.swift */,
+				422397FE205585BE0017B92B /* DateAxisFormatter.swift */,
 			);
 			path = Compontents;
 			sourceTree = "<group>";
@@ -771,6 +780,7 @@
 			files = (
 				427C742A2051458B0065752E /* SharedController.swift in Sources */,
 				42BFC81C204C8BEF008BF9B1 /* PaperOnboardingDataSource.swift in Sources */,
+				42239801205589590017B92B /* DateFormatterExtension.swift in Sources */,
 				42D418A3204DA1B5009F2807 /* Sensor.swift in Sources */,
 				4227C45C204B09FE0036EC77 /* UserModelAPI.swift in Sources */,
 				422397F92051A1BD0017B92B /* WineAllCell.swift in Sources */,
@@ -783,6 +793,7 @@
 				4227C458204AC7150036EC77 /* ValueAPI.swift in Sources */,
 				427C742E20516FBC0065752E /* SensorController.swift in Sources */,
 				42BFC81F204C8BEF008BF9B1 /* ConstraintsHelper.swift in Sources */,
+				422397FD2053CCF60017B92B /* SensorDetailViewController.swift in Sources */,
 				427C742C205169CF0065752E /* UserController.swift in Sources */,
 				4227C450204AC6480036EC77 /* CircleMenu.swift in Sources */,
 				424C8DFE204F0BF50077E609 /* WineDetailViewContoller.swift in Sources */,
@@ -802,6 +813,7 @@
 				427C7430205172AC0065752E /* StationController.swift in Sources */,
 				42BFC81A204C8BEF008BF9B1 /* PaperOnboardingDelegate.swift in Sources */,
 				42DE7662204D9B0D00684584 /* User.swift in Sources */,
+				422397FF205585BE0017B92B /* DateAxisFormatter.swift in Sources */,
 				4227C456204AC6FF0036EC77 /* SensorAPI.swift in Sources */,
 				427C741B204F38390065752E /* WineAPI.swift in Sources */,
 				4227C468204B18CF0036EC77 /* Authentication.swift in Sources */,

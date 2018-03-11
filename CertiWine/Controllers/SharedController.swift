@@ -55,7 +55,7 @@ struct Shared{
   static var SensorId: String = ""
   
   static var Wine: Wine?
-  static var Values: [Value] = []
+  static var Values = [Value]()
   static var SensorType :SensorType = .None
   
   static var oldViewController: UIViewController?

@@ -361,7 +361,7 @@ open class CircleMenu: UIButton {
       container.superview?.bringSubview(toFront: container)
     }
     
-    if let buttons = buttons {
+    if let _ = buttons {
       let step = getArcStep()
       circle.fillAnimation(duration, startAngle: -90 + startAngle + step * Float(sender.tag)) { [weak self] in
         self?.buttons?.forEach { $0.alpha = 0 }

@@ -45,6 +45,7 @@ extension ManagerController{
     API.getWine(withId: Shared.WineId, sensorId: Shared.SensorId, userId: Shared.UserId, stationId: Shared.StationId, onSuccess: { wine in
       Shared.Wine = Wine(apiModel: wine as! API.Wine)
       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshWineData"), object: nil)
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getValues"), object: nil)
     }, onFailure: self.showError)
   }
   
@@ -62,6 +63,15 @@ extension ManagerController{
       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshWines"), object: nil)
       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismiss"), object: nil)
     }, onFailure: showError)
+  }
+  
+  @objc func getValues(notification: NotificationCenter){
+    API.getWineValues(withId: Shared.WineId, sensorId: Shared.SensorId, userId: Shared.UserId, stationId: Shared.StationId, onSuccess: { values in
+      for (_, value) in (values as! Array<API.Value>).enumerated(){
+        Shared.Values.append(Value(apiModel: value))
+      }
+      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshCharts"), object: nil)
+    }, onFailure: self.showError)
   }
 
 }

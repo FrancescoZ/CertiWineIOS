@@ -47,7 +47,10 @@ extension API{
       switch response.statusCode{
       case 200:
         do{
-          let responseJson = try response.map(to, using: JSONDecoder.init())
+          let decoder = JSONDecoder()
+          decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+          
+          let responseJson = try response.map(to, using: decoder)
           success(responseJson)
         } catch _ {
           

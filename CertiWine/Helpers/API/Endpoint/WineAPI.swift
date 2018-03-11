@@ -53,7 +53,7 @@ extension API.WineAPI: TargetType {
   var path: String {
     switch self {
     case .getWineValues(let stationId,let ofUserId,let sensorId,let wineId):
-        return "/\(ofUserId)/stations/\(stationId)/sensors/\(sensorId)/wines/\(wineId)"
+        return "/\(ofUserId)/stations/\(stationId)/sensors/\(sensorId)/values/\(wineId)"
     case .createWine(_,_,_,let sensorId, let userId, let stationId):
         return "/\(userId)/stations/\(stationId)/sensors/\(sensorId)/wines"
     case .getWine(let withId, let sensorId, let userId, let stationId):

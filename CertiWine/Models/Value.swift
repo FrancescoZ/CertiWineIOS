@@ -32,7 +32,70 @@
 import Foundation
 
 struct Value{
+  var id: String{
+    get{
+      return model._id
+    }
+  }
+  var date: Date? {
+    get {
+      return model.date
+    }
+    set(date) {
+      model.date = date!
+    }
+  }
   
+  var humidity: Float {
+    get {
+      return model.humidity
+    }
+    set(humidity) {
+      model.humidity = humidity
+    }
+  }
+  
+  var temperature: Float {
+    get {
+      return model.temperature
+    }
+    set(temperature) {
+      model.temperature = temperature
+    }
+  }
+  
+  var light: Float{
+    get{
+      return model.light
+    }
+    set(light){
+      model.light = light
+    }
+  }
+  
+  var vibration: Float{
+    get{
+      return model.vibration
+    }
+    set(vibration){
+      model.vibration = vibration
+    }
+  }
+  
+  var wine: String{
+    get{
+      return model.wine
+    }
+    set(sensor){
+      model.wine = wine
+    }
+  }
+  
+  var model: API.Value
+  
+  init(apiModel: API.Value){
+    model = apiModel
+  }
 }
 
 

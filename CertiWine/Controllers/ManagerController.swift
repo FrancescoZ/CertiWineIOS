@@ -27,11 +27,18 @@ class ManagerController{
   init(currentViewController: UIViewController){
     Shared.currentViewController = currentViewController
     NotificationCenter.default.addObserver(self, selector: #selector(logout), name: NSNotification.Name(rawValue: "logout"), object: nil)
+    
     NotificationCenter.default.addObserver(self, selector: #selector(refreshWines), name: NSNotification.Name(rawValue: "refreshWines"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(getAllWines), name: NSNotification.Name(rawValue: "getAllWines"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(getWine), name: NSNotification.Name(rawValue: "getWine"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(saveWine), name: NSNotification.Name(rawValue: "saveWine"), object: nil)
+
     NotificationCenter.default.addObserver(self, selector: #selector(refreshStations), name: NSNotification.Name(rawValue: "refreshStations"), object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(refreshValues), name: NSNotification.Name(rawValue: "refreshValues"), object: nil)
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(getValues), name: NSNotification.Name(rawValue: "getValues"), object: nil)
+    
     NotificationCenter.default.addObserver(self, selector: #selector(refreshSensors), name: NSNotification.Name(rawValue: "refreshSensors"), object: nil)
+    
     NotificationCenter.default.addObserver(self, selector: #selector(loadUser), name: NSNotification.Name(rawValue: "refreshUser"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(updateUser), name: NSNotification.Name(rawValue: "updateUser"), object: nil)
     
@@ -40,8 +47,6 @@ class ManagerController{
     NotificationCenter.default.addObserver(self, selector: #selector(pushViewController), name: NSNotification.Name(rawValue: "pushViewController"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(dismiss), name: NSNotification.Name(rawValue: "dismiss"), object: nil)
     
-    NotificationCenter.default.addObserver(self, selector: #selector(getWine), name: NSNotification.Name(rawValue: "getWine"), object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(saveWine), name: NSNotification.Name(rawValue: "saveWine"), object: nil)
 
   }
   

@@ -40,6 +40,4 @@ extension ManagerController{
       NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refreshStationTableView"), object: nil)
     }, onFailure: self.showError)
   }
-  
-  @objc func refreshValues(notification: NotificationCenter){}
 }

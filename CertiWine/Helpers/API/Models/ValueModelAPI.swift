@@ -36,11 +36,11 @@ extension API{
 
   struct Value: Decodable{
     let _id: String
-    let light: Double
-    let date: Date
-    let humidity: Double
-    let temperature: Double
-    let vibration: Double
-    let sensor: String
+    var light: Float
+    var date: Date
+    var humidity: Float
+    var temperature: Float
+    var vibration: Float
+    var wine: String
   }
 }

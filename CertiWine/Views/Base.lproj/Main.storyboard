@@ -862,9 +862,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKz-Fh-ngs">
                                 <rect key="frame" x="0.0" y="388" width="374" height="1012"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzb-jz-GX5" userLabel="Temperature View">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="230"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cla-7Q-mKT">
                                         <rect key="frame" x="8" y="8" width="103" height="46"/>
                                         <constraints>
@@ -981,39 +978,35 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="wzb-jz-GX5" firstAttribute="leading" secondItem="ea6-0e-fdk" secondAttribute="leading" id="4H6-Cl-yjz"/>
                                     <constraint firstItem="Cla-7Q-mKT" firstAttribute="leading" secondItem="oKz-Fh-ngs" secondAttribute="leadingMargin" id="5TN-0n-TZt"/>
                                     <constraint firstItem="ea6-0e-fdk" firstAttribute="trailing" secondItem="MLy-la-LUZ" secondAttribute="trailing" id="6fU-TR-Enz"/>
                                     <constraint firstItem="BDG-SQ-2Qz" firstAttribute="trailing" secondItem="xDJ-Vw-2nJ" secondAttribute="trailing" id="BxX-yR-fqY"/>
                                     <constraint firstItem="BDG-SQ-2Qz" firstAttribute="top" secondItem="ea6-0e-fdk" secondAttribute="bottom" constant="8" symbolic="YES" id="C7O-EI-x2O"/>
                                     <constraint firstAttribute="bottom" secondItem="RSh-0d-N9S" secondAttribute="bottom" constant="50" id="GPP-Ik-LAc"/>
-                                    <constraint firstItem="wzb-jz-GX5" firstAttribute="centerX" secondItem="wfM-TW-J80" secondAttribute="centerX" id="H3M-6t-aEu"/>
                                     <constraint firstItem="wfM-TW-J80" firstAttribute="leading" secondItem="dvt-2L-Zho" secondAttribute="leading" id="Hmr-ZX-9L8"/>
                                     <constraint firstItem="Bib-Id-0gM" firstAttribute="leading" secondItem="xDJ-Vw-2nJ" secondAttribute="leading" id="KnP-aS-LCC"/>
-                                    <constraint firstItem="wzb-jz-GX5" firstAttribute="trailing" secondItem="ea6-0e-fdk" secondAttribute="trailing" id="Muw-kE-O8X"/>
                                     <constraint firstItem="Bib-Id-0gM" firstAttribute="top" secondItem="BDG-SQ-2Qz" secondAttribute="bottom" constant="8" symbolic="YES" id="MzR-xX-vCJ"/>
-                                    <constraint firstItem="dvt-2L-Zho" firstAttribute="top" secondItem="wzb-jz-GX5" secondAttribute="bottom" constant="8" symbolic="YES" id="NXn-uN-hzy"/>
                                     <constraint firstItem="dvt-2L-Zho" firstAttribute="trailing" secondItem="BDG-SQ-2Qz" secondAttribute="trailing" id="NYd-ug-Hhw"/>
                                     <constraint firstItem="xDJ-Vw-2nJ" firstAttribute="leading" secondItem="E4W-XY-Pxf" secondAttribute="leading" id="Q1U-s0-mCe"/>
                                     <constraint firstItem="dvt-2L-Zho" firstAttribute="top" secondItem="wfM-TW-J80" secondAttribute="bottom" constant="8" symbolic="YES" id="Qup-7H-nN1"/>
                                     <constraint firstItem="RSh-0d-N9S" firstAttribute="top" secondItem="xDJ-Vw-2nJ" secondAttribute="top" id="YzE-g0-4eb"/>
+                                    <constraint firstItem="ea6-0e-fdk" firstAttribute="leading" secondItem="oKz-Fh-ngs" secondAttribute="leading" id="ZeH-Uh-kao"/>
                                     <constraint firstItem="Cla-7Q-mKT" firstAttribute="trailing" secondItem="dvt-2L-Zho" secondAttribute="trailing" id="bsh-Pe-aNt"/>
                                     <constraint firstItem="BDG-SQ-2Qz" firstAttribute="leading" secondItem="Bib-Id-0gM" secondAttribute="leading" id="cXa-1Z-5oT"/>
                                     <constraint firstItem="wfM-TW-J80" firstAttribute="trailing" secondItem="Bib-Id-0gM" secondAttribute="trailing" id="dTX-aJ-PP5"/>
-                                    <constraint firstItem="wzb-jz-GX5" firstAttribute="top" secondItem="oKz-Fh-ngs" secondAttribute="top" id="eKZ-81-j0K"/>
+                                    <constraint firstItem="MLy-la-LUZ" firstAttribute="centerX" secondItem="Bib-Id-0gM" secondAttribute="centerX" id="eMY-MO-cwn"/>
                                     <constraint firstItem="ea6-0e-fdk" firstAttribute="top" secondItem="dvt-2L-Zho" secondAttribute="top" id="erG-Pv-7eV"/>
-                                    <constraint firstItem="wzb-jz-GX5" firstAttribute="centerX" secondItem="oKz-Fh-ngs" secondAttribute="centerX" id="gio-gL-jP7"/>
                                     <constraint firstItem="MLy-la-LUZ" firstAttribute="top" secondItem="BDG-SQ-2Qz" secondAttribute="top" id="gmr-kq-5vv"/>
                                     <constraint firstItem="RSh-0d-N9S" firstAttribute="bottom" secondItem="E4W-XY-Pxf" secondAttribute="bottom" id="hZb-iZ-HN8"/>
                                     <constraint firstItem="xDJ-Vw-2nJ" firstAttribute="top" secondItem="Bib-Id-0gM" secondAttribute="bottom" constant="8" symbolic="YES" id="haI-wF-JsP"/>
                                     <constraint firstItem="wfM-TW-J80" firstAttribute="top" secondItem="oKz-Fh-ngs" secondAttribute="top" constant="48" id="iEX-B5-mad"/>
                                     <constraint firstItem="E4W-XY-Pxf" firstAttribute="top" secondItem="xDJ-Vw-2nJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jYD-ez-5Tn"/>
                                     <constraint firstItem="MLy-la-LUZ" firstAttribute="leading" secondItem="RSh-0d-N9S" secondAttribute="leading" id="klC-Xp-e2t"/>
+                                    <constraint firstItem="wfM-TW-J80" firstAttribute="centerX" secondItem="oKz-Fh-ngs" secondAttribute="centerX" id="nlm-2W-Cjo"/>
                                     <constraint firstItem="xDJ-Vw-2nJ" firstAttribute="top" secondItem="MLy-la-LUZ" secondAttribute="bottom" constant="8" symbolic="YES" id="pqJ-rZ-jj0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ea6-0e-fdk" secondAttribute="trailing" id="qTk-lX-nl2"/>
                                     <constraint firstItem="ea6-0e-fdk" firstAttribute="leading" secondItem="MLy-la-LUZ" secondAttribute="leading" id="sK9-t0-YJK"/>
-                                    <constraint firstAttribute="trailing" secondItem="wzb-jz-GX5" secondAttribute="trailing" id="u3a-ix-sFH"/>
                                     <constraint firstItem="Cla-7Q-mKT" firstAttribute="top" secondItem="oKz-Fh-ngs" secondAttribute="topMargin" id="uXf-Sp-YWw"/>
-                                    <constraint firstItem="wzb-jz-GX5" firstAttribute="leading" secondItem="oKz-Fh-ngs" secondAttribute="leading" id="whX-v2-JIP"/>
                                     <constraint firstItem="dvt-2L-Zho" firstAttribute="leading" secondItem="BDG-SQ-2Qz" secondAttribute="leading" id="wkL-aP-W9a"/>
                                     <constraint firstItem="Cla-7Q-mKT" firstAttribute="leading" secondItem="wfM-TW-J80" secondAttribute="leading" id="x03-x1-nwe"/>
                                     <constraint firstItem="Bib-Id-0gM" firstAttribute="trailing" secondItem="E4W-XY-Pxf" secondAttribute="trailing" id="xOX-IG-teh"/>
@@ -1085,10 +1078,10 @@
             </objects>
             <point key="canvasLocation" x="1593" y="1831"/>
         </scene>
-        <!--View Controller-->
+        <!--Sensor Detail View Controller-->
         <scene sceneID="62w-pd-GgQ">
             <objects>
-                <viewController storyboardIdentifier="SensorDetailViewController" id="jzO-kc-zsc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SensorDetailViewController" id="jzO-kc-zsc" customClass="SensorDetailViewController" customModule="CertiWine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z0o-n8-27P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1112,7 +1105,7 @@
                                 <rect key="frame" x="18" y="34" width="30" height="30"/>
                                 <state key="normal" image="back"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6E-gM-H1L">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6E-gM-H1L" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="77" width="375" height="590"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1135,6 +1128,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iiw-zd-hYc"/>
                     </view>
+                    <connections>
+                        <outlet property="sensorChart" destination="j6E-gM-H1L" id="ete-JM-sNz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaG-hx-tbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
