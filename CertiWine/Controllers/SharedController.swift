@@ -30,13 +30,14 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Charts
 
-enum SensorType{
-  case Temperature
-  case Light
-  case Vibration
-  case Humidity
-  case None
+enum SensorType: String{
+  case Temperature = "Temperature"
+  case Light = "Light"
+  case Vibration = "Vibration"
+  case Humidity = "Humidity"
+  case None = "None"
 }
 
 struct Shared{
@@ -56,7 +57,9 @@ struct Shared{
   
   static var Wine: Wine?
   static var Values = [Value]()
+  
   static var SensorType :SensorType = .None
+  static var SensorValues: ChartData?
   
   static var oldViewController: UIViewController?
   static var currentViewController: UIViewController?

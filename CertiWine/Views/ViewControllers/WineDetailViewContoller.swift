@@ -37,11 +37,11 @@ class WineDetailViewContoller: UIViewController{
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var yearLabel: UILabel!
   @IBOutlet weak var informationLabel: UILabel!
+  
   @IBOutlet weak var temperatureChart: LineChartView!
   @IBOutlet weak var humidityChart: LineChartView!
   @IBOutlet weak var vibrationChart: LineChartView!
   @IBOutlet weak var lightChart: LineChartView!
-  
   
   override func viewDidLoad() {
     refreshInterface()
@@ -74,7 +74,55 @@ class WineDetailViewContoller: UIViewController{
     yearLabel.text = String(describing: wine.year)
     informationLabel.text = wine.info
     wineImage.roundedImage()
+    
+    var touchGesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchTemperaureView(_:)))
+    self.temperatureChart.addGestureRecognizer(touchGesture)
+    
+    touchGesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchLightView(_:)))
+    self.lightChart.addGestureRecognizer(touchGesture)
+    
+    touchGesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchHumidityView(_:)))
+    self.humidityChart.addGestureRecognizer(touchGesture)
+    
+    touchGesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchVibrationView(_:)))
+    self.vibrationChart.addGestureRecognizer(touchGesture)
   }
+  
+  // MARK --- Actions
+  
+  @objc func touchTemperaureView(_ sender:UITapGestureRecognizer){
+    Shared.SensorType = .Temperature
+    Shared.SensorValues = temperatureChart.data
+    let viewControllerType: ViewControllerType = .SensorDetail
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+
+  }
+  
+  @objc func touchLightView(_ sender:UITapGestureRecognizer){
+    Shared.SensorType = .Light
+    Shared.SensorValues = lightChart.data
+    let viewControllerType: ViewControllerType = .SensorDetail
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    
+  }
+  
+  @objc func touchVibrationView(_ sender:UITapGestureRecognizer){
+    Shared.SensorType = .Vibration
+    Shared.SensorValues = vibrationChart.data
+    let viewControllerType: ViewControllerType = .SensorDetail
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    
+  }
+  
+  @objc func touchHumidityView(_ sender:UITapGestureRecognizer){
+    Shared.SensorType = .Humidity
+    Shared.SensorValues = humidityChart.data
+    let viewControllerType: ViewControllerType = .SensorDetail
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pushViewController"), object: viewControllerType)
+    
+  }
+  
+  // MARK --- Charts
   
   func setChart(dataset: LineChartDataSet, xAxis: XAxis) {
     dataset.lineWidth = 1.75
